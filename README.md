@@ -1,4 +1,8 @@
-# NHS.UK prototype kit
+# Margin Survey
+
+The Meds Team currently administer the business-critical data collection function for the Margin Survey on behalf of the DHSC which collates invoice pricing information for approximately 850 products from 20 independent pharmacies each month. This data provides a valuable source of information which is used to understand the purchase price and margins of medicines prescribed and dispensed in Primary Care which is then used as part of the Community Pharmacy Contractual Framework (CPCF) funding agreement. 
+
+## NHS.UK prototype kit
 
 Visit the <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit site</a> to download the latest version and read the documentation.
 
