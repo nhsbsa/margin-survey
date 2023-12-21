@@ -1,0 +1,83 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container-fluid">
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container-full">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="margin-survey-menu">Margin survey menu</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="margin-task-menu">Select a task</a></li>
+        </ol>
+      </div>
+    </nav>
+
+
+      
+      <!-- Change the page title here -->
+      <h1>
+        Full report
+      </h1>
+
+
+      <p>Select a month from dropdown list and select download to download spreadsheet report of records for all pharmacies in sample for particular month.</p>
+
+       
+      <div class="nhsuk-card-group">
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width:600px">
+              <option value="1" selected>Select or enter a month here</option>
+              <option value="2">December 2023</option>
+              <option value="3">Novemeber 2023</option>
+              <option value="4">October 2023</option>
+              <option value="5">September 2023</option>
+              <option value="6">August 2023</option>
+            </select>
+          </div>
+      
+      <br>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+       Generate
+      </button>
+  
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

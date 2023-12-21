@@ -85,15 +85,19 @@
           text: 'Skip to main content'
         }) }}
       {% endblock %}
+      
 
       {% block header %}
         {{ header({}) }}
       {% endblock %}
 
+     
+     
+      
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsuk-width-container {{ containerClasses }}">
+        <div class="nhsuk-width-container  {{ containerClasses }}">
           {% block outerContent %}{% endblock %}
           <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
             {% block content %}{% endblock %}

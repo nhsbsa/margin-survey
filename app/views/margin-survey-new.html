@@ -1,0 +1,117 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-width-container-fluid">
+
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-full">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="margin-survey-menu">Margin survey menu</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="margin-task-menu">Select a task</a></li>
+            
+          </ol>
+        </div>
+      </nav>
+      
+      <!-- Change the page title here -->
+      <h1>
+        
+       New account
+      </h1>
+
+      <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    Main ID
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Owner name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Address Line 
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Email address
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+     
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact number
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+
+<a href="margin-information-input" class="nhsuk-button">Continue</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

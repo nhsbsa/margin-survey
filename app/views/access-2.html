@@ -1,0 +1,102 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-width-container-fluid">
+
+
+      
+      <!-- Change the page title here -->
+      <h1>
+        
+        Enter your email address and password
+      </h1>
+    
+     
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p>
+        Log in to your Margin Survey account to access services online on your computer, tablet or mobile phone. You do not need to download anything.
+      </p>
+
+      <p>Get access to:
+        <ul>
+          <li>Margin Survey</li>
+          <li>Retrospective</li>
+          <li>Scanned image task</li>
+          <li>Pharmacies and drug list</li>
+          <li>Statistical information</li>
+          <li>Audit information</li>
+        </ul>
+      </p>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Email address
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Password
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+      <a href="home-page" class="nhsuk-button">Log in</a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Need help with log in?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+         
+          <p>Contact the helpdesk on 0300 123 2344 or via email at marginsurvey@nhs.net for help.</p>
+          
+      
+        </div>
+      </details>
+     
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

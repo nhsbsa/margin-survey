@@ -1,0 +1,131 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu-pharmacy-and-drug">Pharmacy list and drug list</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-menu">Pharmacy list menu</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Pharmacy list</a></li>
+      
+    </ol>
+  </div>
+</nav>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-width-container-full">
+
+
+      
+      <!-- Change the page title here -->
+      <h1>
+        
+       Edit pharmacy details
+      </h1>
+
+      <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    Account No.
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text" value="1234">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    DHID No.
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text" value="1234">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Pharmacy name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="AAA Pharmacy">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="K Johnson">
+</div>
+     
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact number
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="01286 345678">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Email address
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="k.johnson@aaapharmacy.co.uk">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Address Line 
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="AAA Street,">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Newcastle,">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="NA13 4FG">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Opening hours
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="9am - 5pm">
+</div>
+
+<a href="pharmacy-detail" class="nhsuk-button">Save</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
