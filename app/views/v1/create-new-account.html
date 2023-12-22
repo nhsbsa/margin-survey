@@ -30,16 +30,16 @@ New Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="margin-survey-menu">Margin survey menu</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="margin-task-menu">Select a task</a></li>
-            
-          </ol>
-        </div>
-      </nav>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="admin">Admin</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-users">Manage users</a></li>
+     
+    </ol>
+  </div>
+</nav>
       
       <div class="nhsuk-grid-row-full">
         <div class="nhsuk-width-container-full">
@@ -47,43 +47,24 @@ New Drug Purchase Price Database (Margin Survey)
       <!-- Change the page title here -->
       <h1>
         
-       New account
+       Create new user
       </h1>
 
-      <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="input-width-10">
-    Main ID
-  </label>
-  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-</div>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="input-width-20">
-    Owner name
+    First name
   </label>
   <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
 </div>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="input-width-20">
-    Address Line 
-  </label>
-  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-</div>
-
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="input-width-20">
-    
+    Last name
   </label>
   <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
 </div>
 
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="input-width-20">
-    
-  </label>
-  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-</div>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="input-width-20">
@@ -94,20 +75,32 @@ New Drug Purchase Price Database (Margin Survey)
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="input-width-20">
-    Contact name
-  </label>
-  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
-</div>
-     
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="input-width-20">
     Contact number
   </label>
   <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
 </div>
+     
+<div class="nhsuk-form-group" >
+  <div class="nhsuk-form-group" >
+    <label class="nhsuk-label" for="select-1">
+      Account type
+    </label>
+    <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
+      <option value="1" selected>Select an account type</option>
+      <option value="2">Full user access</option>
+      <option value="3">Trainee</option>
+    </select>
+  </div>
+</div>
 
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Password
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
 
-<a href="margin-information-input" class="nhsuk-button">Continue</a>
+<a href="manage-users" class="nhsuk-button">Create</a>
       <!-- End of content -->
 
     </div>
