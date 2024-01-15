@@ -1,0 +1,111 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container-fluid">
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container-full">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="retro-menu">Retrospective menu</a></li>
+          
+        </ol>
+      </div>
+    </nav>
+
+
+      
+      <!-- Change the page title here -->
+      <h1>
+        
+        Search archived historical records
+      </h1>
+
+     
+          <p>Use the tools below to search to the information you would like to view.</p>
+
+          <div class="nhsuk-hero">
+            <div class="nhsuk-width-container-full" style="padding:30px;">
+      <div class="nhsuk-card-group">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Enter main ID, pharmacy name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+     
+     
+     <div class="nhsuk-form-group" style="padding-left: 40px;">
+      <label class="nhsuk-label" for="input-width-20">
+        Enter invoice ID, drug name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+
+    
+    <div class="nhsuk-form-group" style="padding-left: 40px; width: 300px;">
+      <label class="nhsuk-label" for="input-width-20">
+        Search by date / year
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+  </div>
+
+
+    <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <p class="nhsuk-body"><a href="retro-full-list-pharmacy" class="nhsuk-link" style="color: white;"><b>See all entered pharmacies record</b></a></p>
+     </div>
+      </div>
+
+      <div class="nhsuk-form-group" style="padding-left: 780px; ">
+      <a href="retro-archived-search" class="nhsuk-button">Search</a>
+      </div>
+
+      
+    </div>
+  </div>
+  </div>
+
+  <br>
+  <br>
+
+  
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,192 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu-pharmacy-and-drug">Pharmacy list and drug list</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-menu">Pharmacy list menu</a></li>
+    
+      
+    </ol>
+  </div>
+</nav>
+
+<div class="nhsuk-grid-row-full">
+  <div class="nhsuk-width-container-full">
+
+
+      
+      <!-- Change the page title here -->
+      <h1>
+        
+      Pharmacy letter sent form
+      </h1>
+
+      <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    Account No.
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    DHID No.
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Pharmacy name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+     
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact number
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Contact email address
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Address  
+  </label>
+  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+    Where parcel to be collected from (including postcode)
+  </div>
+  
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Opening hours
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" >
+</div>
+
+  <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+      <label class="nhsuk-label" for="input-width-20">
+        Collection date
+      </label>
+      <div class="nhsuk-hint" id="example-hint">
+        For example, 15 3 1984
+      </div>
+  
+      <div class="nhsuk-date-input" id="example">
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+              Day
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+              Month
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" >
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+              Year
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" >
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  
+  </div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    TNT shipment number
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+
+<br>
+
+<h3>Comments</h3>
+        
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example">
+    Provide more details in the box below if needed.
+  </label>
+  <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint"></textarea>
+</div>
+
+<a href="pharmacy-list-menu" class="nhsuk-button">Create</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
