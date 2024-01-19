@@ -8,7 +8,8 @@
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
--->
+    
+--> 
 
 <!-- Set the page title -->
 {% block pageTitle %}
@@ -28,7 +29,7 @@ New Drug Purchase Price Database (Margin Survey)
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
+<script type="text/javascript" src="../../assets/javascript/accessible-autocomplete.min.js"></script>
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-width-container-fluid">
@@ -81,14 +82,17 @@ New Drug Purchase Price Database (Margin Survey)
         </div>
           </div>
            
-           
+        
           
            <div class="nhsuk-card-group">
             <div class="nhsuk-form-group" style="padding-left: 30px;">
               <div class="nhsuk-form-group" style="padding-left:0px;">
+               
+
                 <label class="nhsuk-label" for="select-1">
                   Drug name
                 </label>
+              
                 <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
                   <option value="1" selected>Select or enter a drug name</option>
                   <option value="2">Oxybutynin 5mg modified-release tablets</option>
@@ -98,30 +102,11 @@ New Drug Purchase Price Database (Margin Survey)
                   <option value="6">Oxybutynin 5mg modified-release tablets</option>
                 </select>
               </div>
-              
             </div>
-      
+            </div>
            
-          </div>
-            <div class="nhsuk-card-group">
-              <div class="nhsuk-form-group" style="padding-left: 30px;">
-                <div class="nhsuk-form-group" style="padding-left:0px;">
-                  <label class="nhsuk-label" for="select-1">
-                    Generic Manufacturer
-                  </label>
-                  <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
-                    <option value="1" selected>Select or enter a manufacturer</option>
-                    <option value="2">Oxybutynin 5mg modified-release tablets</option>
-                    <option value="3">Oxybutynin 5mg modified-release tablets</option>
-                    <option value="4">Oxybutynin 5mg modified-release tablets</option>
-                    <option value="5">Oxybutynin 5mg modified-release tablets</option>
-                    <option value="6">Oxybutynin 5mg modified-release tablets</option>
-                  </select>
-                </div>
-              </div>
             
-            </div>
-          
+            
                 <div class="nhsuk-card-group">
                   <div class="nhsuk-form-group" style="padding-left: 30px;">
                     <label class="nhsuk-label" for="input-width-5">
@@ -129,20 +114,8 @@ New Drug Purchase Price Database (Margin Survey)
                     </label>
                     <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
                   </div>
-                  </div>
+               
 
-                  <div class="nhsuk-card-group" >
-
-                    <div class="nhsuk-form-group" style="width: 350px; padding-left: 30px;"">
-                      <label class="nhsuk-label" for="input-width-15">
-                        Brand name / Generic name
-                      </label>
-                      <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
-                    </div>
-
-                    
-                    
-                     
                     <div class="nhsuk-form-group" style="padding-left:50px; padding-top:31px;">
                       <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
@@ -151,39 +124,45 @@ New Drug Purchase Price Database (Margin Survey)
                         </label>
                       </div>
                      </div>
+
+                    <div class="nhsuk-form-group" style="width: 350px; padding-left: 30px;"">
+                      <label class="nhsuk-label" for="input-width-15">
+                        Brand name / Generic name
+                      </label>
+                      <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
+                    </div>
+
                      </div>
 
                      <div class="nhsuk-card-group">
                       <div class="nhsuk-form-group" style="padding-left: 30px;">
                         <label class="nhsuk-label" for="input-width-5">
-                          Number of packs
+                          No. of packs
                         </label>
                         <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
                       </div>
                       
-                  
-
                       
-                        <div class="nhsuk-form-group" style="width: 250px; padding-left: 50px;">
+                        <div class="nhsuk-form-group" style="padding-left: 50px;">
                           <label class="nhsuk-label" for="input-width-55">
                             Price per packs
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-5" id="input-width-15" name="test-width-15" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
                         </div>
 
                         
-                        <div class="nhsuk-form-group" style="max-width: 250px; padding-right: 20px;">
+                        <div class="nhsuk-form-group" style="padding-left: 30px;">
                           <label class="nhsuk-label" for="input-width-5">
-                            Total price for the drug
+                            Total price 
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-5" id="input-width-15" name="test-width-15" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
                         </div>
 
-                        <div class="nhsuk-form-group" style="width: 300px; padding-left: 40px;">
+                        <div class="nhsuk-form-group" style="padding-left: 50px;">
                           <label class="nhsuk-label" for="input-width-5">
                             Difference
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-5" id="input-width-15" name="test-width-15" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
                         </div>
                         </div>
 

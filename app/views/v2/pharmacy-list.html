@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'template-1.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -30,6 +30,9 @@ New Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container-fluid">
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container-full">
     <ol class="nhsuk-breadcrumb__list">
@@ -41,8 +44,6 @@ New Drug Purchase Price Database (Margin Survey)
   </div>
 </nav>
 
-<div class="nhsuk-grid-row-full">
-  <div class="nhsuk-width-container-full">
 
       
       <!-- Change the page title here -->
@@ -51,21 +52,22 @@ New Drug Purchase Price Database (Margin Survey)
        Pharmacy list
       </h1>
 
-      
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-10">
-          Search with any keyword
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-      </div>
-     
+      <form class="nhsuk-header__search-form"  style="width:280px" id="search" action="#" method="get" role="search">
+        <label class="nhsuk-u-visually-hidden" for="search-field">Search the reported faults</label>
+        <input class="nhsuk-search__input " id="search-field" name="search-field" type="search" placeholder="Search" autocomplete="off">
+        <button class="nhsuk-search__submit" type="submit">
+          <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+          </svg>
+          <span class="nhsuk-u-visually-hidden" style="padding-left: 100px;">Search</span>
+        </button>
+      </form>
    
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
-      <a href="pharmacy-list-search" class="nhsuk-button">Search</a>
-
       <br>
+
+     
 
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption"></caption>
@@ -78,7 +80,7 @@ New Drug Purchase Price Database (Margin Survey)
               Code
             </th>
             <th role="columnheader" class="" scope="col">
-              Eligible
+              Participating
             </th>
             <th role="columnheader" class="" scope="col">
               Date invoices <br>arrived
@@ -90,11 +92,9 @@ New Drug Purchase Price Database (Margin Survey)
               Status
             </th>
             <th role="columnheader" class="" scope="col">
-              Ongoing
+              Note
             </th>
-            <th role="columnheader" class="" scope="col">
-              Checked
-            </th>
+           
           </tr>
         </thead>
 
@@ -121,11 +121,9 @@ New Drug Purchase Price Database (Margin Survey)
                 Margin survey
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Dianna Green
+              <span class="nhsuk-table-responsive__heading">How often? </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Lee Jones
-            </td>
+           
           </tr>
         </tbody>
 
@@ -149,14 +147,12 @@ New Drug Purchase Price Database (Margin Survey)
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
               <strong class="nhsuk-tag nhsuk-tag--yellow">
-                First letter sent
+                Letter sent 18/12/23
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
+          
           </tr>
         </tbody>
 
@@ -172,22 +168,20 @@ New Drug Purchase Price Database (Margin Survey)
               <span class="nhsuk-table-responsive__heading">How often? </span>Yes
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>13/12/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>15/01/2024
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--red">
-                Follow up called
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
+              <strong class="nhsuk-tag nhsuk-tag--red">
+                Phone called
             </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>
+            </td>
+         
           </tr>
         </tbody>
 
@@ -206,7 +200,7 @@ New Drug Purchase Price Database (Margin Survey)
               <span class="nhsuk-table-responsive__heading">How often? </span>13/12/2023
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>15/01/2024
+              <span class="nhsuk-table-responsive__heading">How often? </span>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
@@ -216,9 +210,7 @@ New Drug Purchase Price Database (Margin Survey)
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
+          
           </tr>
         </tbody>
 
@@ -245,11 +237,9 @@ New Drug Purchase Price Database (Margin Survey)
                Completed
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Dianna Green
+              <span class="nhsuk-table-responsive__heading">How often? </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Lee Jones
-            </td>
+         
           </tr>
         </tbody>
 
@@ -272,19 +262,22 @@ New Drug Purchase Price Database (Margin Survey)
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-               Margin survey
+              <strong class="nhsuk-tag nhsuk-tag--orange">
+               Collection arranged
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Dianna Green
+              <span class="nhsuk-table-responsive__heading">How often? </span>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Lee Jones
-            </td>
+           
           </tr>
         </tbody>
         
       </table>
+
+      <br>
+      <br>
+
+      <a href="pharmacy-full-list" class="nhsuk-button">Select additional account</a>
      
       <!-- End of content -->
 
