@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'template-1.html' %}
+{% extends 'layout.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -30,30 +30,25 @@ New Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-width-container-fluid">
-
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container-full">
+  <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu-pharmacy-and-drug">Pharmacy list and drug list</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu-pharmacy">Pharmacy list menu</a></li>
-      
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-select-month">Select month / year</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-menu">Monthly pharmacy list</a></li>
+     
     </ol>
   </div>
 </nav>
 
+<div class="nhsuk-grid-row-full">
+  <div class="nhsuk-width-container-full">
 
       
       <!-- Change the page title here -->
       <h1>
-       
-       Pharmacy list
+        
+       Retrospective drug list
       </h1>
-
       <form class="nhsuk-header__search-form"  style="width:280px" id="search" action="#" method="get" role="search">
         <label class="nhsuk-u-visually-hidden" for="search-field">Search the reported faults</label>
         <input class="nhsuk-search__input " id="search-field" name="search-field" type="search" placeholder="Search" autocomplete="off">
@@ -64,66 +59,36 @@ New Drug Purchase Price Database (Margin Survey)
           <span class="nhsuk-u-visually-hidden" style="padding-left: 100px;">Search</span>
         </button>
       </form>
-   
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-      <br>
 
-     
+      <br>
+      <br>
 
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption"></caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">
-             Owner name
+             Drug name
             </th>
             <th role="columnheader" class="" scope="col">
               Code
             </th>
             <th role="columnheader" class="" scope="col">
-              Participating
+              Category
             </th>
-            <th role="columnheader" class="" scope="col">
-              Date invoices <br>arrived
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Date invoices <br>returned
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Status
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Note
-            </th>
-           
           </tr>
         </thead>
 
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="pharmacy-detail">AAA Pharmacy</a>
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How much? </span>1234
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Yes
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>13/12/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>15/01/2024
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Margin survey
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <span class="nhsuk-table-responsive__heading">How often? </span>23
             </td>
            
           </tr>
@@ -132,143 +97,13 @@ New Drug Purchase Price Database (Margin Survey)
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="">Classic Compounds Care</a>
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">How much? </span>9283
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Yes
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--yellow">
-                Letter sent 18/12/23
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-          
-          </tr>
-        </tbody>
-
-        <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="">General Health Pharmacy</a>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How much? </span>8374
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Yes
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--red">
-                Phone called
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-         
-          </tr>
-        </tbody>
-
-        <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="">Miracle Medicines Pharmacy</a>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How much? </span>1234
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Yes
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>13/12/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--grey">
-                Invoices arrived
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-          
-          </tr>
-        </tbody>
-
-        <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="">Health Hub Pharmacy</a>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How much? </span>1234
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Yes
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>13/12/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>15/01/2024
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--green">
-               Completed
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </td>
-         
-          </tr>
-        </tbody>
-
-        <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="">Old-Fashioned Pharmacy</a>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How much? </span>1234
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>Yes
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>13/12/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>15/01/2024
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-              <strong class="nhsuk-tag nhsuk-tag--orange">
-               Collection arranged
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
             </td>
            
           </tr>
@@ -277,38 +112,205 @@ New Drug Purchase Price Database (Margin Survey)
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Age </span><a href="">Susie's Pharmacy</a>
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How much? </span>1234
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>No
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
-             
-             
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">How often? </span>
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
             </td>
            
           </tr>
         </tbody>
-        
+
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>
+
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>  <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Age </span>Oxybutynin 5mg modified-release tablets
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How much? </span>9283
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">How often? </span>25
+            </td>
+           
+          </tr>
+        </tbody>
+       
       </table>
-
-      <br>
-      <br>
-
-      <a href="pharmacy-full-list" class="nhsuk-button">Select additional account</a>
      
       <!-- End of content -->
 

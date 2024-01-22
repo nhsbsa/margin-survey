@@ -30,17 +30,12 @@ New Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container-full">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu-pharmacy-and-drug">Pharmacy list and drug list</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-select-month">Select month / year</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-menu">Monthly pharmacy list menu</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-checklist">Monthly pharmacy list menu</a></li>
-    </ol>
-  </div>
-</nav>
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
 
 <div class="nhsuk-grid-row-full">
   <div class="nhsuk-width-container-full">
