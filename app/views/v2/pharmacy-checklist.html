@@ -76,12 +76,14 @@ New Drug Purchase Price Database (Margin Survey)
    { height: full;  }
 
 .tableFixHead 
-thead th { position: sticky; top: 0; z-index: 9999; background-color: #EFF4F5; }
+thead th { position: sticky; top: 0; background-color: #EFF4F5; max-width: 100%; }
+
 
 .sticky-col {
+  z-index: 9999 !important
   position: -webkit-sticky;
   position: sticky; 
-  z-index: 1;
+  
   top: 0;
   background-color: #EFF4F5;
   
