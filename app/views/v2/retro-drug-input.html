@@ -46,7 +46,7 @@ New Drug Purchase Price Database (Margin Survey)
     </nav>
 
    
-    <h3>Drug price information</h3>
+    <h3>Drug price information for Altera Digital Health</h3>
 
     <div class="nhsuk-card-group">
       <div class="nhsuk-form-group">
@@ -68,14 +68,7 @@ New Drug Purchase Price Database (Margin Survey)
   </div>
  </div>
 
- <div class="nhsuk-form-group" style="padding-left:30px; padding-top:30px;">
-  <div class="nhsuk-checkboxes__item" >
-    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
-      Is this a credit?
-    </label>
-  </div>
- </div>
+ 
 
   
   </div>
@@ -115,25 +108,28 @@ New Drug Purchase Price Database (Margin Survey)
             </div>
          
 
-              <div class="nhsuk-form-group" style="padding-left:50px; padding-top:31px;">
-                <div class="nhsuk-checkboxes__item">
+            
+              <div class="nhsuk-form-group">
+                <p style="padding-left:54px;">  
+                  Brand name / Generic name 
+                </p>
+                <div class="nhsuk-checkboxes__item" style="position:relative; left:55px; top:-20px;">
                   <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
-                    
+                   
                   </label>
                 </div>
+                  <div style="position:relative; left:150px; top:-68px;">
+                  <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
+                  
+                </div>
                </div>
-
-              <div class="nhsuk-form-group" style="width: 350px; padding-left: 30px;"">
-                <label class="nhsuk-label" for="input-width-15">
-                  Brand name / Generic name
-                </label>
-                <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
               </div>
+              
+             
 
-               </div>
-
-               <div class="nhsuk-card-group">
+               <div class="nhsuk-card-group" style="position:relative; top:-68px;">
                 <div class="nhsuk-form-group" style="padding-left: 30px;">
                   <label class="nhsuk-label" for="input-width-5">
                     No. of packs
@@ -165,8 +161,7 @@ New Drug Purchase Price Database (Margin Survey)
                   </div>
                   </div>
 
-                  
-                  <div class="nhsuk-card-group">
+                  <div class="nhsuk-card-group" style="position:relative; top:-68px;">
                     <div class="nhsuk-form-group" style="padding-left:30px;">
                       <label class="nhsuk-label" for="input-width-5">
                         Check total
@@ -182,13 +177,27 @@ New Drug Purchase Price Database (Margin Survey)
                       <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
                     </div>
 
-                    </div>
-               
-                
+            </div>
                 
 
                 
-                <div class="nhsuk-form-group">
+        
+                
+                  <div class="nhsuk-form-group" style="position:relative; top:-60px; left: 30px;">
+                  <a href="" class="nhsuk-button nhsuk-button--secondary">First drug</a>
+
+                  <a href="" class="nhsuk-button nhsuk-button--secondary">Previous drug</a>
+
+                  <a href="" class="nhsuk-button">Next drug</a>
+
+                  <a href="" class="nhsuk-button">Last drug</a>
+
+                  <a href="margin-survey-supplier-input-continue" class="nhsuk-button nhsuk-button--secondary">New supplier</a>
+
+                </div>
+
+
+                <div class="nhsuk-form-group" style="position:relative; top:-75px;">
                   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                   
                     <div class="nhsuk-date-input" id="example" style="padding-left:30px;">
@@ -218,28 +227,7 @@ New Drug Purchase Price Database (Margin Survey)
                         </div>
                       </div>
                     </div>
-                  </fieldset>
                 </div>
-
-
-                   <br>
-                      
-                        <div class="nhsuk-form-group" style="padding-left:30px;">
-                        <a href="" class="nhsuk-button nhsuk-button--secondary">First drug</a>
-
-                        <a href="" class="nhsuk-button nhsuk-button--secondary">Previous drug</a>
-
-                        <a href="" class="nhsuk-button">Next drug</a>
-
-                        <a href="" class="nhsuk-button">Last drug</a>
-
-                        <a href="retro-supplier-input" class="nhsuk-button nhsuk-button--secondary">New supplier</a>
-
-                     
-                       
-                     
-                    
-                      </div>
 </div>
 </div>
 </div>
@@ -248,6 +236,8 @@ New Drug Purchase Price Database (Margin Survey)
 </div>
 </div>
 
+</fieldset>
 
+<div class="footer" style="margin-bottom:-50px;"></div>
 
 {% endblock %}

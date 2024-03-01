@@ -8,4 +8,39 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
-  
+.tableFixHead {
+   
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.tableFixHead 
+thead th { position: sticky; top: 0; z-index: 1 !important; background-color: #EFF4F5; max-width: 100%; }
+
+
+.sticky-col {
+z-index: 9998;
+position: -webkit-sticky;
+position: sticky; 
+top: 0;
+background-color: #EFF4F5;
+
+}
+
+.first-col {
+width: 100px;
+min-width: 100px;
+max-width: 500px;
+left: 0px;
+z-index: 9999;
+
+}
+
+.second-col {
+width: 150px;
+min-width: 150px;
+max-width: 550px;
+left: 100px;
+z-index: 9999;
+
+}
