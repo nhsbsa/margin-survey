@@ -62,8 +62,8 @@ New Drug Purchase Price Database (Margin Survey)
  
     <div class="nhsuk-form-group" style="padding-left:50px; padding-top:30px;">
   <div class="nhsuk-checkboxes__item" >
-    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
+    <input class="nhsuk-checkboxes__input" id="drug-pi" name="drug-pi" type="checkbox" value="email">
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="drug-pi" >
       Is this drug a PI?
     </label>
   </div>
@@ -82,10 +82,6 @@ New Drug Purchase Price Database (Margin Survey)
         <div class="nhsuk-form-group" style="padding-left:0px;">
          
 
-          <label class="nhsuk-label" for="select-1">
-            Drug name
-          </label>
-        
           <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
             <option value="1" selected>Select or enter a drug name</option>
             <option value="2">Oxybutynin 5mg modified-release tablets</option>
@@ -102,10 +98,10 @@ New Drug Purchase Price Database (Margin Survey)
       
           <div class="nhsuk-card-group">
             <div class="nhsuk-form-group" style="padding-left: 30px;">
-              <label class="nhsuk-label" for="input-width-5">
+              <label class="nhsuk-label" for="pack-size">
                 Pack size
               </label>
-              <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
+              <input class="nhsuk-input nhsuk-input--width-5" id="pack-size" name="pack-size" type="text">
             </div>
          
 
@@ -115,14 +111,14 @@ New Drug Purchase Price Database (Margin Survey)
                   Brand name / Generic name 
                 </p>
                 <div class="nhsuk-checkboxes__item" style="position:relative; left:55px; top:-20px;">
-                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <input class="nhsuk-checkboxes__input" id="Brand-name-Generic-name" name="Brand-name-Generic-name" type="checkbox" value="email">
                   
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="Brand-name-Generic-name"  aria-describedby="Brand-name-Generic-name">
                    
                   </label>
                 </div>
                   <div style="position:relative; left:150px; top:-68px;">
-                  <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
+                  <input class="nhsuk-input nhsuk-input--width-15" id="Brand-name-Generic-name" name="Brand-name-Generic-name" type="text">
                   
                 </div>
                </div>
@@ -132,86 +128,84 @@ New Drug Purchase Price Database (Margin Survey)
 
                <div class="nhsuk-card-group" style="position:relative; top:-68px;">
                 <div class="nhsuk-form-group" style="padding-left: 30px;">
-                  <label class="nhsuk-label" for="input-width-5">
+                  <label class="nhsuk-label" for="number-of-packs">
                     No. of packs
                   </label>
-                  <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
+                  <input class="nhsuk-input nhsuk-input--width-5" id="number-of-packs" name="number-of-packs" type="text">
                 </div>
                 
                 
                   <div class="nhsuk-form-group" style="padding-left: 50px;">
-                    <label class="nhsuk-label" for="input-width-55">
+                    <label class="nhsuk-label" for="price-per-pack">
                       Price per packs
                     </label>
-                    <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-5" id="price-per-pack" name="price-per-pack" type="text">
                   </div>
 
                   
                   <div class="nhsuk-form-group" style="padding-left: 30px;">
-                    <label class="nhsuk-label" for="input-width-5">
+                    <label class="nhsuk-label" for="total-price">
                       Total price 
                     </label>
-                    <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-5" id="total-price" name="total-price" type="text">
                   </div>
 
                   <div class="nhsuk-form-group" style="padding-left: 50px;">
-                    <label class="nhsuk-label" for="input-width-5">
+                    <label class="nhsuk-label" for="difference">
                       Difference
                     </label>
-                    <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-5" id="difference" name="difference" type="text">
                   </div>
                   </div>
 
                   <div class="nhsuk-card-group" style="position:relative; top:-68px;">
                     <div class="nhsuk-form-group" style="padding-left:30px;">
-                      <label class="nhsuk-label" for="input-width-5">
+                      <label class="nhsuk-label" for="check-total">
                         Check total
                       </label>
-                      <input class="nhsuk-input nhsuk-input--width-5" id="input-width-15" name="test-width-15" type="text">
+                      <input class="nhsuk-input nhsuk-input--width-5" id="check-total" name="check-total" type="text">
                     </div>
                    
                
                     <div class="nhsuk-form-group" style="width: 350px;  padding-left:50px;">
-                      <label class="nhsuk-label" for="input-width-55">
+                      <label class="nhsuk-label" for="Generic-Manufacturer">
                         Generic Manufacturer
                       </label>
-                      <input class="nhsuk-input nhsuk-input--width-15" id="input-width-15" name="test-width-15" type="text">
+                      <input class="nhsuk-input nhsuk-input--width-15" id="Generic-Manufacturer" name="Generic-Manufacturer" type="text">
                     </div>
 
             </div>
                 
+            <div class="nhsuk-form-group" style="position:relative; top:-60px; left: 30px;">
+              <a href="" class="nhsuk-button nhsuk-button--secondary">Next drug</a>
+              
+              <a href="" class="nhsuk-button nhsuk-button--secondary">Previous drug</a>
+            <a href="" class="nhsuk-button nhsuk-button--secondary">First drug</a>
 
+            <a href="" class="nhsuk-button nhsuk-button--secondary">Last drug</a>
+            <a href="margin-survey-supplier-input-continue" class="nhsuk-button nhsuk-button">New supplier</a>
+           
+
+          </div>
                 
         
-                
-                  <div class="nhsuk-form-group" style="position:relative; top:-60px; left: 30px;">
-                    <a href="" class="nhsuk-button nhsuk-button--secondary">Next drug</a>
-                    <a href="" class="nhsuk-button nhsuk-button--secondary">Previous drug</a>
-                  <a href="" class="nhsuk-button nhsuk-button--secondary">First drug</a>
-                   <a href="" class="nhsuk-button nhsuk-button--secondary">Last drug</a>
-                   <a href="margin-survey-supplier-input" class="nhsuk-button nhsuk-button">New supplier</a>
-
-                 
-
-                </div>
-
 
                 <div class="nhsuk-form-group" style="position:relative; top:-75px;">
-                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="page" role="group">
                   
-                    <div class="nhsuk-date-input" id="example" style="padding-left:30px;">
+                    <div class="nhsuk-date-input" id="page" style="padding-left:30px;">
                       <div class="nhsuk-date-input__item">
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="page">
                             Page
                           </label>
-                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="1">
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="page" name="page" type="text" pattern="[0-9]*" inputmode="numeric" value="1">
                         </div>
                       </div>
 
                       <div class="nhsuk-date-input__item">
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="of">
                             of
                           </label>
                           </div>
@@ -219,10 +213,10 @@ New Drug Purchase Price Database (Margin Survey)
 
                       <div class="nhsuk-date-input__item">
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="end-page">
                             
                           </label>
-                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="16">
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="end-page" name="end-page" type="text" pattern="[0-9]*" inputmode="numeric" value="16">
                         </div>
                       </div>
                     </div>
