@@ -96,21 +96,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-<!-- Coronavirus (COVID-19) banner -->
-<div class="app-global-alert" id="app-global-alert" role="complementary">
-  <div class="nhsuk-width-container">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <div class="app-global-alert__content">
-          <div class="app-global-alert__message">
-            <h2>Coronavirus (COVID-19)</h2>
-            <p><a href="">Get the latest advice about COVID-19</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Breadcrumbs -->
 <nav class="nhsuk-breadcrumb beta-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
@@ -332,7 +317,7 @@
         <div class="beta-hub-related-links-title">
           <h2 class="nhsuk-heading-s">Related information</h2>
         </div>
-        <nav role="navigation">
+        <nav role="navigation" aria-label="Related information">
           <ul class="beta-hub-related-links">
             <li class="beta-hub-related-links__list-item">
               <a href="">Every Mind Matters</a>
@@ -403,7 +388,7 @@
         </ul>
       </div> 
       <div>
-        <p class="nhsuk-footer__copyright">© Crown copyright</p>
+        <p class="nhsuk-footer__copyright">© NHS England</p>
       </div>
     </div> 
   </div> 
@@ -411,7 +396,6 @@
 {% endblock %}
 
 
-<!-- JavaScript hack to do nothing if search button or link href="" clicked -->
 {% block pageScripts %}
 <script>
   $( document ).ready(function() {
