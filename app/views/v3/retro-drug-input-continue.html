@@ -1,0 +1,235 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-width-container-fluid">
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container-full">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="retro-menu">Retrospective menu</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="retro-task-menu">Select a task</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="retro-continue">Select an account</a></li>
+          
+        </ol>
+      </div>
+    </nav>
+
+   
+    <h3>Drug price information for Altera Digital Health</h3>
+
+    <div class="nhsuk-card-group">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-10">
+          Invoice ID
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+        
+      </div>
+
+   
+ 
+    <div class="nhsuk-form-group" style="padding-left:50px; padding-top:30px;">
+  <div class="nhsuk-checkboxes__item" >
+    <input class="nhsuk-checkboxes__input" id="drug-pi" name="drug-pi" type="checkbox" value="email">
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="drug-pi" >
+      Is this drug a PI?
+    </label>
+  </div>
+ </div>
+
+ 
+
+  
+  </div>
+    </div>
+     
+  
+    
+     <div class="nhsuk-card-group">
+      <div class="nhsuk-form-group" style="padding-left: 30px;">
+        <div class="nhsuk-form-group" style="padding-left:0px;">
+         
+
+          <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
+            <option value="1" selected>Select or enter a drug name</option>
+            <option value="2">Oxybutynin 5mg modified-release tablets</option>
+            <option value="3">Oxybutynin 5mg modified-release tablets</option>
+            <option value="4">Oxybutynin 5mg modified-release tablets</option>
+            <option value="5">Oxybutynin 5mg modified-release tablets</option>
+            <option value="6">Oxybutynin 5mg modified-release tablets</option>
+          </select>
+        </div>
+      </div>
+      </div>
+     
+      
+      
+          <div class="nhsuk-card-group">
+            <div class="nhsuk-form-group" style="padding-left: 30px;">
+              <label class="nhsuk-label" for="pack-size">
+                Pack size
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-5" id="pack-size" name="pack-size" type="text">
+            </div>
+         
+
+            
+              <div class="nhsuk-form-group">
+                <p style="padding-left:54px;">  
+                  Brand name / Generic name 
+                </p>
+                <div class="nhsuk-checkboxes__item" style="position:relative; left:55px; top:-20px;">
+                  <input class="nhsuk-checkboxes__input" id="Brand-name-Generic-name" name="Brand-name-Generic-name" type="checkbox" value="email">
+                  
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="Brand-name-Generic-name"  aria-describedby="Brand-name-Generic-name">
+                   
+                  </label>
+                </div>
+                  <div style="position:relative; left:150px; top:-68px;">
+                  <input class="nhsuk-input nhsuk-input--width-15" id="Brand-name-Generic-name" name="Brand-name-Generic-name" type="text">
+                  
+                </div>
+               </div>
+              </div>
+              
+             
+
+               <div class="nhsuk-card-group" style="position:relative; top:-68px;">
+                <div class="nhsuk-form-group" style="padding-left: 30px;">
+                  <label class="nhsuk-label" for="number-of-packs">
+                    No. of packs
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-5" id="number-of-packs" name="number-of-packs" type="text">
+                </div>
+                
+                
+                  <div class="nhsuk-form-group" style="padding-left: 50px;">
+                    <label class="nhsuk-label" for="price-per-pack">
+                      Price per packs
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-5" id="price-per-pack" name="price-per-pack" type="text">
+                  </div>
+
+                  
+                  <div class="nhsuk-form-group" style="padding-left: 30px;">
+                    <label class="nhsuk-label" for="total-price">
+                      Total price 
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-5" id="total-price" name="total-price" type="text">
+                  </div>
+
+                  <div class="nhsuk-form-group" style="padding-left: 50px;">
+                    <label class="nhsuk-label" for="difference">
+                      Difference
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-5" id="difference" name="difference" type="text">
+                  </div>
+                  </div>
+
+                  <div class="nhsuk-card-group" style="position:relative; top:-68px;">
+                    <div class="nhsuk-form-group" style="padding-left:30px;">
+                      <label class="nhsuk-label" for="check-total">
+                        Check total
+                      </label>
+                      <input class="nhsuk-input nhsuk-input--width-5" id="check-total" name="check-total" type="text">
+                    </div>
+                   
+               
+                    <div class="nhsuk-form-group" style="width: 350px;  padding-left:50px;">
+                      <label class="nhsuk-label" for="Generic-Manufacturer">
+                        Generic Manufacturer
+                      </label>
+                      <input class="nhsuk-input nhsuk-input--width-15" id="Generic-Manufacturer" name="Generic-Manufacturer" type="text">
+                    </div>
+
+            </div>
+                
+            <div class="nhsuk-form-group" style="position:relative; top:-60px; left: 30px;">
+              <a href="" class="nhsuk-button nhsuk-button--secondary">Next drug</a>
+              
+              <a href="" class="nhsuk-button nhsuk-button--secondary">Previous drug</a>
+            <a href="" class="nhsuk-button nhsuk-button--secondary">First drug</a>
+
+            <a href="" class="nhsuk-button nhsuk-button--secondary">Last drug</a>
+            <a href="retro-supplier-input-continue" class="nhsuk-button nhsuk-button">New supplier</a>
+           
+
+          </div>
+                
+        
+
+                <div class="nhsuk-form-group" style="position:relative; top:-75px;">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="page" role="group">
+                  
+                    <div class="nhsuk-date-input" id="page" style="padding-left:30px;">
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="page">
+                            Page
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="page" name="page" type="text" pattern="[0-9]*" inputmode="numeric" value="1">
+                        </div>
+                      </div>
+
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="of">
+                            of
+                          </label>
+                          </div>
+                      </div>
+
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="end-page">
+                            
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="end-page" name="end-page" type="text" pattern="[0-9]*" inputmode="numeric" value="16">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</fieldset>
+
+<div class="footer" style="margin-bottom:-50px;"></div>
+
+{% endblock %}

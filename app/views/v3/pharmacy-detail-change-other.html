@@ -1,0 +1,180 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu-pharmacy-and-drug">Pharmacy list and drug list</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-menu">Pharmacy list menu</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Pharmacy list</a></li>
+      
+    </ol>
+  </div>
+</nav>
+
+<div class="nhsuk-grid-row-full">
+  <div class="nhsuk-width-container-full">
+
+      
+      <!-- Change the page title here -->
+      <h1>
+       
+       Edit other details
+      </h1>
+
+      
+
+
+      <div class="nhsuk-form-group" >
+        <label class="nhsuk-label" for="select-1">
+          Status
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1">Letter sent</option>
+          <option value="2">Confirm participation​</option>
+          <option value="3">To arrange collection​</option>
+          <option value="4">Collection arranged​</option>
+          <option value="5">Invoices on site​</option>
+          <option value="6" selected>Invoices received and returned​</option>
+          <option value="7">Not participating ​​</option>
+        </select>
+      </div>
+      
+      
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+          <label class="nhsuk-label" for="input-width-20">
+            Date invoices arrived
+          </label>
+          <div class="nhsuk-hint" id="example-hint">
+            For example, 15 3 1984
+          </div>
+      
+          <div class="nhsuk-date-input" id="example">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="11">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2023">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      
+      </div>
+      
+      
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+          <label class="nhsuk-label" for="input-width-20">
+            Date invoices returned
+          </label>
+          <div class="nhsuk-hint" id="example-hint">
+            For example, 15 3 1984
+          </div>
+      
+          <div class="nhsuk-date-input" id="example">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="13">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="12">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2023">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Ongoing
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          (with cipher of member that is completing this)
+        </div>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Dianna Green">
+      </div>
+      
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Checked 
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          (with cipher of member that has quality checked work)
+        </div>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Lee Jones">
+      </div>
+      
+
+<a href="pharmacy-detail" class="nhsuk-button">Save</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

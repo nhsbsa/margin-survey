@@ -1,0 +1,118 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+New Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-width-container-fluid">
+
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-full">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-page">Home</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="retro-menu">Retrospective menu</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="retro-task-menu">Select a task</a></li>
+            
+          </ol>
+        </div>
+      </nav>
+      
+      <!-- Change the page title here -->
+     
+      <div class="nhsuk-grid-row-full">
+        <div class="nhsuk-width-container-full">
+          
+      <!-- Change the page title here -->
+      <h1>
+        
+       New account
+      </h1>
+
+   
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="select-1">
+    Owner name
+  </label>
+  <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
+    <option value="1" selected>Select or enter an owner name</option>
+    <option value="2">General Health Pharmacy</option>
+    <option value="3">Health Hub Pharmacy</option>
+    <option value="4">Miracle Medicines Pharmacy</option>
+    <option value="5">Old-Fashioned Pharmacy</option>
+  </select>
+</div>
+</div>
+
+<hr>
+
+<dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Owner name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      General Health Pharmacy
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     Month
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      December 2023
+    </dd>
+
+  </div>
+  
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     Address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      AAA Street, Newcastle, NA13 4FG
+    </dd>
+
+  </div>
+
+  
+
+</dl>
+
+<a href="retro-supplier-input" class="nhsuk-button">Continue</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

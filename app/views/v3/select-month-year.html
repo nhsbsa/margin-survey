@@ -30,48 +30,44 @@ New Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
 
+<div class="nhsuk-grid-row">
 
+<div class="nhsuk-grid-column-two-thirds">
+
+<br>
       
       <!-- Change the page title here -->
       <h1>
-        NHS Margin Survey Service
-       
+        Select a month / year
       </h1>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
+      <p>Select from the drop down for the month and year you wish to enter.</p>
+
+       
+      <div class="nhsuk-card-group">
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Month and year
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width:600px">
+              <option value="1"selected>Select a month and year here</option>
+              <option value="2" >January 2025</option>
+              <option value="3">October 2024</option>
+              <option value="4">July 2024</option>
+              <option value="5">April 2024</option>
+              <option value="6">January 2024</option>
+            </select>
+          </div>
       
-      <hr>
+      <br>
 
-      <h3>Version 1 - 22 Dec 2023</h3>
-
-      <p>First prototype has created..</p>
-
-         <p> <a href="v1/access">Version 1</a></p>
-        
-
-         <hr>
-
-         <h3>Version 2 - 10 Jan 2024</h3>
-
-         <p>Changed the journey in pharmacy list.</p>
-
-         <p>Changed the layout of information input.</p>
-   
-            <p> <a href="v2/access">Version 2</a></p>
-           
-            <hr>
-
-            <h3>Version 3 (MVP) - 28 Jan 2025</h3>
-   
-            <p>MVP version - more simple and mostly manual journey</p>
-      
-               <p> <a href="v3/access">Version 3 (MVP)</a></p>
-              
+      <a href="home-page" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+       Continue
+      </a>
+  
       <!-- End of content -->
 
     </div>

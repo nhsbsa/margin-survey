@@ -30,46 +30,38 @@ New Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
 
-  {{ backLink({
-    "href": "javascript:history.go(-1)",
-    "text": "Go back"
-    }) }}
+<div class="nhsuk-grid-row">
+  
+  <div class="nhsuk-grid-column-two-thirds">
 
-
-    <div class="nhsuk-grid-row-full">
-      <div class="nhsuk-width-container-full">
-
-
+    <br>
       
       <!-- Change the page title here -->
       <h1>
-        
-        Access your account
+        Sign in
       </h1>
-    
-
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
-      <p>
-        Log in to your Margin Survey account to access services online on your computer, tablet or mobile phone. You do not need to download anything.
-      </p>
-
-      <p>Get access to:
-        <ul>
-          <li>Margin Survey</li>
-          <li>Retrospective</li>
-          <li>Scanned image task</li>
-          <li>Pharmacies and drug list</li>
-          <li>Statistical information</li>
-          <li>Audit information</li>
-        </ul>
-      </p>
-
-      <a href="access-2" class="nhsuk-button">Log in</a>
       
-     
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Email address
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Password
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+      <a href="select-month-year" class="nhsuk-button">Log in</a>
+
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
