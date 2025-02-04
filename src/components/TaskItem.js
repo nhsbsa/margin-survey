@@ -1,0 +1,1 @@
+import React from "react";import PropTypes from "prop-types";const TaskItem=({title,status})=>(<li className="nhsuk-task-list__item"><span className="nhsuk-task-list__task">{title}</span><strong className="nhsuk-tag nhsuk-task-list__tag">{status}</strong></li>);TaskItem.propTypes={title:PropTypes.string.isRequired,status:PropTypes.string.isRequired};export default TaskItem;
