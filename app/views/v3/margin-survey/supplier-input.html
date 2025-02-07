@@ -67,18 +67,20 @@ New Drug Purchase Price Database (Margin Survey)
               -->
               
                 <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="supplier">
-                    Select supplier
-                  </label>
-                  <select class="nhsuk-select nhsuk-u-width-one-half" id="supplier" name="supplier">
-                    <option value="Select"selected>Select a supplier</option>
-                    <option value="Altera Digital Health">Altera Digital Health</option>
-                  <option value="Dedalusd">Dedalusd</option>
-                  <option value="Meditech UK">Meditech UK</option>
-                  <option value="Oracle Corporation UK Ltd">Oracle Corporation UK Ltd</option>
-                  <option value="Nervecentre Software Ltd">Nervecentre Software Ltd</option>
-                  </select>
-                </div>
+                   
+              <label class="nhsuk-label" for="autocomplete-supplier">
+                Select supplier
+               </label>
+               <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="">
+               <ul class="nhsuk-list" id="supplier-list" hidden></ul>
+               </div>
+               <datalist id="supplier">
+                 <option value="Altera Digital Health"></option>
+                 <option value="Dedalusd"></option>
+                 <option value="Meditech UK"></option>
+                 <option value="Oracle Corporation UK Ltd"></option>
+                 <option value="Nervecentre Software Ltd"></option>
+               </datalist>
 
 
                 <div class="nhsuk-card-group" >
