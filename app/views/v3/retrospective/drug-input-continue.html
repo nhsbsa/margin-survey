@@ -44,24 +44,23 @@ New Drug Purchase Price Database (Margin Survey)
       
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Retrospective</span>
-      <h1 class="nhsuk-heading-xl">Altera Digital Health - Add a drug</h1>
+      <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
       <h2 class="nhsuk-heading-s">Search for a drug</h2>
 
-<p>Use this search to find and amend any drugs you previously entered.</p>
- <div class="nhsuk-form-group">
+      <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="Search">
-          Enter invoice and drug reference number
+          Enter invoice and drug reference number to search for previously entered drugs.
         </label>
         <div class="nhsuk-hint" id="example-with-hint-text-hint">
           For example Supplierinvoice.033
         </div>
-        <div style="display: flex; align-items: center;">
-          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text">
-          <a href="drug-input" style="margin-left: 10px; font-size: 18px;">Find drug</a>
-        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+          <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+           </div>
       </div>
 
-      <hr>
+      <hr style="margin-top: 0px;">
 
       <form id="myForm">
 <h3 class="nhsuk-heading-s">Add drug details</h3>
@@ -98,8 +97,8 @@ New Drug Purchase Price Database (Margin Survey)
       Invoice and drug reference number
     </label>
     <div class="nhsuk-hint" id="example-with-hint-text-hint">
-      You can use this unique reference number to search and amend this drug entry later.  
-      <br>
+      You can use this unique reference number to search and amend this entry after it has been saved.
+        <br>
       Format this unique reference number using the supplier's invoice number followed by a number. 
       <br>
       For example Supplierinvoice.001
