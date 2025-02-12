@@ -43,28 +43,28 @@ New Drug Purchase Price Database (Margin Survey)
     <br>
       
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Retrospective checking</span>
-      <h1 class="nhsuk-heading-xl">Altera Digital Health - Check drug entry</h1>
+      <span class="nhsuk-caption-xl">January 2025 - Retrospective check</span>
+      <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
       <h2 class="nhsuk-heading-s">Search for a drug</h2>
 
-<p>Use this search to find and amend any drugs you previously entered.</p>
- <div class="nhsuk-form-group">
+      
+      <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="Search">
-          Enter invoice and drug reference number
+          Enter invoice and drug reference number to search for a drug
         </label>
         <div class="nhsuk-hint" id="example-with-hint-text-hint">
           For example Supplierinvoice.033
         </div>
-        <div style="display: flex; align-items: center;">
-          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text">
-          <a href="drug-input-continue-2" style="margin-left: 10px; font-size: 18px;">Find drug</a>
-        </div>
-      </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+          <a href="drug-input-continue-2" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+           </div>
+          </div>
 
-      <hr>
+          <hr style="margin-top: 0px;">
 
       <form id="myForm">
-<h3 class="nhsuk-heading-s">Add drug details</h3>
+<h3 class="nhsuk-heading-s">Check drug details</h3>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
@@ -98,7 +98,7 @@ New Drug Purchase Price Database (Margin Survey)
       Invoice and drug reference number
     </label>
     <div class="nhsuk-hint" id="example-with-hint-text-hint">
-      You can use this unique reference number to search and amend this drug entry later.  
+      Use this unique reference number to search and amend this entry.
       <br>
       Format this unique reference number using the supplier's invoice number followed by a number. 
       <br>
@@ -219,13 +219,14 @@ New Drug Purchase Price Database (Margin Survey)
 </div>
 
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="Generic Manufacturer">
-    Generic Manufacturer
-  </label>
-  <input class="nhsuk-input nhsuk-u-width-one-half" id="Generic Manufacturer" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
-  <ul class="nhsuk-list" id="Generic Manufacturer" hidden></ul>
+  
+<label class="nhsuk-label" for="autocomplete-Manufacturer">
+ Generic Manufacturer
+</label>
+<input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+<ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
 </div>
-<datalist id="Generic Manufacturer">
+<datalist id="Manufacturer">
   <option value="AbbVie"></option>
   <option value="Bristol-Myers Squibb"></option>
   <option value="GSK"></option>
