@@ -43,22 +43,27 @@ New Drug Purchase Price Database (Margin Survey)
     <br>
       
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Margin Survey check</span>
-      <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
+      <h2 class="nhsuk-heading-s">Search for a drug</h2>
 
-      <div class="nhsuk-inset-text">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
-      
-        <p><a href="drug-input-search" title="Drug input search">Search</a> for a drug entry</p>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="Search">
+          Enter invoice and drug reference number to search for previously entered drugs.
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          For example Supplierinvoice.033
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+          <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+           </div>
       </div>
-      
+
+      <hr style="margin-top: 0px;">
+
       <form id="myForm">
-<h3 class="nhsuk-heading-s">Check drug details</h3>
-
-<p>Check these drug details. If any details are incorrect, amend the drug details and select Update information.
-<br>
-If all the details are correct select View next drug.</p>
-
+<h3 class="nhsuk-heading-s">Add drug details</h3>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
@@ -92,7 +97,7 @@ If all the details are correct select View next drug.</p>
       Invoice and drug reference number
     </label>
     <div class="nhsuk-hint" id="example-with-hint-text-hint">
-      Use this unique reference number to search and amend this entry.
+      You can use this unique reference number to search and amend this entry after it has been saved.
         <br>
       Format this unique reference number using the supplier's invoice number followed by a number. 
       <br>
@@ -213,18 +218,18 @@ If all the details are correct select View next drug.</p>
 </div>
 
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="autocomplete-Manufacturer">
+  <label class="nhsuk-label" for="Generic Manufacturer">
     Generic Manufacturer
-   </label>
-   <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
-   <ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
-   </div>
-   <datalist id="Manufacturer">
-     <option value="AbbVie"></option>
-     <option value="Bristol-Myers Squibb"></option>
-     <option value="GSK"></option>
-     <option value="Johnson & Johnson Company"></option>
-   </datalist>
+  </label>
+  <input class="nhsuk-input nhsuk-u-width-one-half" id="Generic Manufacturer" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+  <ul class="nhsuk-list" id="Generic Manufacturer" hidden></ul>
+</div>
+<datalist id="Generic Manufacturer">
+  <option value="AbbVie"></option>
+  <option value="Bristol-Myers Squibb"></option>
+  <option value="GSK"></option>
+  <option value="Johnson & Johnson Company"></option>
+</datalist>
 
 
 <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
@@ -241,9 +246,8 @@ If all the details are correct select View next drug.</p>
 
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input-continue-2" class="nhsuk-button">Details correct - view next drug</a> 
-                            <a href="drug-input-continue" class="nhsuk-button">Update information</a> 
-                            <a href="continue-2" class="nhsuk-button nhsuk-button--secondary" >Back to suppliers list</a>
+                            <a href="drug-input" class="nhsuk-button">Save and add another drug</a> 
+                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
                             <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
 
@@ -252,7 +256,7 @@ If all the details are correct select View next drug.</p>
                             <label class="nhsuk-label" for="page">
                               Page of 143
                             </label>
-                            <input class="nhsuk-input nhsuk-input--width-5" id="page" name="page" type="text" value="16">
+                            <input class="nhsuk-input nhsuk-input--width-5" id="page" name="page" type="text" value="143">
                             <a href="drug-input-continue" style="margin-left: 10px; font-size: 18px;">Go to page</a>
                           </div>
                           
