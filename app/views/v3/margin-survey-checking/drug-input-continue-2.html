@@ -45,25 +45,19 @@ New Drug Purchase Price Database (Margin Survey)
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey check</span>
       <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
-      <h2 class="nhsuk-heading-s">Search for a drug</h2>
 
- <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="Search">
-          Enter invoice and drug reference number to search for a drug
-        </label>
-        <div class="nhsuk-hint" id="example-with-hint-text-hint">
-          For example Supplierinvoice.033
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-          <a href="drug-input-continue-2" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-           </div>
-          </div>
-
-          <hr style="margin-top: 0px;">
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+      
+        <p>You can look up <a href="drug-input-search" title="Drug input search">previously entered drug searches here</a>.</p>
+      </div>
 
       <form id="myForm">
 <h3 class="nhsuk-heading-s">Check drug details</h3>
+
+<p>Check these drug details. If any details are incorrect, amend the drug details and select Update information.
+<br>
+If all the details are correct select View next drug.</p>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
@@ -246,7 +240,7 @@ New Drug Purchase Price Database (Margin Survey)
 
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input-continue" class="nhsuk-button">View next drug</a> 
+                            <a href="drug-input-continue" class="nhsuk-button">Details correct - view next drug</a> 
                             <a href="drug-input-continue-2" class="nhsuk-button">Update information</a> 
                             <a href="continue-2" class="nhsuk-button nhsuk-button--secondary" >Back to suppliers list</a>
                             <a href="delete-2" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
