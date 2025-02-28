@@ -50,3 +50,19 @@ th.first-col,
 th.second-col {
     z-index: 9999 !important;
 }
+
+.nhsuk-card.nhsuk-card--confirmation {
+  background-color: #005EB8;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.nhsuk-card {
+  margin-bottom: 40px;
+  background: #ffffff;
+  border: 1px solid #d8dde0;
+  position: relative;
+  width: 100%;
+}
