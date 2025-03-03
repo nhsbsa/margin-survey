@@ -46,12 +46,35 @@ New Drug Purchase Price Database (Margin Survey)
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
       <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
 
-      <div class="nhsuk-inset-text">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
-      
-        <p><a href="drug-input-search" title="Drug input search">Search</a> for a drug entry</p>
-      </div>
 
+      <!--search-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="Search">
+              Enter invoice and drug reference number to search for previously entered drugs.
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              For example Supplierinvoice.033
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+               </div>
+          </div>
+      
+        </div>
+      </details>
+
+      <!--search-->
+      
+<br>
 
       <form id="myForm">
 <h3 class="nhsuk-heading-s">Add drug details</h3>
