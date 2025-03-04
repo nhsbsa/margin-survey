@@ -43,3 +43,4 @@ exports.matchRoutes = function (req, res, next) { /* eslint-disable-line func-na
 
   renderPath(path, res, next);
 };
+
