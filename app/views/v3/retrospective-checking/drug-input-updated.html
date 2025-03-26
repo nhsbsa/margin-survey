@@ -29,13 +29,26 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-
+   
 
 {{ backLink({
   "href": "javascript:history.go(-1)",
   "text": "Go back"
   }) }}
 
+<br>
+  
+    <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-3" style="background-color: #007f3b;">
+
+      <div class="nhsuk-card__content">
+
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-1">
+          Drug details updated
+        </h1>
+
+      </div>
+
+    </div>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
@@ -46,36 +59,35 @@ Drug Purchase Price Database (Margin Survey)
       <span class="nhsuk-caption-xl">January 2025 - Retrospective check</span>
       <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
 
-      <!--search-->
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Search for a drug entry
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-      
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="Search">
-              Enter invoice and drug reference number to search for previously entered drugs.
-            </label>
-            <div class="nhsuk-hint" id="example-with-hint-text-hint">
-              For example Supplierinvoice.033
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-              <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-               </div>
+     <!--search-->
+     <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Search for a drug entry
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+    
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="Search">
+            Enter invoice and drug reference number to search for previously entered drugs.
+          </label>
+          <div class="nhsuk-hint" id="example-with-hint-text-hint">
+            For example Supplierinvoice.033
           </div>
-      
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+            <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+             </div>
         </div>
-      </details>
+    
+      </div>
+    </details>
 
-      <!--search-->
+    <!--search-->
+
 <br>
       
-
-
       <form id="myForm">
 <h3 class="nhsuk-heading-s">Check drug details</h3>
 
@@ -117,7 +129,7 @@ If all the details are correct select View next drug.</p>
     </label>
     <div class="nhsuk-hint" id="example-with-hint-text-hint">
       Use this unique reference number to search and amend this entry.
-      <br>
+        <br>
       Format this unique reference number using the supplier's invoice number followed by a number. 
       <br>
       For example Supplierinvoice.001
@@ -237,19 +249,18 @@ If all the details are correct select View next drug.</p>
 </div>
 
 <div class="nhsuk-form-group">
-  
-<label class="nhsuk-label" for="autocomplete-Manufacturer">
- Generic Manufacturer
-</label>
-<input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
-<ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
-</div>
-<datalist id="Manufacturer">
-  <option value="AbbVie"></option>
-  <option value="Bristol-Myers Squibb"></option>
-  <option value="GSK"></option>
-  <option value="Johnson & Johnson Company"></option>
-</datalist>
+  <label class="nhsuk-label" for="autocomplete-Manufacturer">
+    Generic Manufacturer
+   </label>
+   <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+   <ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
+   </div>
+   <datalist id="Manufacturer">
+     <option value="AbbVie"></option>
+     <option value="Bristol-Myers Squibb"></option>
+     <option value="GSK"></option>
+     <option value="Johnson & Johnson Company"></option>
+   </datalist>
 
 
 <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
