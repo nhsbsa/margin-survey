@@ -69,7 +69,7 @@ Drug Purchase Price Database (Margin Survey)
               <div class="nhsuk-form-group">
                    
                 <label class="nhsuk-label" for="autocomplete-supplier">
-                  Enter supplier
+                  Enter supplier name
                  </label>
                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="">
                  <ul class="nhsuk-list" id="supplier-list" hidden></ul>
@@ -89,16 +89,19 @@ Drug Purchase Price Database (Margin Survey)
                     <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
                       <div class="nhsuk-checkboxes__item">
                         <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
-                          Statement provided
-                        </label>
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="Statement" >
+                        Statement provided (Optional)
+                      </label>
                       </div>
                       </div>
                      </div>
                     
                     <div class="nhsuk-form-group">
                       <label class="nhsuk-label" for="total">
-                        Statement total amount
+                       Statement total amount (optional)
+                       <div class="nhsuk-hint" id="total-hint">
+                        For example, £600 or £192.01
+                      </div>
                       </label>
                       <div class="nhsuk-input__wrapper">
                     
