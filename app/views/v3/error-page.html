@@ -1,0 +1,76 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+<div class="nhsuk-grid-row">
+  
+  <div class="nhsuk-grid-column-two-thirds">
+
+<br>
+      
+
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">NHS Drug Purchase Price Database</span>
+      <h1 class="nhsuk-heading-xl">Sorry, there is a problem with the service</h1>
+    
+     <p>Try again later.</p>
+        
+
+
+     <p>We have not saved your answers. When the service is available, you will need to start again.</p>
+      
+
+<br>     
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Need help with signing in?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+         
+          <p>Contact the helpdesk on 0300 123 2344 or via email at <a href="mailto: marginsurvey@nhs.net">marginsurvey@nhs.net </a>for help</p>
+          
+      
+        </div>
+      </details>
+     
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
