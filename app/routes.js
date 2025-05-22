@@ -40,3 +40,38 @@ router.post(/deletedrug/, function (req, res) {
       res.redirect('drug-input-continue-2');
     }
   });
+
+
+    router.post(/completeaccount/, function (req, res) {
+
+    const completeaccount = req.session.data['completeaccount']
+  
+    if (completeaccount === "yes") {
+      res.redirect('confirmation');
+    } else {
+      res.redirect('continue');
+    }
+  });
+
+
+   router.post(/updateremove/, function (req, res) {
+
+    const updateremove = req.session.data['updateremove']
+  
+    if (updateremove === "yes") {
+      res.redirect('drug-input-deleted');
+    } else {
+      res.redirect('drug-input-continue');
+    }
+  });
+
+   router.post(/areyousure/, function (req, res) {
+
+    const areyousure = req.session.data['areyousure']
+  
+    if (areyousure === "yes") {
+      res.redirect('drug-input-deleted');
+    } else {
+      res.redirect('drug-input-continue');
+    }
+  });
