@@ -1,0 +1,138 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+    <br>
+    <form id="myForm">
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Add a supplier to Alpha Pharmacy</h1>
+      
+    <!-- auto complete 
+     
+    <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                    Select supplier
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="service-search" type="text" autocomplete="off" list="trusts" placeholder="Select or enter a supplier">
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="trusts">
+                  <option value="Altera Digital Health"></option>
+                  <option value="Dedalusd"></option>
+                  <option value="Meditech UK"></option>
+                  <option value="Oracle Corporation UK Ltd"></option>
+                  <option value="Nervecentre Software Ltd"></option>
+                </datalist>
+
+              -->
+              
+                <div class="nhsuk-form-group">
+                   
+              <label class="nhsuk-label" for="autocomplete-supplier">
+                Enter supplier name
+               </label>
+               <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="">
+               <ul class="nhsuk-list" id="supplier-list" hidden></ul>
+               </div>
+               <datalist id="supplier">
+                 <option value="Altera Digital Health"></option>
+                 <option value="Dedalusd"></option>
+                 <option value="Meditech UK"></option>
+                 <option value="Oracle Corporation UK Ltd"></option>
+                 <option value="Nervecentre Software Ltd"></option>
+               </datalist>
+
+
+                <div class="nhsuk-card-group" >
+                  
+                     
+                  <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
+                        Statement provided (optional)
+                      </label>
+                    </div>
+                    </div>
+                   </div>
+                  
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="total">
+                     Statement total amount (optional)
+                     <div class="nhsuk-hint" id="total-hint">
+                      For example, £600 or £192.01
+                    </div>
+                    </label>
+                    <div class="nhsuk-input__wrapper">
+                  
+                      <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                  
+                      <input class="nhsuk-input nhsuk-input--width-5" id="total" name="total" type="text">
+                    </div>
+                  
+                  </div>
+
+                  <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+
+                </form>
+
+
+                   <script>
+                    function clearFields() {
+                        document.getElementById('myForm').reset();
+                    }
+                </script>
+           
+
+                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
+                            <a href="drug-input" class="nhsuk-button">Save and add drug</a> 
+                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                          </div>
+
+                          </div>
+     
+                        </div>
+
+</div>
+
+
+{% endblock %}
