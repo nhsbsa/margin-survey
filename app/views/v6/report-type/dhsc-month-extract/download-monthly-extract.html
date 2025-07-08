@@ -44,10 +44,17 @@ Drug Purchase Price Database (Margin Survey)
         </p>    
       </div>
 
+    <script>
+    // Check if the page was reloaded
+    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+      // Redirect to another page
+      window.location.href = "downloaded-monthly-extract";
+    }
+    </script>
       
       <p><a href="next-dhsc-monthly-extract">Generate another report</a></p>
 <br>
-      <a href="../../report/report-dashboard" class="nhsuk-button nhsuk-button--primary">Back to the dashboard</a>
+      <a href="../../report/report-dashboard" class="nhsuk-button nhsuk-button--primary">Back to reports</a>
 
 
 </div>
