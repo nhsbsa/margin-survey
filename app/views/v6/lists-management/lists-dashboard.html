@@ -21,7 +21,7 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Dashboard</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -51,35 +51,47 @@ Drug Purchase Price Database (Margin Survey)
 <h1 class="nhsuk-heading-xl">Lists management</h1>
 
        
-    <table class="nhsuk-table">
-  <caption class="nhsuk-table__caption">Select a report type to export</caption>
-  <thead class="nhsuk-table__head">
-    <tr>
-      <th scope="col" class="nhsuk-table__header">Reports</th>
-      <th scope="col" class="nhsuk-table__header">Action</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-     <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">Daily checking extract</td>
-      <td class="nhsuk-table__cell"><a href="">View</a></td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">DHSC monthly extract</td>
-      <td class="nhsuk-table__cell"><a href="">View</a></td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">Retrospective extract</td>
-      <td class="nhsuk-table__cell"><a href="">View</a></td>
-    </tr>
-     <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">Archived records  (previous surveys)</td>
-      <td class="nhsuk-table__cell"><a href="">View</a></td>
-    </tr>
-  </tbody>
-</table>
-      
-    
+ <div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+          <a class="nhsuk-card__link" href="pharmacy-list/pharmacy-list">Pharmacy list</a>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+          <a class="nhsuk-card__link" href="#">Drug list</a>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+          <a class="nhsuk-card__link" href="#">Retrospective drug list</a>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+          <a class="nhsuk-card__link" href="#">Drug supplier list</a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
