@@ -1,0 +1,86 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v7.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+ 
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+<div class="nhsuk-grid-row">
+
+  
+<div class="nhsuk-grid-column-full">
+  
+
+     
+
+   
+<h1 class="nhsuk-heading-xl">Reports</h1>
+
+       
+    <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Select a report type to export</caption>
+  <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Reports</th>
+      <th scope="col" class="nhsuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+     <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Daily checking extract</td>
+      <td class="nhsuk-table__cell"><a href="../report/daily-extract/daily-checking-extract">View</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">DHSC monthly extract</td>
+      <td class="nhsuk-table__cell"><a href="../report/dhsc-month-extract/dhsc-monthly-extract">View</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Retrospective extract</td>
+      <td class="nhsuk-table__cell"><a href="../report/retro-extract/retro-extract">View</a></td>
+    </tr>
+     <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Archived records (previous surveys)</td>
+      <td class="nhsuk-table__cell"><a href="../report/archived-records/archived-records">View</a></td>
+    </tr>
+  </tbody>
+</table>
+      
+    
+
+    </div>
+  </div>
+{% endblock %}
