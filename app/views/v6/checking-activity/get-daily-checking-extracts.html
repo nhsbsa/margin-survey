@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v6.html' %}
+{% extends 'layout.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -18,18 +18,6 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../report/report-dashboard">Reports</a></li>
-  </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="#">
-      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Dashboard
-    </a>
-  </p>
-</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -42,28 +30,33 @@ Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
+
+    <br>
       
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Daily checking extracts</h1>
-
-      <p>Extracts will be downloaded to your device as a zipped file containing a number of csv files.</p>
-<br>
- 
-        <div class="nhsuk-form-group ">
+      <h1 class="nhsuk-heading-xl">Daily checking extracts</h1>
+    
+        <div class="nhsuk-form-group">
 
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                 <legend class="nhsuk-fieldset__legend nhsuk-label--l">
                 <h2 class="nhsuk-fieldset__heading">
-                    Enter extract date
+                    Enter the report date
                 </h2>
                 </legend>
                 <div class="nhsuk-hint" id="example-hint">
                 For example, 31 3 2025
                 </div>
+            
                 <div class="nhsuk-date-input" id="example">
                 <div class="nhsuk-date-input__item">
                     <div class="nhsuk-form-group">
@@ -88,16 +81,12 @@ Drug Purchase Price Database (Margin Survey)
                 </div>
                 </div>
             </fieldset>
-
+            
         </div>
 
-<br>
-        <!-- Button to generate reports -->
-        <a href="daily-download" class="nhsuk-button" >Get reports</a>
+<br>        
 
-
-<br>
-
+        <a href="download-daily-checking-extract" class="nhsuk-button">Get reports</a>
      <!-- End of content -->
 
     </div>

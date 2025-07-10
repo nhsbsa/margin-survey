@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v6.html' %}
+{% extends 'layout.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -18,38 +18,32 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../report/report-dashboard">Reports</a></li>
-    
-  </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="#">
-      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Dashboard
-    </a>
-  </p>
-</nav>
-
 {% endblock %}
 
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
 
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-    
+    <br>
+      
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Get monthly margin survey data for the Department of Health and Social Care (DHSC)</h1>
+      <h1 class="nhsuk-heading-xl">Get monthly margin survey data for the Department of Health and Social Care (DHSC)</h1>
     
       <p>Generate monthly extracts of the drug purchase price (margin survey) data to send to DHSC.</p>
 <br>
@@ -58,11 +52,11 @@ Drug Purchase Price Database (Margin Survey)
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                 <legend class="nhsuk-fieldset__legend nhsuk-label--l">
                 <h2 class="nhsuk-fieldset__heading">
-                Select a month and year
+                    Select a month and year
                 </h2>
                 </legend>
                 <div class="nhsuk-hint" id="example-hint">
-                Choose any previous month and year. Data cannot be extracted for the current month.
+                Choose any previous month, and year. Data cannot be extracted for the current month.
                 </div>
 <br>
                 <!-- Date input fields for month and year -->                
@@ -93,28 +87,25 @@ Drug Purchase Price Database (Margin Survey)
                         </label>
                         <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric">
                             <option value="Select">Select a year</option>
-                            <option value="2025">2025</option>
-                            <option value="2024">2024</option>
                             <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
                         </select>
                     </div>
                     <div>
-                                            
+                        <a href="download-daily-checking-extract" class="nhsuk-button" style="margin: 0;">Generate reports</a>
+                    </div>
                 </div>
             </fieldset>
 
         </div>
 
 
-<br>
-        <!-- Button to generate reports -->
-        <a href="download-monthly-extract" class="nhsuk-button" >Generate report</a>
-
-
-<br>
 <br>
 
         <table class="nhsuk-table">
@@ -132,21 +123,21 @@ Drug Purchase Price Database (Margin Survey)
         <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell nhsuk-u-text-break-word">June 2025</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">June-2025-report.xlsx</td>
+            <td class="nhsuk-table__cell nhsuk-u-text-break-word">report-june-2025.xlsx</td>
             <td class="nhsuk-table__cell nhsuk-u-text-break-word">01 June 2025 13:34</td>
             <td class="nhsuk-table__cell nhsuk-u-text-break-word">Ross Geller</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word"><a href="#">Download</a>
+            <td class="nhsuk-table__cell nhsuk-u-text-break-word"><a href="download-monthly-extract">Download</a>
             </td>
             </tr>
         </tbody>
 
-         <tbody class="nhsuk-table__body">
+           <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell nhsuk-u-text-break-word">May 2025</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">May-2025-report.xlsx</td>
+            <td class="nhsuk-table__cell nhsuk-u-text-break-word">report-may-2025.xlsx</td>
             <td class="nhsuk-table__cell nhsuk-u-text-break-word">01 May 2025 13:34</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">Rachel Green</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word"><a href="#">Download</a>
+            <td class="nhsuk-table__cell nhsuk-u-text-break-word">Monica Geller</td>
+            <td class="nhsuk-table__cell nhsuk-u-text-break-word"><a href="">Download</a>
             </td>
             </tr>
         </tbody>
