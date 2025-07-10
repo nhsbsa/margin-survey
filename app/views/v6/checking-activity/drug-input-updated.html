@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-v6.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -18,6 +18,21 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/select-month-year">Select month and year</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/menu">Margin survey checking dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/continue">List of suppliers</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/supplier-input-continue">Check supplier</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -31,12 +46,6 @@ Drug Purchase Price Database (Margin Survey)
 
    
 
-{{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-  }) }}
-
-<br>
   
     <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-3" style="background-color: #007f3b; text-align: left;">
 
