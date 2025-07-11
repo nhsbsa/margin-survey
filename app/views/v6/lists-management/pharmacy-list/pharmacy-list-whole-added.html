@@ -39,7 +39,11 @@ Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-
+<div class="nhsuk-panel">
+  <h1 class="nhsuk-panel__title">
+    Old Pharmacy has added to the list
+  </h1>
+</div>
 
 <div class="nhsuk-grid-row">
 
@@ -52,19 +56,21 @@ Drug Purchase Price Database (Margin Survey)
       <span class="nhsuk-caption-xl">Pharmacy list</span>
 <h1 class="nhsuk-heading-xl">April 2025 to June 2025</h1>
 
-
-  <h2 class="nhsuk-heading-m">Generate list</h2>
+<h2 class="nhsuk-heading-m">Generate list</h2>
     <p class="nhsuk-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
      
-       
+      
          <a href="generate-sample" class="nhsuk-button">Generate sample</a>
 
-       
+
 
          <hr>
 
 
         <h2 class="nhsuk-heading-m">Pharmacy list (945)</h2>
+
+      
+
                <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="autocomplete-supplier">
     Search a pharmacy name
@@ -74,9 +80,7 @@ Drug Purchase Price Database (Margin Survey)
     <input class="nhsuk-input nhsuk-u-width-one-third" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="Search here">
     
     <a href="" class="nhsuk-button" style="margin-top:-8px ;">Search</a>
-   
-  </div>
-
+ 
  <p class="nhsuk-body"><a href="add-pharmacy">Add pharmacy to the list</a></p> 
 
   <ul class="nhsuk-list" id="supplier-list" hidden></ul>
@@ -93,7 +97,7 @@ Drug Purchase Price Database (Margin Survey)
 
         <table class="nhsuk-table">
            <caption class="nhsuk-u-font-size-19 nhsuk-u-font-weight-normal nhsuk-u-padding-bottom-2">
-            <span class="nhsuk-u-visually-hidden">This table shows the whole pharmacy lists that was uploaded for April 2025 to June 2025.</span>
+   <span class="nhsuk-u-visually-hidden">This table shows the whole pharmacy lists that was uploaded for April 2025 to June 2025.</span>
   
 </caption>
  <thead class="nhsuk-table__head">
@@ -126,6 +130,14 @@ Drug Purchase Price Database (Margin Survey)
     <tr class="nhsuk-table__row">
      <th scope="row" class="nhsuk-table__header"><a href="">Holiday Pharmacy</a></th>
       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">111213</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Mark as eligible</a> | <a href="">Remove</a></td>
+    </tr>
+     <tr class="nhsuk-table__row">
+     <th scope="row" class="nhsuk-table__header"><a href="">Old Pharmacy</a></th>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">111256</td>
       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
