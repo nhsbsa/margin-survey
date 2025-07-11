@@ -75,3 +75,29 @@ router.post(/deletedrug/, function (req, res) {
       res.redirect('drug-input-continue');
     }
   });
+
+  //v6//
+
+  router.post(/finalsample/, function (req, res) {
+
+    const finalsample = req.session.data['finalsample']
+  
+    if (finalsample === "yes") {
+      res.redirect('confirmation');
+    } else {
+      res.redirect('25-generate-sample');
+    }
+  });
+
+  router.post(/removeaaapharmacy/, function (req, res) {
+
+    const removeaaapharmacy = req.session.data['removeaaapharmacy']
+  
+    if (removeaaapharmacy === "yes") {
+      res.redirect('pharmacy-list-whole-confirm-remove');
+    } else {
+      res.redirect('pharmacy-list-whole');
+    }
+  });
+
+  
