@@ -1,0 +1,98 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v6.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+ 
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Dashboard</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+  <!-- Change the page title here -->
+    <span class="nhsuk-caption-xl">Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Select month and year</h1>
+       
+      <div class="nhsuk-card-group">
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group">
+           
+            <label class="nhsuk-label" for="select-1">
+              Year
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1"selected>Select a year</option>
+              <option value="2">2023</option>
+              <option value="3">2024</option>
+              <option value="4">2025</option>
+              <option value="5">2026</option>
+              <option value="6">2027</option>
+              <option value="7">2028</option>
+              <option value="8">2029</option>
+              <option value="9">2030</option>
+            </select>
+          </div>
+      </div>
+
+
+<br>
+    
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Months
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1"selected>Select a month</option>
+              <option value="2">January to March</option>
+              <option value="3">April to June</option>
+              <option value="4">July to September</option>
+              <option value="5">October to December</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <a href="menu" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+       Continue
+      </a>
+  
+      <!-- End of content -->
+
+      </div>
+  </div>
+{% endblock %}
