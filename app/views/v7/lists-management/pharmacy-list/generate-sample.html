@@ -15,14 +15,13 @@
 Drug Purchase Price Database (Margin Survey)
 {% endblock %}
 
-<!-- For adding a breadcrumb -->
- 
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Lists management</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Select month/year</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-whole">Pharmacy list for April to June 2025</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -48,77 +47,51 @@ Drug Purchase Price Database (Margin Survey)
 
       
       <!-- Change the page title here -->
-<span class="nhsuk-caption-xl">Pharmacy list</span>
-<h1 class="nhsuk-heading-xl">Select a year and quarter months</h1>
-
-    <p class="nhsuk-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-     
-         <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
-                    <div>
-                       <label class="nhsuk-label" for="year">
-                            Year
-                        </label>
-                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
-                            <option value="Select">Select a year</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                        </select>
-                    </div>
-                    <div>
-                         <label class="nhsuk-label" for="month">
-                            Months
-                        </label>
-                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="month" name="month" type="text" inputmode="numeric">
-                            <option value="Select">Select a quarter</option>
-                            <option value="01">January to March</option>
-                            <option value="02">April to June</option>
-                            <option value="03">July to September</option>
-                             <option value="03">October to December</option>
-                        </select>
-                    </div>
-                
-
-        </div>
-
-        <br>
-
-         <a href="25-generate-sample" class="nhsuk-button">Continue</a>
-
-         <a href="upload-list" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-  Upload list
-         </a>
-
+       <span class="nhsuk-caption-xl">Pharmacy list</span>
+<h1 class="nhsuk-heading-xl">Generate sample from April to June 2025</h1>
+    
+     <p class="nhsuk-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 <br>
-<br>
-         <h2 class="nhsuk-heading-m">Uploaded list</h2>
+      <div style="display: flex; gap: 1rem; align-items: flex-end;">
+           <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="month-year">
+    Month and year
+  </label> <select class="nhsuk-select" id="month-year" name="month-year">
+    <option value="2" selected>Select a month and year</option>
+    <option value="1">April 2025</option>
+    <option value="2">May 2025</option>
+    <option value="3">June 2025</option>
+  </select>
+</div>          
+              
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-4">
+    Sample size
+  </label> 
+  <input class="nhsuk-input nhsuk-input--width-4" id="input-width-4" name="test-width-4" type="text" value="25">
+</div>
+</div>
+
+ <a href="25-generate-sample" class="nhsuk-button">Generate sample</a>
+                 
+<hr>
+
+<h2 class="nhsuk-heading-m">Generated sample</h2>
 
         <table class="nhsuk-table">
            <caption class="nhsuk-u-font-size-19 nhsuk-u-font-weight-normal nhsuk-u-padding-bottom-2">
-  This table shows all previously uploaded lists.
+  This table shows all previously generated lists.
 </caption>
         <thead class="nhsuk-table__head">
             <tr>
             <th scope="col" class="nhsuk-table__header">Month and year</th>
             <th scope="col" class="nhsuk-table__header">Sample size</th>
-            <th scope="col" class="nhsuk-table__header">Date uploaded</th>
-            <th scope="col" class="nhsuk-table__header">Uploaded by</th>
+            <th scope="col" class="nhsuk-table__header">Date generated</th>
+            <th scope="col" class="nhsuk-table__header">Generated by</th>
             <th scope="col" class="nhsuk-table__header">Confirmed list</th>
             <th scope="col" class="nhsuk-table__header">Actions</th>
             </tr>
         </thead>
-           <tbody class="nhsuk-table__body">
-            <tr class="nhsuk-table__row">
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">June 2025</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">25</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">01 June 2025 10:14</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">Ross Geller</td>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word">No</th>
-            <td class="nhsuk-table__cell nhsuk-u-text-break-word"><a href="25-generate-sample">View</a>
-            </td>
-            </tr>
-        </tbody>
-
         <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell nhsuk-u-text-break-word">May 2025</td>
@@ -144,8 +117,9 @@ Drug Purchase Price Database (Margin Survey)
         </tbody>
         </table>
 
-  
-      <!-- End of content -->
+<br>     
+
+     <!-- End of content -->
 
     </div>
   </div>
