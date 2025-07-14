@@ -100,4 +100,4 @@ router.post(/deletedrug/, function (req, res) {
     }
   });
 
-  
+

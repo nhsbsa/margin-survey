@@ -22,8 +22,8 @@ Drug Purchase Price Database (Margin Survey)
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Lists management</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-list">Pharmacy list</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/25-generate-sample">Pharmacies for June 2025</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Select month/year</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list-whole">Pharmacy list for April to June 2025</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -49,37 +49,35 @@ Drug Purchase Price Database (Margin Survey)
 
       
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">Pharmacy list</span>
+      <span class="nhsuk-caption-xl">Remove pharmacy</span>
        <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
       <h1 class="nhsuk-fieldset__heading">
-        Confirm final sample for June 2025
+        Confirm remove AAA Pharmacy from the pharmacy list
       </h1>
     </legend>
     
 <br>
-      <p>This list contains a total of 25 pharmacies.</p>
-
-      <p>Confirm this list is the final sample.</p>
+     
       
       <div class="nhsuk-form-group">
 
-        <form action="finalsample" method="post">
+        <form action="removeaaapharmacy" method="post">
 
            <div class="nhsuk-radios">
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="inline-1" name="finalsample" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="inline-1" name="removeaaapharmacy" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
-                Yes, confirm this list is the final sample
+                Yes, confirm remove pharmacy
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="inline-2" name="finalsample" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="inline-2" name="removeaaapharmacy" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
-                No, this list is not the final sample
+                No, keep pharmacy
               </label>
             </div>
       
