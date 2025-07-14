@@ -22,6 +22,7 @@ Drug Purchase Price Database (Margin Survey)
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Lists management</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -39,57 +40,46 @@ Drug Purchase Price Database (Margin Survey)
 
 <div class="nhsuk-grid-row">
 
-  <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-full">
 
 
   <!-- Change the page title here -->
-    <span class="nhsuk-caption-xl">Margin Survey</span>
-      <h1 class="nhsuk-heading-xl">Select month and year</h1>
-       
-      <div class="nhsuk-card-group">
-        <div class="nhsuk-form-group">
-          <div class="nhsuk-form-group">
-           
-            <label class="nhsuk-label" for="select-1">
-              Year
-            </label>
-            <select class="nhsuk-select" id="select-1" name="select-1">
-              <option value="1"selected>Select a year</option>
-              <option value="2">2023</option>
-              <option value="3">2024</option>
-              <option value="4">2025</option>
-              <option value="5">2026</option>
-              <option value="6">2027</option>
-              <option value="7">2028</option>
-              <option value="8">2029</option>
-              <option value="9">2030</option>
-            </select>
-          </div>
-      </div>
+    <span class="nhsuk-caption-xl">Drug list</span>
+      <h1 class="nhsuk-heading-xl">Select a year and quarter months</h1>
+      <p>Select a year and the corresponding quarter months for the drug list.</p>
 
+      <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
+                    <div>
+                       <label class="nhsuk-label" for="year">
+                            Year
+                        </label>
+                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
+                            <option value="Select">Select a year</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
+                    <div>
+                         <label class="nhsuk-label" for="month">
+                            Months
+                        </label>
+                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="month" name="month" type="text" inputmode="numeric">
+                            <option value="Select">Select a quarter</option>
+                            <option value="01">January to March</option>
+                            <option value="02">April to June</option>
+                            <option value="03">July to September</option>
+                             <option value="03">October to December</option>
+                        </select>
+                    </div>
+                
 
+        </div>
 <br>
     
-        <div class="nhsuk-form-group">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="select-1">
-              Months
-            </label>
-            <select class="nhsuk-select" id="select-1" name="select-1">
-              <option value="1"selected>Select a month</option>
-              <option value="2">January to March</option>
-              <option value="3">April to June</option>
-              <option value="4">July to September</option>
-              <option value="5">October to December</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      </div>
 
-      <a href="menu" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-       Continue
-      </a>
+      <a href="drug-list" class="nhsuk-button" data-module="nhsuk-button" type="submit">Continue</a>
+      <a href="" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">Upload list</a>
   
       <!-- End of content -->
 

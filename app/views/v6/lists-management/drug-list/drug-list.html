@@ -1,0 +1,136 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v6.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+ 
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Lists management</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Select month/year</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+    <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">Drug list</span>
+        <h1 class="nhsuk-heading-xl">January 2025 to March 2025</h1>
+
+
+        <h2 class="nhsuk-heading-m">Generate list</h2>
+            <p class="nhsuk-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+     
+        
+        <br>
+
+         <a href="generate-sample" class="nhsuk-button">Generate sample</a>
+
+         <hr>
+
+        <h2 class="nhsuk-heading-m">Drug list (25)</h2>
+
+      
+
+        <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="autocomplete-supplier">
+            Search a drug name
+        </label>
+
+        <div class="input-button-wrapper">
+            <input class="nhsuk-input nhsuk-u-width-one-third" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="Search here">
+            
+            <a href="" class="nhsuk-button" style="margin-top:-8px ;">Search</a>
+        </div>
+
+        <ul class="nhsuk-list" id="supplier-list" hidden></ul>
+        </div>
+
+        <datalist id="supplier">
+        <option value="Amlodipine 5mg tablets - For hypertension"></option>
+        <option value="Citalopram 20mg tablets - Another antidepressant"></option>
+        <option value="Oxybutynin 5mg modified-release tablets"></option>
+        </datalist>
+
+
+
+
+        <table class="nhsuk-table">
+           <caption class="nhsuk-u-font-size-19 nhsuk-u-font-weight-normal nhsuk-u-padding-bottom-2">
+            This table shows the whole drug lists that was uploaded for January 2025 to March 2025.
+            </caption>
+        <thead class="nhsuk-table__head">
+            <tr>
+            <th scope="col" class="nhsuk-table__header">Drug name</th>
+            <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">ODS code</th>
+            <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Participating</th>
+            <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Previous <br>participating</th> 
+            <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Eligible</th>
+            <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Action</th>
+            </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+            <th scope="row" class="nhsuk-table__header"><a href="aaa-pharmacy">Amlodipine 5mg tablets - For hypertension</a></th>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">123456</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="pharmacy-list-whole-eligible">Mark as ineligible</a> | <a href="remove-pharamcy">Remove</a></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+            <th scope="row" class="nhsuk-table__header"><a href="">Citalopram 20mg tablets - Another antidepressant</a></th>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">789075</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Mark as ineligible</a> | <a href="">Remove</a></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+            <th scope="row" class="nhsuk-table__header"><a href="">Oxybutynin 5mg modified-release tablets</a></th>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">111213</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Mark as eligible</a> | <a href="">Remove</a></td>
+            </tr>
+        </tbody>
+        </table>
+
+        <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}
