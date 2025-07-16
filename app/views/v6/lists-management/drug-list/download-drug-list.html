@@ -18,6 +18,7 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -29,6 +30,7 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
@@ -37,25 +39,14 @@ Drug Purchase Price Database (Margin Survey)
       <!-- Change the page title here -->
       <div class="nhsuk-panel">
         <h1 class="nhsuk-panel__title">
-          A monthly extract for June 2025 is being generated
+          Drug list for July 2025 to September 2025 is now available to download
         </h1>
-        <p class="nhsuk-panel__body">
-          Refresh this page after 5 minutes to get the reports
-        </p>    
       </div>
 
-    <script>
-    // Check if the page was reloaded
-    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-      // Redirect to another page
-      window.location.href = "downloaded-monthly-extract";
-    }
-    </script>
+      <p><a href="#">Download the drug list for July 2025 to September 2025.</a></p>
       
-      <p><a href="next-dhsc-monthly-extract">Generate another report</a></p>
 <br>
-      <a href="../../report/report-dashboard" class="nhsuk-button nhsuk-button--primary">Back to reports</a>
-       <a href="../../checking-activity/menu" class="nhsuk-button nhsuk-button--secondary">Back to the margin survey checking dashboard</a>
+      <a href="selelct-month-year" class="nhsuk-button nhsuk-button--primary">Back to search</a>
 
 
 </div>
