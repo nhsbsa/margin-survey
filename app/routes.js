@@ -100,4 +100,13 @@ router.post(/deletedrug/, function (req, res) {
     }
   });
 
+  router.post(/MayFinal/, function (req, res) {
 
+    const MayFinal = req.session.data['MayFinal']
+  
+    if (MayFinal === "yes") {
+      res.redirect('confirmation-may');
+    } else {
+      res.redirect('25-generate-sample-may');
+    }
+  });
