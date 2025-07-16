@@ -55,22 +55,15 @@ Drug Purchase Price Database (Margin Survey)
 
     <p class="nhsuk-body">Select year and period (quarter), then click on <b>upload pharmacy list </b>(upload new or replace existing).</p>
      
-    
-         <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
+     <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
                     <div>
                        <label class="nhsuk-label" for="year">
                             Year
                         </label>
                         <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
                             <option value="Select">Select a year</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
                             <option value="2025">2025</option>
-                            <option value="2026">2026</option>
-                            <option value="2027">2027</option>
-                            <option value="2028">2028</option>
-                            <option value="2029">2029</option>
-                            <option value="2030">2030</option>
+                            <option value="2025">2026</option>
                         </select>
                     </div>
                     <div>
@@ -89,10 +82,18 @@ Drug Purchase Price Database (Margin Survey)
 
         </div>
 
-        <br>
+      <br>
+          <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="nhsuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+</div>
 
-         <a href="upload-confirmation" class="nhsuk-button">Upload pharmacy list</a>
+<br>
+         <a href="upload-confirmation" class="nhsuk-button">Upload</a>
 
+         <!--
          <hr>
 
          <h2 class="nhsuk-heading-m">Auto upload pharmacy list</h2>
@@ -104,7 +105,7 @@ Drug Purchase Price Database (Margin Survey)
   Auto upload list
          </a>
 
-  
+  -->
       <!-- End of content -->
 
     </div>
