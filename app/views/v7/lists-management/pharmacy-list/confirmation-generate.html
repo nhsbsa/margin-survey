@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v7.html' %}
+{% extends 'layout-v6.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -29,24 +29,35 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
 
-    <br>
 
-      <!-- Change the page title here -->
-      <div class="nhsuk-panel">
-        <h1 class="nhsuk-panel__title">
-          A monthly extract for June 2025 was successfully generated
-        </h1>    
-      </div>
-
-      <p><a href="#">Download the monthly extract for June 2025</a></p>
-      <p><a href="next-dhsc-monthly-extract">Generate another report</a></p>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
 <br>
-      <a href="../../report/report-dashboard" class="nhsuk-button nhsuk-button--primary">Back to get reports</a>
 
+              <div class="nhsuk-grid-column-two-thirds">
 
-</div>
+                <div class="nhsuk-panel">
+  <h1 class="nhsuk-panel__title">
+    Sample list has successfully generated for June 2025
+  </h1>
+  <div class="nhsuk-panel__body">
+   25 pharamcies has generated
   </div>
+</div>
+
+               
+                <p class="nhsuk-body"><a href="25-generate-sample" class="nhsuk-link">Continue to sampe list</a></p>
+ 
+
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        
 {% endblock %}

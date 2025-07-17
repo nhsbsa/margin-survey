@@ -22,7 +22,7 @@ Drug Purchase Price Database (Margin Survey)
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Lists management</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Manage lists</a></li>
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Select month/year</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
@@ -51,26 +51,17 @@ Drug Purchase Price Database (Margin Survey)
       <!-- Change the page title here -->
 <h1 class="nhsuk-heading-xl">Upload pharmacy list</h1>
 
-<h2 class="nhsuk-heading-m">Select a period upload pharmacy list</h2>
-
-    <p class="nhsuk-body">Select year and period (quarter), then click on <b>upload pharmacy list </b>(upload new or replace existing).</p>
+<p class="nhsuk-body">Select a year and a month, choose a file then upload pharmacy list.</p>
      
-    
-         <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
+     <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
                     <div>
                        <label class="nhsuk-label" for="year">
                             Year
                         </label>
                         <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
                             <option value="Select">Select a year</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
                             <option value="2025">2025</option>
-                            <option value="2026">2026</option>
-                            <option value="2027">2027</option>
-                            <option value="2028">2028</option>
-                            <option value="2029">2029</option>
-                            <option value="2030">2030</option>
+                            <option value="2025">2026</option>
                         </select>
                     </div>
                     <div>
@@ -89,10 +80,19 @@ Drug Purchase Price Database (Margin Survey)
 
         </div>
 
-        <br>
+      <br>
+      <br>
+          <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="nhsuk-file-upload" id="file-upload-1" name="fileUpload1" type="file" style="font-size: larger;">
+</div>
 
-         <a href="upload-confirmation" class="nhsuk-button">Upload pharmacy list</a>
+<br>
+         <a href="upload-confirmation" class="nhsuk-button">Upload</a>
 
+         <!--
          <hr>
 
          <h2 class="nhsuk-heading-m">Auto upload pharmacy list</h2>
@@ -104,7 +104,7 @@ Drug Purchase Price Database (Margin Survey)
   Auto upload list
          </a>
 
-  
+  -->
       <!-- End of content -->
 
     </div>
