@@ -24,7 +24,7 @@ Drug Purchase Price Database (Margin Survey)
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Manage lists</a></li>
    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-list">Pharmacy list</a></li>
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/25-generate-sample-april">Pharmacies for June 2025</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-details">Details of Anchor Health Pharmacy</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-details">View details for Anchor Health Pharmacy</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -75,11 +75,19 @@ Drug Purchase Price Database (Margin Survey)
 </div>
 
 <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="Pharmacy type">
+    Pharmacy type
+  </label> <select class="nhsuk-select" id="Pharmacy type" name="Pharmacy type">
+     <option value="Independent"selected>Independent</option>
+    <option value="Chain">Chain</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Contact name">
     Contact name
   </label> <input class="nhsuk-input nhsuk-input--width-20" id="Contact name" name="Contact name" type="text" value="Karen Johnson">
 </div>
-
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Contact number">
     Contact number
@@ -113,7 +121,7 @@ Drug Purchase Price Database (Margin Survey)
 
 <br>
 
-<h2 class="nhsuk-heading-m">Shipment details</h2>
+<h2 class="nhsuk-heading-m">Delivery details</h2>
 
 <div class="nhsuk-form-group">
 
@@ -153,9 +161,9 @@ Drug Purchase Price Database (Margin Survey)
 </div>
 
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="TNT Shipment number">
-    TNT Shipment number
-  </label> <input class="nhsuk-input nhsuk-input--width-20" id="TNT Shipment number" name="TNT Shipment number" type="text" value="FHV123497785GH">
+  <label class="nhsuk-label" for="TNT shipment number">
+    TNT shipment number
+  </label> <input class="nhsuk-input nhsuk-input--width-20" id="TNT shipment number" name="TNT shipment number" type="text" value="FHV123497785GH">
 </div>
 
 <br>
@@ -167,12 +175,12 @@ Drug Purchase Price Database (Margin Survey)
     Status
   </label> <select class="nhsuk-select" id="status" name="status">
     <option value="Blank"></option>
-    <option value="Letter sent"selected>Letter sent</option>
+    <option value="Letter sent">Letter sent</option>
     <option value="Confirm participation" >Confirm participation</option>
     <option value="To arrange collection" >To arrange collection</option>
      <option value="Collection arranged" >Collection arranged</option>
     <option value="Invoices on site" >Invoices on site</option>
-     <option value="Invoices received and returned" >Invoices received and returned</option>
+     <option value="Invoices received and returned" selected>Invoices received and returned</option>
      <option value="Not participating" >Not participating</option>
   </select>
 </div>
@@ -256,11 +264,7 @@ Drug Purchase Price Database (Margin Survey)
   </label> <input class="nhsuk-input nhsuk-input--width-20" id="Ongoing" name="Ongoing" type="text" value="Dianna Green">
 </div>
 
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="Checked">
-    Checked
-  </label> <input class="nhsuk-input nhsuk-input--width-20" id="Checked" name="Checked" type="text" value="Lee Jones">
-</div>
+
 
 
 <br>
