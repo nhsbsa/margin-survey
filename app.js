@@ -57,6 +57,7 @@ const appViews = [
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/macros'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages'),
+  path.join(__dirname, 'node_modules/@nhsbsa/session-timeout-warning-component/component'),
 ];
 
 const nunjucksConfig = {
@@ -166,6 +167,7 @@ app.set('trust proxy', 1);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/packages')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
+app.use(express.static('./node_modules/@nhsbsa/session-timeout-warning-component/dist'));
 
 // Use custom application routes
 app.use('/', routes);
