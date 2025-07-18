@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-v6.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -31,26 +31,36 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-
-
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
 <br>
-      
-      <!-- Change the page title here -->
-      <h1 class="nhsuk-heading-xl">You have been signed out</h1>
-     
-     <p class="nhsuk-body">It appears you have been inactive for a while.</p>
 
-     <p class="nhsuk-body">You have been signed out</p>
+              <div class="nhsuk-grid-column-two-thirds">
+
+                <div class="nhsuk-panel">
+  <h1 class="nhsuk-panel__title">
+    Ashby Emporium has added successfully
+  </h1>
+  <div class="nhsuk-panel__body">
+   You will find this supplier in the list
+  </div>
+</div>
+
+               
+                <p class="nhsuk-body"><a href="supplier-list" class="nhsuk-link">Back to supplier list</a></p>
  
 
-     <br>
+                
+                <p class="nhsuk-body"><a href="../../home-page" class="nhsuk-link">Back to Home page</a></p>
 
-<a href="access-2" class="nhsuk-button">Sign back in</a>
-      <!-- End of content -->
 
-    </div>
-  </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        
 {% endblock %}

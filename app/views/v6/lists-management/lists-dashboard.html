@@ -45,54 +45,44 @@ Drug Purchase Price Database (Margin Survey)
 <div class="nhsuk-grid-column-full">
   
 
-     
-
-      
+   
 <h1 class="nhsuk-heading-xl">Select a list</h1>
 
        
- <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-    <div class="nhsuk-card nhsuk-card--clickable">
-      <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
-          <a class="nhsuk-card__link" href="pharmacy-list/pharmacy-list">Pharmacy list</a>
-        </h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-    <div class="nhsuk-card nhsuk-card--clickable">
-      <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
-          <a class="nhsuk-card__link" href="drug-list/selelct-month-year">Drug list</a>
-        </h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-    <div class="nhsuk-card nhsuk-card--clickable">
-      <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
-          <a class="nhsuk-card__link" href="retrospective-drug-list/select-month-year">Retrospective drug list</a>
-        </h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-    <div class="nhsuk-card nhsuk-card--clickable">
-      <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading nhsuk-heading-xs">
-          <a class="nhsuk-card__link" href="#">Supplier list</a>
-        </h2>
-      </div>
-    </div>
-  </div>
-</div>
-
+    <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption"><span aria-hidden="Select a report type to export"></span></caption>
+  <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Reports</th>
+      <th scope="col" class="nhsuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+     <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Pharmacy list</td>
+      <td class="nhsuk-table__cell"><a href="pharmacy-list/pharmacy-list">View</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Drug list</td>
+      <td class="nhsuk-table__cell"><a href="drug-list/selelct-month-year">View</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Retrospective drug list</td>
+      <td class="nhsuk-table__cell"><a href="retrospective-drug-list/select-month-year">View</a></td>
+    </tr>
+     <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Supplier list</td>
+      <td class="nhsuk-table__cell"><a href="supplier-list/supplier-list">View</a></td>
+    </tr> 
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Manufacturer list</td>
+      <td class="nhsuk-table__cell"><a href="manufacturer-list/manufacturer-list">View</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+      
+    
     </div>
   </div>
 {% endblock %}

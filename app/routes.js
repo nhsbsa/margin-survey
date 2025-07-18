@@ -109,6 +109,7 @@ router.post(/deletedrug/, function (req, res) {
     } else {
       res.redirect('25-generate-sample-may');
     }
+
   });
 
    router.post(/supplierConfirmation/, function (req, res) {
@@ -121,3 +122,4 @@ router.post(/deletedrug/, function (req, res) {
       res.redirect('drug-input');
     }
   });
+
