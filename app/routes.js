@@ -110,3 +110,14 @@ router.post(/deletedrug/, function (req, res) {
       res.redirect('25-generate-sample-may');
     }
   });
+
+   router.post(/supplierConfirmation/, function (req, res) {
+
+    const supplierConfirmation = req.session.data['supplierConfirmation']
+
+    if (supplierConfirmation === "yes") {
+      res.redirect('continue');
+    } else {
+      res.redirect('drug-input');
+    }
+  });
