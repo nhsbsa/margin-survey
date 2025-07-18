@@ -123,3 +123,24 @@ router.post(/deletedrug/, function (req, res) {
     }
   });
 
+router.post(/suppliergone/, function (req, res) {
+
+    const suppliergone = req.session.data['suppliergone']
+  
+    if (suppliergone === "yes") {
+      res.redirect('confirmation-remove');
+    } else {
+      res.redirect('supplier-list');
+    }
+  });
+
+  router.post(/manufacturergone/, function (req, res) {
+
+    const manufacturergone = req.session.data['manufacturergone']
+  
+    if (manufacturergone === "yes") {
+      res.redirect('confirmation-remove');
+    } else {
+      res.redirect('manufacturer-list');
+    }
+  });
