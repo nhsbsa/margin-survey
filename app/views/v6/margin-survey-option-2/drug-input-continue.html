@@ -254,17 +254,55 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
-  
+  <!-- Banner for successful save -->
 
-           
-                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input" class="nhsuk-button">Save and add another drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
-                            <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
-                          </div>
+<form id="myForm" method="post" action="/drug-input">
+  <!-- ...other form fields... -->
 
-                                          
-                            <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+  <!-- Banner (hidden by default) -->
+  <div  class="nhsuk-panel" id="save-banner" style="display: none; margin-bottom: 1rem;">
+    <span>Drug list saved successfully!</span>
+  </div>
+
+  <div class="nhsuk-form-group" style="padding-top: 10px;">
+    <button type="button" id="saveBtn" class="nhsuk-button">Save</button>
+    <a href="drug-input" class="nhsuk-button nhsuk-button--secondary">Add another drug</a>
+    <a href="continue" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a>
+     <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
+  </div>
+</form>
+
+<script>
+document.getElementById('saveBtn').addEventListener('click', function() {
+  const form = document.getElementById('myForm');
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show the banner
+      document.getElementById('save-banner').style.display = 'block';
+      // Optionally clear the form fields
+      // form.reset();
+      // Optionally scroll to the banner
+      document.getElementById('save-banner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // Handle error (show error banner/message)
+    }
+  })
+  .catch(error => {
+    // Handle network error (show error banner/message)
+  });
+});
+</script>
+
+<!-- Banner for successful save end here -->
+
+
+ <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
 </form>
 
