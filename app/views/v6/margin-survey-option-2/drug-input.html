@@ -244,16 +244,61 @@ Drug Purchase Price Database (Margin Survey)
   <option value="Johnson & Johnson Company"></option>
 </datalist>
 
-           
-                          <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="confirmation-save" class="nhsuk-button">Save</a>
-                            <a href="drug-input-2" class="nhsuk-button  nhsuk-button--secondary">Add another drug</a>                             
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Back to suppliers</a>
-                          </div>
 
-                          <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
+
+<!-- Banner for successful save -->
+
+<form id="myForm" method="post" action="/drug-input">
+  <!-- ...other form fields... -->
+
+  <!-- Banner (hidden by default) -->
+  <div  class="nhsuk-panel" id="save-banner" style="display: none; margin-bottom: 1rem;">
+    <span>Drug list saved successfully!</span>
+  </div>
+
+  <div class="nhsuk-form-group" style="padding-top: 10px;">
+    <button type="button" id="saveBtn" class="nhsuk-button">Save</button>
+    <a href="drug-input-2" class="nhsuk-button nhsuk-button--secondary">Add another drug</a>
+    <a href="confirmation-save" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a>
+  </div>
 </form>
+
+<script>
+document.getElementById('saveBtn').addEventListener('click', function() {
+  const form = document.getElementById('myForm');
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show the banner
+      document.getElementById('save-banner').style.display = 'block';
+      // Optionally clear the form fields
+      // form.reset();
+      // Optionally scroll to the banner
+      document.getElementById('save-banner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // Handle error (show error banner/message)
+    }
+  })
+  .catch(error => {
+    // Handle network error (show error banner/message)
+  });
+});
+</script>
+
+<!-- Banner for successful save end here -->
+
+
+
+<!-- Clear all fields link -->
+<p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+
+
 
 
    <script>
@@ -275,7 +320,7 @@ Drug Purchase Price Database (Margin Survey)
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-            <a href="drug-input-continue-2">Jump to another page by entering a page number</a>
+            <a href="drug-input-view">Jump to another page by entering a page number</a>
           </label>
         </div>
       </div>
