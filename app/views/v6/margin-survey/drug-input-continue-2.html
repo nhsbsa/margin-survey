@@ -18,26 +18,6 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <ol class="nhsuk-breadcrumb__list">
-    
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/new">Pharmacy details</a></li>
-    <!--li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/supplier-input">Add a supplier</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/drug-input">Add a drug</a></li-->
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/continue">List of suppliers</a></li>
-    <!--li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/supplier-input-continue">View and edit a supplier</a></li-->
-
-  </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="#">
-      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Home
-    </a>
-  </p>
-</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -49,7 +29,12 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back to supplier list"
+  }) }}
 
+<br>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
@@ -259,7 +244,7 @@ Drug Purchase Price Database (Margin Survey)
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
                             <a href="drug-input" class="nhsuk-button">Save and add another drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                            <a href="confirmation-save" class="nhsuk-button nhsuk-button--secondary" >Back to suppliers</a>
                             <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
 
@@ -277,7 +262,7 @@ Drug Purchase Price Database (Margin Survey)
 
  <p> You are on page 1 of 1</p>
 
-         <p>Jump to a new page by entering a page number</p>
+         <p>Jump to another page by entering a page number</p>
       
 
   
@@ -285,7 +270,7 @@ Drug Purchase Price Database (Margin Survey)
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-            <a href="drug-input-continue-2">Jump to another page by entering a page number</a>
+            <a href="drug-input-continue-2">Go to page</a>
           </label>
         </div>
       </div>
