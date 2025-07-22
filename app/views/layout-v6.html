@@ -96,18 +96,18 @@ NHS.UK prototype kit
 
   <dialog id="js-modal-dialog" data-url-redirect="https://margin-survey-b4d34510a183.herokuapp.com/v6/session-timeout"
    data-session-timeout="1200" data-session-timeout-warning="300"
-   data-session-timeout-timer-text="You will be signed out in "  data-session-timeout-timer-extra-text="This is to ensure you data is safe"
+   data-session-timeout-timer-text="It appears you have been inactive for a while. <br> <br> To protect your information you will be signed out in "  data-session-timeout-timer-extra-text=""
    class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
    <div class="modal-dialog__inner">
       <h1 id="dialog-title" class="heading-large">
-         Session Timeout
+         You will be signed out soon
       </h1>
       <div class="modal-dialog__inner__text">
          <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions"></div>
          <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div>
       </div>
       <div class="modal-dialog__inner__block">
-         <button class="nhsuk-button js-dialog-close">Continue Application</button>
+         <button class="nhsuk-button js-dialog-close">Continue</button>
       </div>
    </div>
 </dialog>
