@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-v7.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -18,6 +18,22 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/new">Pharmacy details</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input">Add a supplier</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -31,36 +47,44 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
-{{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-  }) }}
 
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-    <br>
       
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
       <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
-      <h2 class="nhsuk-heading-s">Search for a drug</h2>
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="Search">
-          Enter invoice and drug reference number to search for previously entered drugs.
-        </label>
-        <div class="nhsuk-hint" id="example-with-hint-text-hint">
-          For example Supplierinvoice.033
+
+      <!--search-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="Search">
+              Enter invoice and drug reference number to search for previously entered drugs.
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              For example Supplierinvoice.033
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+               </div>
+          </div>
+      
         </div>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-          <a href="drug-input-continue-search" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-           </div>
-      </div>
+      </details>
 
-      <hr style="margin-top: 0px;">
+      <!--search-->
+
 
       <form id="myForm">
 
@@ -119,7 +143,8 @@ Drug Purchase Price Database (Margin Survey)
                 </div>
 
    
- <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+   <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
      <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
           <input class="nhsuk-checkboxes__input" id="brand-name-1" name="brand-name" type="checkbox" value="brand-name" aria-controls="brand-name-generic-name-1" aria-expanded="false">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
@@ -136,9 +161,10 @@ Drug Purchase Price Database (Margin Survey)
         </div>
 </div>
 
+   
 
      <div class="nhsuk-form-group" style="margin-top: 25px;">
-
+      
       <label class="nhsuk-label" for="Number of packs">
         Number of packs
       </label>
@@ -212,16 +238,12 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
-  
-
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
                             <a href="drug-input" class="nhsuk-button">Save and add another drug</a> 
                             <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
-                            <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
 
-                          
 
                             <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
@@ -234,11 +256,9 @@ Drug Purchase Price Database (Margin Survey)
     }
 </script>
 
- <p> You are on page XXX of 143</p>
-                          <br>
- 
-
-                         
+  
+                           <p> You are on page 144 of 144</p>
+                          
                           </div>
      
                         </div>

@@ -18,13 +18,16 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/menu">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/new">Pharmacy details</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input">Add a supplier</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/drug-input">Add a drug</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue">List of suppliers</a></li>
 
   </ol>
   <p class="nhsuk-breadcrumb__back">
@@ -34,7 +37,6 @@ Drug Purchase Price Database (Margin Survey)
     </a>
   </p>
 </nav>
-
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -46,68 +48,55 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
 
-      
+    <form id="myForm">
       <!-- Change the page title here -->
-     <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
-      <h1 class="nhsuk-heading-xl">Pharmacy details</h1>
-    
-
-      <p>Start a new margin survey activity for Alpha Pharmacy.</p>
-
-
-<dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
-
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">View Altera Digital Health</h1>
+      
+      
+    <dl class="nhsuk-summary-list">
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-      Pharmacy name
+      Supplier name
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Alpha Pharmacy
+      Altera Digital Health
     </dd>
-
   </div>
-
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-      Address
+      Statement provided (Optional)
     </dt>
     <dd class="nhsuk-summary-list__value">
-      AAA Street, Newcastle, NA13 4FG
+      Yes
     </dd>
-
   </div>
-
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-     OCS
+      Statement total amount (optional)
     </dt>
     <dd class="nhsuk-summary-list__value">
-      FGY780
+      £623.54
     </dd>
-
-  </div>
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-     MET
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      000000
-    </dd>
-
   </div>
   
-
 </dl>
+              
+           
+                         
+                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
+                            <a href="drug-input-continue" class="nhsuk-button">Check and continue to drug</a> 
+                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                          </div>
+ 
+                        </div>
 
-<a href="supplier-input" class="nhsuk-button">Continue</a>
-<a href="menu" class="nhsuk-button nhsuk-button--secondary">Back to margin survey dashboard</a>
-      <!-- End of content -->
+</div>
 
-    </div>
-  </div>
+
 {% endblock %}
