@@ -24,11 +24,8 @@ Drug Purchase Price Database (Margin Survey)
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/new">Pharmacy details</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input">Add a supplier</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/drug-input">Add a drug</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue">List of suppliers</a></li>
-
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
+    
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -52,15 +49,42 @@ Drug Purchase Price Database (Margin Survey)
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-
     <form id="myForm">
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
-      <h1 class="nhsuk-heading-xl">View Altera Digital Health</h1>
-      
-   
+      <h1 class="nhsuk-heading-xl">Edit a supplier to Alpha Pharmacy</h1>
+    
+    <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="supplier-image-1" target="_blank">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">View sample invoice from this supplier (opens in a new tab)</span>
+  </a>
+</div>      
+      <br>
+    <!-- auto complete 
+     
+    <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                    Select supplier
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="service-search" type="text" autocomplete="off" list="trusts" placeholder="Select or enter a supplier">
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="trusts">
+                  <option value="Altera Digital Health"></option>
+                  <option value="Dedalusd"></option>
+                  <option value="Meditech UK"></option>
+                  <option value="Oracle Corporation UK Ltd"></option>
+                  <option value="Nervecentre Software Ltd"></option>
+                </datalist>
+
+              -->
               
-              <div class="nhsuk-form-group">
+              
+             <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="supplier">
                   Enter supplier name
                 </label>
@@ -104,22 +128,17 @@ Drug Purchase Price Database (Margin Survey)
                   
                   </div>
 
-                
-                         
+
+                 
+
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
-                            <a href="drug-input-continue" class="nhsuk-button">Save and add drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                            <a href="supplier-input-continue" class="nhsuk-button">Update supplier</a> 
+                            <a href="" class="nhsuk-button nhsuk-button--secondary">Revert to original data </a>
+                             </div>
+ </form>
+           
                           </div>
-  <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
-
-                </form>
-
-
-                   <script>
-                    function clearFields() {
-                        document.getElementById('myForm').reset();
-                    }
-                </script>
+     
                         </div>
 
 </div>

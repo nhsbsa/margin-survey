@@ -23,7 +23,7 @@ Drug Purchase Price Database (Margin Survey)
     
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu-in-progress">Margin survey dashboard</a></li>
 
   </ol>
   <p class="nhsuk-breadcrumb__back">
@@ -113,10 +113,10 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
-<table role="table" class="nhsuk-table-responsive">
+<table class="nhsuk-table-responsive" role="table">
   <caption class="nhsuk-table__caption">Supplier list</caption>
-  <table role="table" class="nhsuk-table-responsive">
-  <thead role="rowgroup" class="nhsuk-table__head">
+  
+  <thead class="nhsuk-table__head" role="rowgroup">
     <tr role="row">
       <th role="columnheader" class="" scope="col">
         Supplier name
@@ -125,7 +125,10 @@ Drug Purchase Price Database (Margin Survey)
         Statement provided
       </th>
       <th role="columnheader" class="" scope="col">
-        Drugs entered
+        Drugs checked
+      </th>
+       <th role="columnheader" class="" scope="col">
+        Completed
       </th>
       <th role="columnheader" class="" scope="col">
         Action
@@ -141,10 +144,13 @@ Drug Purchase Price Database (Margin Survey)
         <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="drug-input-continue">143</a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs checked</span>0/143
+      </td>
+        <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Completed</span>
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="drug-input">Add drug <span class="nhsuk-u-visually-hidden">Altera Digital Health</span></a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="supplier-input-continue">Start <span class="nhsuk-u-visually-hidden">Altera Digital Health</span></a>
       </td>
     </tr>
 
@@ -156,10 +162,13 @@ Drug Purchase Price Database (Margin Survey)
         <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="">3</a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs checked</span>0/3
+      </td>
+       <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Completed</span>
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Add drug <span class="nhsuk-u-visually-hidden">Dedalusd</span></a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Start<span class="nhsuk-u-visually-hidden">Dedalusd</span></a>
       </td>
     </tr>
 
@@ -171,10 +180,13 @@ Drug Purchase Price Database (Margin Survey)
         <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="">116</a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs checked</span>0/116
+      </td>
+       <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Completed</span>
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Add drug <span class="nhsuk-u-visually-hidden">MEDITECH UK</span></a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Start<span class="nhsuk-u-visually-hidden">MEDITECH UK</span></a>
       </td>
     </tr>
 
@@ -186,10 +198,13 @@ Drug Purchase Price Database (Margin Survey)
         <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="">41</a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs checked</span>0/41
+      </td>
+       <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Completed</span>
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Add drug <span class="nhsuk-u-visually-hidden">Oracle Corporation UK Ltd</span></a>
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Start<span class="nhsuk-u-visually-hidden">Oracle Corporation UK Ltd</span></a>
       </td>
     </tr>
     
@@ -197,7 +212,6 @@ Drug Purchase Price Database (Margin Survey)
 </table>
 
 
-<br>
 <a href="supplier-input" class="nhsuk-button">Add new supplier</a>
       <!-- End of content -->
      
@@ -208,9 +222,10 @@ Drug Purchase Price Database (Margin Survey)
       <p>When you have entered all the suppliers and drugs, mark this margin survey account as complete.
         <br>
         You can amend this account after it has been completed.</p>
-      <a href="complete-account" class="nhsuk-button">Complete account</a>
-      <a href="menu-in-progress" class="nhsuk-button nhsuk-button--secondary">Back to margin survey dashboard</a>
-      
+    
+        <button class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit" disabled>
+    Complete account
+</button>
     </div>
   </div>
 {% endblock %}

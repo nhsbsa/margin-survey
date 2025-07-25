@@ -21,15 +21,13 @@ Drug Purchase Price Database (Margin Survey)
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
-       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input-continue">Confirm a supplier</a></li>
- <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/drug-input-continue">Confirm a drug</a></li>
-<li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/delete">Delete a drug</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu-completed">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/completed">Pharmacy details</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input-old">View a supplier</a></li>
 
-</ol>
+  </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
@@ -48,38 +46,28 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+  
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p><b>Drug details have been verified.</b></p>
+</div>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-
-
-     <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-3" style="background-color: #007f3b; text-align: left;">
-
-      <div class="nhsuk-card__content">
-
-        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-1">
-          Drug deleted
-        </h1>
-
-      </div>
-
-    </div>
-
-      
+  
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
-      <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
+      <h1 class="nhsuk-heading-xl">Edit a drug to Altera Digital Health</h1>
 
-
-      <!--search-->
-      <div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="drug-image-2" target="_blank">
+  
+     <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="drug-image-1" target="_blank">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
     </svg>
-    <span class="nhsuk-action-link__text">View source invoice 3 (opens in a new tab)</span>
+    <span class="nhsuk-action-link__text">View source invoice 2 (opens in a new tab)</span>
   </a>
 </div>
 
@@ -103,7 +91,7 @@ Drug Purchase Price Database (Margin Survey)
             </div>
             <div style="display: flex; align-items: center; gap: 10px;">
               <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-              <a href="drug-input-continue-1-old" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+              <a href="drug-input-continue-2-old" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
                </div>
           </div>
       
@@ -129,7 +117,7 @@ Drug Purchase Price Database (Margin Survey)
       Invoice and drug reference number
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Supplierinvoice.144
+      Supplierinvoice.143
     </dd>
   </div>
   <div class="nhsuk-summary-list__row">
@@ -145,7 +133,7 @@ Drug Purchase Price Database (Margin Survey)
    Drug name
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Ensure plus Juice Bottle Strawberry
+     Bisoprolol Tab 10mg (AAH/HX)
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -153,7 +141,7 @@ Drug Purchase Price Database (Margin Survey)
    Pack size
     </dt>
     <dd class="nhsuk-summary-list__value">
-      220ml
+      28
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -169,7 +157,7 @@ Drug Purchase Price Database (Margin Survey)
     Brand name / Generic name
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Trexia
+      Aspire
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -177,7 +165,7 @@ Drug Purchase Price Database (Margin Survey)
    Number of packs
     </dt>
     <dd class="nhsuk-summary-list__value">
-      15
+      11
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -185,7 +173,7 @@ Drug Purchase Price Database (Margin Survey)
     Price per pack
     </dt>
     <dd class="nhsuk-summary-list__value">
-      £2.63
+      £0.25
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -193,7 +181,7 @@ Drug Purchase Price Database (Margin Survey)
     Total price
     </dt>
     <dd class="nhsuk-summary-list__value">
-      £39.45
+      £2.76
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -209,7 +197,7 @@ Drug Purchase Price Database (Margin Survey)
     Check total
     </dt>
     <dd class="nhsuk-summary-list__value">
-       £39.45
+      £2.76
     </dd>
   </div>
    <div class="nhsuk-summary-list__row">
@@ -217,26 +205,25 @@ Drug Purchase Price Database (Margin Survey)
     Generic Manufacturer
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Zythera Pharmaceuticals
+      Johnson & Johnson Company
     </dd>
   </div>
 </dl>
 
+ 
+  
 
-
-
-                 <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input-continue-3" class="nhsuk-button">Confirm and continue to next drug</a> 
-                            <a href="drug-input-edit" class="nhsuk-button nhsuk-button--secondary" >Edit drug</a>
-                            <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
+           
+                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
+                            <a href="" class="nhsuk-button">View next drug</a>
                           </div>
 
                       
 
 
- <p> You are on page 143 of 144</p>
+ <p> You are on page 1 of 144</p>
                      
-                 <div class="nhsuk-checkboxes" style="margin-left: -38px;">
+                    <div class="nhsuk-checkboxes" style="margin-left: -38px;">
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
