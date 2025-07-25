@@ -20,12 +20,11 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
-       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
-
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu-completed">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/completed">Pharmacy details</a></li>
+   
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -45,10 +44,17 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+ 
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p><b>Supplier details have been verified.</b></p>
+</div>
+
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+      
 
     <form id="myForm">
       <!-- Change the page title here -->
@@ -99,8 +105,7 @@ Drug Purchase Price Database (Margin Survey)
            
                          
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
-                            <a href="drug-input-continue" class="nhsuk-button">Confirm and continue to drug</a>
-                             <a href="supplier-input-edit" class="nhsuk-button nhsuk-button--secondary"">Edit supplier</a>
+                            <a href="drug-input-continue-2-old" class="nhsuk-button">View drugs</a>
                           </div>
  
                         </div>

@@ -20,11 +20,14 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
+    
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/menu">Margin survey checking dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/continue">List of suppliers</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/supplier-input-continue">Check supplier</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input-continue">Confirm a supplier</a></li>
+<li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/drug-input-continue">Confirm a drug</a></li>
+
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -44,66 +47,57 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-   
-
-  
-    <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-3" style="background-color: #007f3b; text-align: left;">
-
-      <div class="nhsuk-card__content">
-
-        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-1">
-          Drug details updated
-        </h1>
-
-      </div>
-
-    </div>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-    <br>
       
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Margin Survey check</span>
-      <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Edit a drug to Altera Digital Health</h1>
 
-     <!--search-->
-     <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Search for a drug entry
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-    
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="Search">
-            Enter invoice and drug reference number to search for previously entered drugs.
-          </label>
-          <div class="nhsuk-hint" id="example-with-hint-text-hint">
-            For example Supplierinvoice.033
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-            <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-             </div>
-        </div>
-    
-      </div>
-    </details>
+     <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="drug-image-1" target="_blank">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">View source invoice 2 (opens in a new tab)</span>
+  </a>
+</div>
 
-    <!--search-->
-
-<br>
+      <!--search-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
       
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="Search">
+              Enter invoice and drug reference number to search for previously entered drugs.
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              For example Supplierinvoice.033
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="drug-input-continue-1-old" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+               </div>
+          </div>
+      
+        </div>
+      </details>
+
+      <!--search-->
+
+
+<br>      
+
+
       <form id="myForm">
-
-
-<p>Check these drug details. If any details are incorrect, amend the drug details and select Update information.
-<br>
-If all the details are correct select View next drug.</p>
-
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
@@ -133,10 +127,9 @@ If all the details are correct select View next drug.</p>
 
 <div class="nhsuk-form-group" >
   <div>
-    <label class="nhsuk-label" for="Invoice ID">
+     <label class="nhsuk-label" for="Invoice ID">
       Invoice and drug reference number
     </label>
-    
     <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
  
     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
@@ -176,7 +169,7 @@ If all the details are correct select View next drug.</p>
                      </div>
                 </div>
 
-    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+ <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
      <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
           <input class="nhsuk-checkboxes__input" id="brand-name-1" name="brand-name" type="checkbox" value="brand-name" aria-controls="brand-name-generic-name-1" aria-expanded="false" value="" checked>
           <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
@@ -194,6 +187,7 @@ If all the details are correct select View next drug.</p>
 </div>
 
  <div class="nhsuk-form-group" style="margin-top: 25px;">
+      
       <label class="nhsuk-label" for="Number of packs">
         Number of packs
       </label>
@@ -251,18 +245,22 @@ If all the details are correct select View next drug.</p>
 </div>
 
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="autocomplete-Manufacturer">
+  <label class="nhsuk-label" for="autocomplete-input 2">
     Generic Manufacturer
-   </label>
-   <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
-   <ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
-   </div>
-   <datalist id="Manufacturer">
-     <option value="AbbVie"></option>
-     <option value="Bristol-Myers Squibb"></option>
-     <option value="GSK"></option>
-     <option value="Johnson & Johnson Company"></option>
-   </datalist>
+  </label>
+  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+  </div>
+
+  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="" value="Johnson & Johnson Company">
+  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+</div>
+<datalist id="Generic Manufacturer">
+  <option value="AbbVie"></option>
+  <option value="Bristol-Myers Squibb"></option>
+  <option value="GSK"></option>
+  <option value="Johnson & Johnson Company"></option>
+</datalist>
 
 
 
@@ -270,25 +268,26 @@ If all the details are correct select View next drug.</p>
 
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input-continue-2" class="nhsuk-button">Details correct - view next drug</a> 
-                            <a href="drug-input-updated" class="nhsuk-button">Update information</a> 
-                            <a href="continue-2" class="nhsuk-button nhsuk-button--secondary" >Back to suppliers list</a>
+                            <a href="drug-input-continue-1-old" class="nhsuk-button">Save drug</a> 
+                             <a href="" class="nhsuk-button nhsuk-button--secondary">Revert to original data </a>
                             <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
 
-
+                                          
                            </form>
 
- <p> You are on page XXX of 143</p>
-                          <br>
- 
-
+ <p> You are on page 1 of 144</p>
+                     
                          
-                          </div>
-     
-                        </div>
-
-</div>
-
+               <div class="nhsuk-checkboxes" style="margin-left: -38px;">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            <a href="drug-input-continue-1-old">Go to page</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
