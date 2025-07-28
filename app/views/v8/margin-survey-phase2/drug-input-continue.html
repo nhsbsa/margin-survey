@@ -1,0 +1,232 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input-continue-confirmed">Confirm a supplier</a></li>
+
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Edit a drug to Altera Digital Health</h1>
+
+    <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="drug-image-1" target="_blank">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">View source invoice 2 (opens in a new tab)</span>
+  </a>
+</div>
+
+      <!--search-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="Search">
+              Enter invoice and drug reference number to search for previously entered drugs.
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              For example Supplierinvoice.033
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="drug-input-continue-1-old" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+               </div>
+          </div>
+      
+        </div>
+      </details>
+
+      <!--search-->
+
+
+<br>      
+
+<dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Conces/Cat C
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Cat C
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Invoice and drug reference number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Supplierinvoice.143
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Is this drug a PI?
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Yes
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   Drug name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     Bisoprolol Tab 10mg (AAH/HX)
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   Pack size
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      28
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Brand name or generic name (optional)
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Yes
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Brand name / Generic name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Aspire
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   Number of packs
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      11
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Price per pack
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      £0.25
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Total price
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      £2.76
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   Difference
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      £0
+    </dd>
+  </div>
+    <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Check total
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      £2.76
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+    Generic Manufacturer
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Johnson & Johnson Company
+    </dd>
+  </div>
+</dl>
+
+   
+
+  
+
+           
+                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
+                            <a href="drug-input-continue-2" class="nhsuk-button">Confirm and continue to next drug</a> 
+                            <a href="drug-input-edit" class="nhsuk-button nhsuk-button--secondary" >Edit drug</a>
+                            <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
+                          </div>
+
+                      
+
+
+ <p> You are on page 1 of 144</p>
+                     
+            <div class="nhsuk-checkboxes" style="margin-left: -38px;">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            <a href="drug-input-continue-1-old">Go to page</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
