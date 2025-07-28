@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v7.html' %}
+{% extends 'layout-v8.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,15 +20,10 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/new">Pharmacy details</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input">Add a supplier</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/drug-input">Add a drug</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue">List of suppliers</a></li>
-
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/select-month-year">Select month and year</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/menu">Margin survey checking dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/continue">List of suppliers</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -49,31 +44,45 @@ Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
+
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
 
     <form id="myForm">
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
-      <h1 class="nhsuk-heading-xl">View Altera Digital Health</h1>
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey check</span>
+      <h1 class="nhsuk-heading-xl">Check supplier - Alpha Pharmacy</h1>
       
-   
-              
+      
+    <!-- auto complete 
+     
+    <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                    Select supplier
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="service-search" type="text" autocomplete="off" list="trusts" placeholder="Select or enter a supplier">
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="trusts">
+                  <option value="Altera Digital Health"></option>
+                  <option value="Dedalusd"></option>
+                  <option value="Meditech UK"></option>
+                  <option value="Oracle Corporation UK Ltd"></option>
+                  <option value="Nervecentre Software Ltd"></option>
+                </datalist>
+                
+              -->
+
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="supplier">
                   Enter supplier name
                 </label>
-                <select class="nhsuk-select nhsuk-u-width-one-half" id="supplier" name="supplier">
-                  <option value="Select">Select a supplier</option>
-                  <option value="Altera Digital Health"selected>Altera Digital Health</option>
-                <option value="Dedalusd">Dedalusd</option>
-                <option value="Meditech UK">Meditech UK</option>
-                <option value="Oracle Corporation UK Ltd">Oracle Corporation UK Ltd</option>
-                <option value="Nervecentre Software Ltd">Nervecentre Software Ltd</option>
-                </select>
+                <input class="nhsuk-input nhsuk-u-width-one-half" id="supplier" name="supplier" type="text" value="Altera Digital Health" disabled>
               </div>
-
+              
+              
 
                 <div class="nhsuk-card-group" >
                   
@@ -104,13 +113,7 @@ Drug Purchase Price Database (Margin Survey)
                   
                   </div>
 
-                
-                         
-                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
-                            <a href="drug-input-continue" class="nhsuk-button">Save and add drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
-                          </div>
-  <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+                 <!-- <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
                 </form>
 
@@ -120,6 +123,18 @@ Drug Purchase Price Database (Margin Survey)
                         document.getElementById('myForm').reset();
                     }
                 </script>
+           
+              -->
+                  
+                  
+
+                         
+                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
+                            <a href="drug-input-continue" class="nhsuk-button">View drug</a> 
+                            <a href="supplier-input-update" class="nhsuk-button">Update information</a> 
+                            <a href="continue-2" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                          </div>
+
                         </div>
 
 </div>

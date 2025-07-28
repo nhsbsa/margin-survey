@@ -144,3 +144,51 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('manufacturer-list');
     }
   });
+
+  
+     router.post(/Confirmsupplier/, function (req, res) {
+
+    const Confirmsupplier = req.session.data['Confirmsupplier']
+
+    if (Confirmsupplier === "yes") {
+      res.redirect('continue-complete');
+    } else {
+      res.redirect('drug-input');
+    }
+  });
+  
+
+    router.post(/Confirmblanksupplier/, function (req, res) {
+
+    const Confirmblanksupplier = req.session.data['Confirmblanksupplier']
+
+    if (Confirmblanksupplier === "yes") {
+      res.redirect('continue-complete');
+    } else {
+      res.redirect('supplier-input');
+    }
+  });
+
+ 
+   router.post(/reopenaccount/, function (req, res) {
+
+    const reopenaccount = req.session.data['reopenaccount']
+  
+    if (reopenaccount === "yes") {
+      res.redirect('confirmation-reopen');
+    } else {
+      res.redirect('completed');
+    }
+  });
+
+  
+     router.post(/manualleave/, function (req, res) {
+
+    const manualleave = req.session.data['manualleave']
+
+    if (manualleave === "yes") {
+      res.redirect('continue-complete-manual-add');
+    } else {
+      res.redirect('drug-input');
+    }
+  });

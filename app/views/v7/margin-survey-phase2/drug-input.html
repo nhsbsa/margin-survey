@@ -24,7 +24,7 @@ Drug Purchase Price Database (Margin Survey)
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/new">Pharmacy details</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/supplier-input">Add a supplier</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
@@ -75,8 +75,8 @@ Drug Purchase Price Database (Margin Survey)
               For example Supplierinvoice.033
             </div>
             <div style="display: flex; align-items: center; gap: 10px;">
-              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-              <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="drug-input-continue-1-old" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
                </div>
           </div>
       
@@ -86,7 +86,7 @@ Drug Purchase Price Database (Margin Survey)
       <!--search-->
 
 
-      <form id="myForm">
+     <form id="myForm">
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
@@ -128,7 +128,7 @@ Drug Purchase Price Database (Margin Survey)
                   <option value="Atorvastatin 20 mg tablet"></option>
                   <option value="Cetirizine 10 mg tablet"></option>
                   <option value="Ibuprofen 400 mg tablet"></option>
-                  <option value="Oxybutynin 5mg modified-release tablets"></option>
+                  <option value="Bisoprolol Tab 10mg (AAH/HX)"></option>
                   <option value="Paracetamol 500 mg tablet"></option>
                   <option value="Salbutamol 2 mg tablet "></option>
                 </datalist>
@@ -143,28 +143,49 @@ Drug Purchase Price Database (Margin Survey)
                 </div>
 
    
-
-   <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
-          <input class="nhsuk-checkboxes__input" id="brand-name-1" name="brand-name" type="checkbox" value="brand-name" aria-controls="brand-name-generic-name-1" aria-expanded="false">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
-            Select if the drug has another brand name or generic name (optional)
-          </label>
-        </div>
-        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="brand-name-generic-name-1">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="brand-name">
-              Brand name / Generic name
-            </label> <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text">
-          </div>
-
-        </div>
+<!--select brand and generic name-->
+<div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
+    <input class="nhsuk-checkboxes__input"
+           id="brand-name-1"
+           name="brand-name-checkbox"
+           type="checkbox"
+           value="brand-name"
+           aria-controls="brand-name-generic-name-1"
+           aria-expanded="false"
+           onclick="toggleConditional(this)">
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
+      Select if the drug has another brand name or generic name (optional)
+    </label>
+  </div>
+  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="brand-name-generic-name-1">
+    <div class="nhsuk-form-group" style="margin-top: 25px;">
+      <label class="nhsuk-label" for="brand-name">
+        Brand name / Generic name
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text">
+    </div>
+  </div>
 </div>
 
+<script>
+  function toggleConditional(checkbox) {
+    const conditional = document.getElementById('brand-name-generic-name-1');
+    if (checkbox.checked) {
+      conditional.classList.remove('nhsuk-checkboxes__conditional--hidden');
+      checkbox.setAttribute('aria-expanded', 'true');
+    } else {
+      conditional.classList.add('nhsuk-checkboxes__conditional--hidden');
+      checkbox.setAttribute('aria-expanded', 'false');
+    }
+  }
+</script>
+
+<!--select brand and generic name-->
+<br>
    
 
-     <div class="nhsuk-form-group" style="margin-top: 25px;">
-      
+    <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="Number of packs">
         Number of packs
       </label>
@@ -226,6 +247,10 @@ Drug Purchase Price Database (Margin Survey)
   <label class="nhsuk-label" for="autocomplete-input 2">
     Generic Manufacturer
   </label>
+  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+  </div>
+
   <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="">
   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
 </div>
@@ -237,11 +262,10 @@ Drug Purchase Price Database (Margin Survey)
 </datalist>
 
 
-
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
                             <a href="drug-input" class="nhsuk-button">Save and add another drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                             <a href="confirmation-save-maunal" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a>
                           </div>
 
 
@@ -257,13 +281,18 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-                           <p> You are on page 144 of 144</p>
-                          
-                          </div>
-     
-                        </div>
-
-</div>
+                           <p> You are on page 145 of 145</p>
+                        
+      <div class="nhsuk-checkboxes" style="margin-left: -38px;">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            <a href="drug-input-continue-1-old">Go to page</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 {% endblock %}
