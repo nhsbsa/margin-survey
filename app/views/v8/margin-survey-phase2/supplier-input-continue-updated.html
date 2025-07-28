@@ -24,7 +24,7 @@ Drug Purchase Price Database (Margin Survey)
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/menu">Margin survey dashboard</a></li>
-       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete-manual-add">Pharmacy details</a></li>
+       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/continue-complete">Pharmacy details</a></li>
 
   </ol>
   <p class="nhsuk-breadcrumb__back">
@@ -45,15 +45,22 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-<div class="nhsuk-inset-text">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p><b>Supplier details have been entered manually.</b></p>
-</div>
-
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+
+       <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-3" style="background-color: #007f3b; text-align: left;">
+
+      <div class="nhsuk-card__content">
+
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-1">
+          Supplier updated
+        </h1>
+
+      </div>
+
+    </div>
 
     <form id="myForm">
       <!-- Change the page title here -->
@@ -61,6 +68,17 @@ Drug Purchase Price Database (Margin Survey)
       <h1 class="nhsuk-heading-xl">Confirm a supplier to Alpha Pharmacy</h1>
       
       
+      <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="supplier-image-1" target="_blank">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Open document viewer and view an invoice (opens in a new tab)</span>
+  </a>
+</div>
+      
+      <br>
 
     <dl class="nhsuk-summary-list">
   <div class="nhsuk-summary-list__row">
@@ -68,7 +86,7 @@ Drug Purchase Price Database (Margin Survey)
       Supplier name
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Health Start UK
+      Altera Digital Health
     </dd>
   </div>
   <div class="nhsuk-summary-list__row">
@@ -93,8 +111,8 @@ Drug Purchase Price Database (Margin Survey)
            
                          
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
-                            <a href="drug-input-continue-manual" class="nhsuk-button">Continue to drug</a>
-                             <a href="" class="nhsuk-button nhsuk-button--secondary"">Edit supplier</a>
+                            <a href="drug-input-continue" class="nhsuk-button">Confirm and continue to drug</a>
+                             <a href="supplier-input-edit" class="nhsuk-button nhsuk-button--secondary"">Edit supplier</a>
                           </div>
  
                         </div>
