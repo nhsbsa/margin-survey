@@ -117,7 +117,7 @@ router.post(/deletedrug/, function (req, res) {
     const supplierConfirmation = req.session.data['supplierConfirmation']
 
     if (supplierConfirmation === "yes") {
-      res.redirect('continue');
+      res.redirect('new');
     } else {
       res.redirect('drug-input');
     }
