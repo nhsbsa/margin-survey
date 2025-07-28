@@ -180,3 +180,15 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('completed');
     }
   });
+
+  
+     router.post(/manualleave/, function (req, res) {
+
+    const manualleave = req.session.data['manualleave']
+
+    if (manualleave === "yes") {
+      res.redirect('continue-complete-manual-add');
+    } else {
+      res.redirect('drug-input');
+    }
+  });
