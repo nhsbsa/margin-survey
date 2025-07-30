@@ -80,33 +80,49 @@ Drug Purchase Price Database (Margin Survey)
       
       <br>
 
-    <dl class="nhsuk-summary-list">
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Supplier name
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      Altera Digital Health
-    </dd>
-  </div>
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Statement provided (optional)
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      Yes
-    </dd>
-  </div>
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Statement total amount (optional)
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      £623.54
-    </dd>
-  </div>
-  
-</dl>
+   <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="supplier">
+                  Enter supplier name
+                </label>
+                <select class="nhsuk-select nhsuk-u-width-one-half" id="supplier" name="supplier">
+                  <option value="Select">Select a supplier</option>
+                  <option value="Altera Digital Health"selected>Altera Digital Health</option>
+                <option value="Dedalusd">Dedalusd</option>
+                <option value="Meditech UK">Meditech UK</option>
+                <option value="Oracle Corporation UK Ltd">Oracle Corporation UK Ltd</option>
+                <option value="Nervecentre Software Ltd">Nervecentre Software Ltd</option>
+                </select>
+              </div>
+
+
+                <div class="nhsuk-card-group" >
+                  
+                     
+                  <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="Statement" name="Statement" type="checkbox" value="Statement" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="Statement" >
+                        Statement provided (optional)
+                      </label>
+                    </div>
+                    </div>
+                   </div>
+                  
+                  <div class="nhsuk-form-group">
+                     <label class="nhsuk-label" for="total">
+                     Statement total amount (optional)
+                     <div class="nhsuk-hint" id="total-hint">
+                      For example, £600 or £192.01
+                    </div>
+                    </label>
+                    <div class="nhsuk-input__wrapper">
+                  
+                      <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                  
+                      <input class="nhsuk-input nhsuk-input--width-5" id="total" name="total" type="text" value="623.54">
+                    </div>
+                  
+                  </div>
               
            
                          
