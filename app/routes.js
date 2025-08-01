@@ -192,17 +192,3 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('drug-input');
     }
   });
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-  
