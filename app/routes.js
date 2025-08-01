@@ -192,15 +192,3 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('drug-input');
     }
   });
-
-  
-    router.post(/confirmleave/, function (req, res) {
-
-    const confirmleave = req.session.data['confirmleave']
-
-    if (confirmleave === "yes") {
-      res.redirect('continue-2');
-    } else {
-      res.redirect('drug-input-continue');
-    }
-  });
