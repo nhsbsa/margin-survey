@@ -52,7 +52,7 @@ Drug Purchase Price Database (Margin Survey)
 
       
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <span class="nhsuk-caption-xl">June 2025 - Margin Survey</span>
       <h1 class="nhsuk-heading-xl">Document viewer</h1>
  <h2 class="nhsuk-heading-m">Invoice 3</h1>
    
@@ -70,7 +70,7 @@ Drug Purchase Price Database (Margin Survey)
 
     .highlight-text {
       position: absolute;
-      background-color: hsla(54, 100%, 50%, 0.547); /* Semi-transparent red */
+      background-color: hsla(54, 100%, 50%, 0.347); /* Semi-transparent red */
       padding: 10px 460px;
       border-radius: 5px;
       font-size: 20px;
@@ -79,16 +79,35 @@ Drug Purchase Price Database (Margin Survey)
 
     /* Position each word where you need it */
     .word1 {
-      top: 526px;
+      top: 500px;
       left: 50px;
     }
 
+       input[type=checkbox] {
+  display: none;
+}
+
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  width: 1000px;
+  height: 1000px;
+}
+
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(2);
+  cursor: zoom-out;
+}
   </style>
 
+ <div class="container">
   <div class="image-container">
-    <img src="/images/supplier.png" alt="source">
-    <span class="highlight-text word1"></span>
-  </div>
+  <input type="checkbox" id="zoomCheck">
+  <label for="zoomCheck">
+    <img src="/images/supplier.png" alt="invoice">
+     <span class="highlight-text word1"></span>
+  </label>
+</div></div>
 
            <br>
            <br>

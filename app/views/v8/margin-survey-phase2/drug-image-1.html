@@ -40,6 +40,7 @@ Drug Purchase Price Database (Margin Survey)
       <h1 class="nhsuk-heading-xl">Document viewer</h1>
  <h2 class="nhsuk-heading-m">Invoice 2</h1>
    
+  
 
   <style>
     .image-container {
@@ -54,25 +55,43 @@ Drug Purchase Price Database (Margin Survey)
 
     .highlight-text {
       position: absolute;
-      background-color: hsla(54, 100%, 50%, 0.547); /* Semi-transparent red */
+      background-color: hsla(54, 100%, 50%, 0.347); /* Semi-transparent red */
       padding: 10px 460px;
       border-radius: 5px;
       font-size: 20px;
       font-weight: bold;
     }
 
+    
     /* Position each word where you need it */
     .word1 {
       top: 505px;
       left: 50px;
     }
 
+    input[type=checkbox] {
+  display: none;
+}
+
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  width: 1000px;
+  height: 1000px;
+}
+
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(2);
+  cursor: zoom-out;
+}
   </style>
 
   <div class="image-container">
     <img src="/images/supplier.png" alt="source">
     <span class="highlight-text word1"></span>
   </div>
+
+  
 
            <br>
            <br>
