@@ -203,3 +203,14 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('drug-input-continue');
     }
   });
+
+     router.post(/overwritemonth/, function (req, res) {
+
+    const overwritemonth = req.session.data['overwritemonth']
+
+    if (overwritemonth === "yes") {
+      res.redirect('upload-confirmation');
+    } else {
+      res.redirect('upload-list');
+    }
+  });
