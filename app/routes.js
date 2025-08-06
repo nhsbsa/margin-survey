@@ -214,3 +214,39 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('upload-list');
     }
   });
+
+  
+   router.post(/overwritemonth/, function (req, res) {
+
+    const overwritemonth = req.session.data['overwritemonth']
+
+    if (overwritemonth === "yes") {
+      res.redirect('upload-confirmation');
+    } else {
+      res.redirect('upload-list');
+    }
+  });
+
+  
+   router.post(/supplierdelete/, function (req, res) {
+
+    const supplierdelete = req.session.data['supplierdelete']
+
+    if (supplierdelete === "yes") {
+      res.redirect('confirmation-supplier-del');
+    } else {
+      res.redirect('supplier-input-continue');
+    }
+  });
+
+  
+    router.post(/drugmanual/, function (req, res) {
+
+    const drugmanual = req.session.data['drugmanual']
+
+    if (drugmanual === "yes") {
+      res.redirect('continue-complete');
+    } else {
+      res.redirect('drug-input-manual');
+    }
+  });
