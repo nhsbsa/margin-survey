@@ -60,8 +60,10 @@ router.post(/deletedrug/, function (req, res) {
   
     if (updateremove === "yes") {
       res.redirect('drug-input-deleted');
-    } else {
+     } else if (updateremove === "no") {
       res.redirect('drug-input-continue');
+    } else if (updateremove === "maybe") {
+      res.redirect('delete-all-drugs');
     }
   });
 
@@ -71,8 +73,10 @@ router.post(/deletedrug/, function (req, res) {
   
     if (areyousure === "yes") {
       res.redirect('drug-input-deleted');
-    } else {
+    } else if (areyousure === "no") {
       res.redirect('drug-input-continue');
+    } else if (areyousure === "maybe") {
+      res.redirect('delete-all-drugs');
     }
   });
 
@@ -248,5 +252,16 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('continue-complete');
     } else {
       res.redirect('drug-input-manual');
+    }
+  });
+
+   router.post(/deletealldrugs/, function (req, res) {
+
+    const deletealldrugs = req.session.data['deletealldrugs']
+
+    if (deletealldrugs === "yes") {
+      res.redirect('confirmation-all-drugs');
+    } else {
+      res.redirect('drug-input-continue');
     }
   });

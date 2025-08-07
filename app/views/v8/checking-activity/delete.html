@@ -20,13 +20,8 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/menu">Margin survey checking dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/continue">List of suppliers</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/supplier-input-continue">Check supplier</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../checking-activity/drug-input-continue">Check drug details</a></li>
-  </ol>
+    
+  <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="continue-2">Go back to supplier list</a></li>  </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
@@ -62,7 +57,7 @@ Drug Purchase Price Database (Margin Survey)
 
         <form action="updateremove" method="post">
 
-          <div class="nhsuk-radios nhsuk-radios--inline">
+          <!--div class="nhsuk-radios nhsuk-radios--inline">
       
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="inline-1" name="updateremove" type="radio" value="yes">
@@ -78,8 +73,38 @@ Drug Purchase Price Database (Margin Survey)
               </label>
             </div>
       
-          </div>
+          </div-->
        
+              <div class="nhsuk-form-group">
+
+ <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+       <span aria-hidden="Are you sure you want to delete Bisoprolol Tab 10mg (AAH/HX)?"></span>
+    </legend>
+ 
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-divider-1" name="updateremove" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-divider-1">
+          Yes
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-divider-2" name="updateremove" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-divider-2">
+          No
+        </label>
+      </div>
+      <div class="nhsuk-radios__divider">or</div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-divider-4" name="updateremove" type="radio" value="maybe">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-divider-4">
+           I wish to delete this drug and the invoice with all drugs in it
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
       
       </div>
 
