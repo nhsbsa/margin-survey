@@ -23,7 +23,7 @@ Drug Purchase Price Database (Margin Survey)
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Lists management</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="select-month-year">Retrospective drug list</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="select-month-year">Manage retrospective drug list</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -49,11 +49,11 @@ Drug Purchase Price Database (Margin Survey)
 
       
       <!-- Change the page title here -->
-<h1 class="nhsuk-heading-xl">Upload quarterly retrospective drug list</h1>
+<h1 class="nhsuk-heading-xl">Upload retrospective drug list</h1>
 
-<h2 class="nhsuk-heading-m">Select a quarter to upload retrospective drug list</h2>
+<h2 class="nhsuk-heading-m">Select a month to upload retrospective drug list</h2>
 
-    <p class="nhsuk-body">Select a year and range of months, then click on upload retrospective drug list (upload new or replace existing).</p>
+    <p class="nhsuk-body">Select a year and month, then click on upload retrospective drug list (upload new or replace existing).</p>
 
 
          <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
@@ -78,11 +78,20 @@ Drug Purchase Price Database (Margin Survey)
                             Quarter
                         </label>
                         <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="month" name="month" type="text" inputmode="numeric">
-                            <option value="Select">Select a quarter</option>
-                            <option value="January">January to March</option>
-                             <option value="April">April to June</option>
-                            <option value="July">July to September</option>
-                            <option value="October">October to December</option>
+                             <option value="1"selected>Select a month and year</option>
+                     <option value="12">December </option>
+              <option value="11">November </option>
+              <option value="10">October </option>
+                <option value="9">September </option>
+              <option value="8">August</option>
+              <option value="7">July </option>
+              <option value="6">June </option>
+              <option value="5">May </option>
+              <option value="4">April </option>
+              <option value="3">March </option>
+              <option value="2">February </option>
+              <option value="1">January </option>
+        
                         </select>
                     </div>
                 
