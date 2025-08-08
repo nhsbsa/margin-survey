@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v6.html' %}
+{% extends 'layout-v8.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -18,11 +18,11 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-<!--nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Manage lists</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../manufacturer-list/manufacturer-list">Manufacturer list</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../manufacturer-list/manufacturer-list">manufacturer list</a></li>
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -30,7 +30,7 @@ Drug Purchase Price Database (Margin Survey)
       Home
     </a>
   </p>
-</nav-->
+</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -42,12 +42,8 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-{{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-  }) }}
 
-  <br>
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
@@ -55,12 +51,12 @@ Drug Purchase Price Database (Margin Survey)
       
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Add manufacturer to the list</h1>
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Add manufacturer</h1>
 
    
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="manufacturer name">
-    Name of manufacturer
+    Manufacturer name
   </label> <input class="nhsuk-input nhsuk-input--width-20" id="manufacturer name" name="manufacturer name" type="text">
 </div>
 
@@ -69,7 +65,7 @@ Drug Purchase Price Database (Margin Survey)
 
 
         <!-- Button to generate reports -->
-        <a href="confirmation" class="nhsuk-button">Add manufacturer</a>
+        <a href="confirmation" class="nhsuk-button" >Add manufacturer</a>
 
 
 
@@ -77,16 +73,14 @@ Drug Purchase Price Database (Margin Survey)
 <br>
 <br>
     
-<details class="nhsuk-details">
+      <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
       Warning example
     </span>
   </summary>
   <div class="nhsuk-details__text">
-<a href="error-add-manufacturer" class="nhsuk-body">Error message if field empty</a><br>
-<a href="error-add-manufacturer-2" class="nhsuk-body">Error if name too many characters</a><br>  
-<a href="error-add-manufacturer-3" class="nhsuk-body">If manufacturer name already exists</a>
+<a href="add-manufacturer-warning" class="nhsuk-body">Warning example for adding the same manufacturer</a>
   </div>
 </details>
  
