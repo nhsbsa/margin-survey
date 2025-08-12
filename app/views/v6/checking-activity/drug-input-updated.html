@@ -68,34 +68,6 @@ Drug Purchase Price Database (Margin Survey)
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey check</span>
       <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
 
-     <!--search-->
-     <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Search for a drug entry
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-    
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="Search">
-            Enter invoice and drug reference number to search for previously entered drugs.
-          </label>
-          <div class="nhsuk-hint" id="example-with-hint-text-hint">
-            For example Supplierinvoice.033
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-            <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-             </div>
-        </div>
-    
-      </div>
-    </details>
-
-    <!--search-->
-
-<br>
       
       <form id="myForm">
 
@@ -175,23 +147,43 @@ If all the details are correct select View next drug.</p>
                     <input class="nhsuk-input nhsuk-input--width-5" id="Pack size" name="Pack size" type="text" value="20">
                      </div>
                 </div>
-
-    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
-          <input class="nhsuk-checkboxes__input" id="brand-name-1" name="brand-name" type="checkbox" value="brand-name" aria-controls="brand-name-generic-name-1" aria-expanded="false" value="" checked>
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
-            Select if the drug has another brand name or generic name (optional)
-          </label>
-        </div>
-        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="brand-name-generic-name-1">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="brand-name">
-              Brand name / Generic name
-            </label> <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="Tillomed Laboratories Ltd">
-          </div>
-
-        </div>
+ <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;" >
+    <input class="nhsuk-checkboxes__input"
+           id="brand-name-1"
+           name="brand-name-checkbox"
+           type="checkbox"
+           value="brand-name"
+           aria-controls="brand-name-generic-name-1"
+           aria-expanded="false"
+           onclick="toggleConditional(this)" value="" checked>
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
+      Select if the drug has another brand name or generic name (optional)
+    </label>
+  </div>
+  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional" id="brand-name-generic-name-1">
+    <div class="nhsuk-form-group" style="margin-top: 25px;">
+      <label class="nhsuk-label" for="brand-name">
+        Brand name / Generic name
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="Aspire">
+    </div>
+  </div>
 </div>
+
+<script>
+  function toggleConditional(checkbox) {
+    const conditional = document.getElementById('brand-name-generic-name-1');
+    if (checkbox.checked) {
+      conditional.classList.remove('nhsuk-checkboxes__conditional--hidden');
+      checkbox.setAttribute('aria-expanded', 'true');
+    } else {
+      conditional.classList.add('nhsuk-checkboxes__conditional--hidden');
+      checkbox.setAttribute('aria-expanded', 'false');
+    }
+  }
+</script>
+
 
  <div class="nhsuk-form-group" style="margin-top: 25px;">
       <label class="nhsuk-label" for="Number of packs">
@@ -292,6 +284,32 @@ If all the details are correct select View next drug.</p>
                           <br>
  
 
+     <!--search-->
+     <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Search for a drug entry
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+    
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="Search">
+            Enter invoice and drug reference number to search for previously entered drugs.
+          </label>
+          <div class="nhsuk-hint" id="example-with-hint-text-hint">
+            For example Supplierinvoice.033
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+            <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+             </div>
+        </div>
+    
+      </div>
+    </details>
+
+    <!--search-->
                          
                           </div>
      

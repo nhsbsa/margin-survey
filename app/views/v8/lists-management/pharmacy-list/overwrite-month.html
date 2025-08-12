@@ -21,8 +21,8 @@ Drug Purchase Price Database (Margin Survey)
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Manage lists</a></li>
-     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Upload and manage pharmacy lists</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Select a list</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="pharmacy-list">Manage pharmacy lists</a></li>
         <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="upload-list">Upload pharmacy list</a></li>
 
   </ol>
@@ -56,17 +56,17 @@ Drug Purchase Price Database (Margin Survey)
   
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
       <h1 class="nhsuk-fieldset__heading">
-        Confirm you want to overwrite the previous [month year] pharmacy list
+        Confirm you want to replace the pharmacy list for [Month Year]
       </h1>
     </legend>
 <br>    
 
 
- <p>Based on the uploaded pharmacy list, here are the differences:</p>
+ <p>Changes between your uploaded csv file and the current version of the pharmacy list:</p>
 
     
       <table class="nhsuk-table">
-  <caption class="nhsuk-table__caption">Adding</caption>
+  <caption class="nhsuk-table__caption">Pharmacies added</caption>
   <thead class="nhsuk-table__head">
     <tr>
       <th scope="col" class="nhsuk-table__header">Trading name</th>
@@ -86,7 +86,7 @@ Drug Purchase Price Database (Margin Survey)
 </table>
       
   <table class="nhsuk-table">
-  <caption class="nhsuk-table__caption">Removing</caption>
+  <caption class="nhsuk-table__caption">Pharmacies removed</caption>
   <thead class="nhsuk-table__head">
     <tr>
       <th scope="col" class="nhsuk-table__header">Trading name</th>
@@ -110,11 +110,11 @@ Drug Purchase Price Database (Margin Survey)
           <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
       <h1 class="nhsuk-fieldset__heading">
-        Do you wish the overwrite the pharamcy list for [month list]?
+        Confirm the changes to the pharmacy list for [Month Year]?
       </h1>
     </legend>
     
- <p>If you overwrite the pharmacy list, you will lose the previous pharmacy list for the same month.</p>
+ <p>Once you have confirmed these changes, the pharmacy list will be replaced and you will not be able to revert back.</p>
 
         <form action="overwritemonth" method="post">
 
@@ -124,14 +124,14 @@ Drug Purchase Price Database (Margin Survey)
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="inline-1" name="overwritemonth" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
-                Yes, I want to overwrite [month year] pharmacy list
+                Yes, these changes are correct
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="inline-2" name="overwritemonth" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
-                No, I don't want to overwrite
+                No, these changes are not correct
               </label>
             </div>
       
