@@ -20,13 +20,9 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/new">Pharmacy details</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/supplier-input">Add a supplier</a></li>
-  </ol>
+     
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="continue">Go back to supplier list</a></li>
+      </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
@@ -47,7 +43,7 @@ Drug Purchase Price Database (Margin Survey)
 
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-three-quarters">
 
 
 
@@ -69,53 +65,27 @@ Drug Purchase Price Database (Margin Survey)
       <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
 
 
-      <!--search-->
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Search for a drug entry
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-      
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="Search">
-              Enter invoice and drug reference number to search for previously entered drugs.
-            </label>
-            <div class="nhsuk-hint" id="example-with-hint-text-hint">
-              For example Supplierinvoice.033
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-              <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-               </div>
-          </div>
-      
-        </div>
-      </details>
-
-      <!--search-->
-
 
       <form id="myForm">
 
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="Conces/Cat C">
+  <label class="nhsuk-label" for="Invoice ID">
+      Invoice and drug reference number
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
+
+</div>
+
+<div class="nhsuk-form-group" >
+  <div>
+    <label class="nhsuk-label" for="Conces/Cat C">
     Conces/Cat C
   </label>
   <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
     <option value="1" selected>Cat C</option>
     <option value="2">Conces</option>
   </select>
-</div>
 
-<div class="nhsuk-form-group" >
-  <div>
-     <label class="nhsuk-label" for="Invoice ID">
-      Invoice and drug reference number
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
- 
     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
@@ -130,7 +100,7 @@ Drug Purchase Price Database (Margin Survey)
                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
+                  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
                 <datalist id="Drug">
@@ -237,7 +207,7 @@ Drug Purchase Price Database (Margin Survey)
   <label class="nhsuk-label" for="autocomplete-input 2">
     Generic Manufacturer
   </label>
-  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="">
+  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="">
   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
 </div>
 <datalist id="Generic Manufacturer">
@@ -268,11 +238,48 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-                           <p> You are on page 144 of 144</p>
                           
-                          </div>
-     
-                        </div>
+ <p> You are on page 143 of 143</p>
+
+         <div class="nhsuk-checkboxes" style="margin-left: -38px;">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            <a href="drug-input-continue-2">Go to page</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+                   
+<br>
+      <!--search-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="Search">
+              Enter invoice and drug reference number to search for previously entered drugs.
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              For example Supplierinvoice.033
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+               </div>
+          </div>
+      
+        </div>
+      </details>
+
+      <!--search-->
+
 
 </div>
 

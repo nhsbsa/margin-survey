@@ -84,6 +84,32 @@ Drug Purchase Price Database (Margin Survey)
      <form id="myForm">
 
 <div class="nhsuk-form-group">
+     <label class="nhsuk-label" for="Invoice ID">
+      Invoice and drug reference number
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
+ 
+</div>
+
+<!--<div class="nhsuk-form-group" style="display: flex; align-items: center; gap: 1rem;">
+  <div>
+    <label class="nhsuk-label" for="Invoice ID">
+      Invoice ID
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="123.143">
+  </div>
+
+  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 32px;">
+    <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
+      Is this drug a PI?
+    </label>
+  </div>
+</div> -->
+
+<div class="nhsuk-form-group" >
+  <div>
+  
   <label class="nhsuk-label" for="Conces/Cat C">
     Conces/Cat C
   </label>
@@ -91,15 +117,7 @@ Drug Purchase Price Database (Margin Survey)
     <option value="1" selected>Cat C</option>
     <option value="2">Conces</option>
   </select>
-</div>
 
-<div class="nhsuk-form-group" >
-  <div>
-     <label class="nhsuk-label" for="Invoice ID">
-      Invoice and drug reference number
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
- 
     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
@@ -114,7 +132,7 @@ Drug Purchase Price Database (Margin Survey)
                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
+                  <input class="nhsuk-input nhsuk-u-width-three-quarters" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
                 <datalist id="Drug">
@@ -246,7 +264,7 @@ Drug Purchase Price Database (Margin Survey)
    Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
   </div>
 
-  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="">
+  <input class="nhsuk-input nhsuk-u-width-three-quarters" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="">
   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
 </div>
 <datalist id="Generic manufacturer">

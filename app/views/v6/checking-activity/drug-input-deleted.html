@@ -67,36 +67,7 @@ Drug Purchase Price Database (Margin Survey)
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey check</span>
       <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
-
-     <!--search-->
-     <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Search for a drug entry
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-    
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="Search">
-            Enter invoice and drug reference number to search for previously entered drugs.
-          </label>
-          <div class="nhsuk-hint" id="example-with-hint-text-hint">
-            For example Supplierinvoice.033
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-            <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-             </div>
-        </div>
-    
-      </div>
-    </details>
-
-    <!--search-->
-
-<br>
-      
+  
       <form id="myForm">
 
 
@@ -105,14 +76,14 @@ Drug Purchase Price Database (Margin Survey)
 If all the details are correct select View next drug.</p>
 
 
+
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="Conces/Cat C">
-    Conces/Cat C
-  </label>
-  <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
-    <option value="1" selected>Cat C</option>
-    <option value="2">Conces</option>
-  </select>
+    <label class="nhsuk-label" for="Invoice ID">
+      Invoice and drug reference number
+    </label>
+    
+    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.144">
+ 
 </div>
 
 <!--<div class="nhsuk-form-group" style="display: flex; align-items: center; gap: 1rem;">
@@ -132,13 +103,15 @@ If all the details are correct select View next drug.</p>
 </div> -->
 
 <div class="nhsuk-form-group" >
+
+  <label class="nhsuk-label" for="Conces/Cat C">
+    Conces/Cat C
+  </label>
+  <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
+    <option value="1" selected>Cat C</option>
+    <option value="2">Conces</option>
+  </select>
   <div>
-    <label class="nhsuk-label" for="Invoice ID">
-      Invoice and drug reference number
-    </label>
-    
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
- 
     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
@@ -153,7 +126,7 @@ If all the details are correct select View next drug.</p>
                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="Enter a drug name" value="Oxybutynin 5mg modified-release tablets">
+                  <input class="nhsuk-input nhsuk-u-width-three-quarters" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="Enter a drug name" value="Oxybutynin 5mg modified-release tablets">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
                 <datalist id="Drug">
@@ -254,7 +227,7 @@ If all the details are correct select View next drug.</p>
   <label class="nhsuk-label" for="autocomplete-Manufacturer">
     Generic Manufacturer
    </label>
-   <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+   <input class="nhsuk-input nhsuk-u-width-three-quarters" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
    <ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
    </div>
    <datalist id="Manufacturer">
@@ -291,6 +264,33 @@ If all the details are correct select View next drug.</p>
  <p> You are on page XXX of 143</p>
                           <br>
  
+
+     <!--search-->
+     <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Search for a drug entry
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+    
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="Search">
+            Enter invoice and drug reference number to search for previously entered drugs.
+          </label>
+          <div class="nhsuk-hint" id="example-with-hint-text-hint">
+            For example Supplierinvoice.033
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+            <a href="" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+             </div>
+        </div>
+    
+      </div>
+    </details>
+
+    <!--search-->
 
                          
                           </div>
