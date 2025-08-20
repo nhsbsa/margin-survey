@@ -208,24 +208,14 @@ router.post(/suppliergone/, function (req, res) {
     }
   });
 
-     router.post(/overwritemonth/, function (req, res) {
-
-    const overwritemonth = req.session.data['overwritemonth']
-
-    if (overwritemonth === "yes") {
-      res.redirect('upload-confirmation');
-    } else {
-      res.redirect('upload-list');
-    }
-  });
-
+    
   
    router.post(/overwritemonth/, function (req, res) {
 
     const overwritemonth = req.session.data['overwritemonth']
 
     if (overwritemonth === "yes") {
-      res.redirect('upload-confirmation');
+      res.redirect('upload-confirmation-overwrite');
     } else {
       res.redirect('upload-list');
     }
