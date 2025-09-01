@@ -19,6 +19,22 @@ NHS.UK prototype kit
 
 <!-- Edit the header -->
 <!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
+
+{% block bodyStart %}{% endblock %}
+
+      {% block skipLink %}
+        <a class="nhsuk-skip-link" href="#invoice-id">Skip to Invoice and Drug Reference Number</a>
+  <style>
+    /* Add offset for skip link target */
+    #invoice-id:focus {
+      scroll-margin-top: 200px; /* Adjust this value to match your header height */     
+      outline-offset: 2px;
+    }
+  </style>
+      {% endblock %}    
+
+{% block beforeContent %}{% endblock %}
+
 {% block header %}
 
 
