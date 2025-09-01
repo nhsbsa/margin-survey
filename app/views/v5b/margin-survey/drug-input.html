@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v6.html' %}
+{% extends 'layout-v6-drug.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -54,53 +54,31 @@ Drug Purchase Price Database (Margin Survey)
       <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
 
 
-      <!--search-->
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Search for a drug entry
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-      
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="Search">
-              Enter invoice and drug reference number to search for previously entered drugs.
-            </label>
-            <div class="nhsuk-hint" id="example-with-hint-text-hint">
-              For example Supplierinvoice.033
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-              <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-               </div>
-          </div>
-      
-        </div>
-      </details>
-
-      <!--search-->
 
 
-      <form id="myForm">
 
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="Conces/Cat C">
-    Conces/Cat C
-  </label>
-  <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
-    <option value="1" selected>Cat C</option>
-    <option value="2">Conces</option>
-  </select>
-</div>
+<form id="myForm">
 
 <div class="nhsuk-form-group" >
-  <div>
-     <label class="nhsuk-label" for="Invoice ID">
+  
+     <label class="nhsuk-label" for="invoice-id">
       Invoice and drug reference number
     </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
- 
+    <input class="nhsuk-input nhsuk-input--width-10" id="invoice-id" name="invoice-id" type="text" style="width: 300px;">
+  </div>
+
+    <div class="nhsuk-form-group">
+      <div>
+      <label class="nhsuk-label" for="Conces/Cat C">
+        Conces/Cat C
+      </label>
+      <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
+        <option value="1" selected>Cat C</option>
+        <option value="2">Conces</option>
+      </select>
+    
+
+
     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
@@ -244,7 +222,7 @@ Drug Purchase Price Database (Margin Survey)
     Generic Manufacturer
   </label>
   <div class="nhsuk-hint" id="example-with-hint-text-hint">
-  If name does not appear <a href="add-manufacturer" class="nhsuk-link">add manufacturer</a> 
+  Enter manufacturers name, if name does not appear <a href="add-manufacturer" class="nhsuk-link">add manufacturer</a> 
   </div>
 
   <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="">
@@ -289,7 +267,34 @@ Drug Purchase Price Database (Margin Survey)
     </div>
   </div>
 
+<br>
 
+      <!--search-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="Search">
+              Enter invoice and drug reference number to search for previously entered drugs.
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              For example Supplierinvoice.033
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
+              <a href="drug-input-continue" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
+               </div>
+          </div>
+      
+        </div>
+      </details>
+
+      <!--search-->
 
 
 {% endblock %}
