@@ -52,13 +52,15 @@ Drug Purchase Price Database (Margin Survey)
       <span class="nhsuk-caption-xl">June 2025 - Margin Survey</span>
       <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
 
-     <form id="myForm">
+<form id="myForm">
+
+
 
 <div class="nhsuk-form-group">
-     <label class="nhsuk-label" for="Invoice ID">
+     <label class="nhsuk-label" for="InvoiceID">
       Invoice and drug reference number
     </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
+    <input class="nhsuk-input nhsuk-input--width-10" id="InvoiceID" name="InvoiceID" type="text" style="width: 300px;">
  
 </div>
 
@@ -256,6 +258,24 @@ Drug Purchase Price Database (Margin Survey)
 
                             <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const invoiceField = document.getElementById("InvoiceID");
+    if (invoiceField) {
+      invoiceField.focus();
+      invoiceField.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+</script>
+
+
+
+
+
+
 </form>
 
 
@@ -308,6 +328,27 @@ Drug Purchase Price Database (Margin Survey)
 
     </div>
   </div>
+
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const invoiceField = document.getElementById("InvoiceID");
+
+    if (invoiceField) {
+      // Focus on load
+      invoiceField.focus();
+
+      // If someone clicks a link to #InvoiceID, focus again
+      window.addEventListener("hashchange", function() {
+        if (location.hash === "#InvoiceID") {
+          invoiceField.focus();
+        }
+      });
+    }
+  });
+</script>
+
 
 
 {% endblock %}
