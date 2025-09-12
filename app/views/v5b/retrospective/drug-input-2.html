@@ -46,7 +46,7 @@ Drug Purchase Price Database (Margin Survey)
 
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters">
+    <div class="nhsuk-grid-column-full">
 
    
       <!-- Change the page title here -->
@@ -115,7 +115,7 @@ Drug Purchase Price Database (Margin Survey)
                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
+                  <input class="nhsuk-input nhsuk-u-width-three-quarters" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
                 <datalist id="Drug">
@@ -275,7 +275,7 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-    <p> You are on page 1 of 1</p>
+    <p>You are on page 8 of 8</p>
 
    
       <div class="nhsuk-checkboxes" style="margin-left: -38px;">
@@ -289,7 +289,25 @@ Drug Purchase Price Database (Margin Survey)
     </div>
   </div>
 
+<!---pagination--->
 
+<nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+  <ul class="nhsuk-list nhsuk-pagination__list">
+    <li class="nhsuk-pagination-item--previous">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input">
+        <span class="nhsuk-pagination__title">Previous</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 7</span>
+        <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
+        </svg>
+
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!---pagination ends--->
 
 
 {% endblock %}
