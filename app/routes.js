@@ -256,4 +256,13 @@ router.post(/suppliergone/, function (req, res) {
     }
   });
 
-  
+  router.post(/ConfirmInvoice/, function (req, res) {
+
+    const ConfirmInvoice = req.session.data['ConfirmInvoice']
+
+    if (ConfirmInvoice === "yes") {
+      res.redirect('drug-image-1-confirmation');
+    } else {
+      res.redirect('drug-image-1');
+    }
+  });
