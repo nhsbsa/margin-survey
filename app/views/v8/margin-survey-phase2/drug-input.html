@@ -278,7 +278,9 @@ Drug Purchase Price Database (Margin Survey)
 
 <br>
 
+
       <!--search-->
+
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
@@ -286,24 +288,45 @@ Drug Purchase Price Database (Margin Survey)
           </span>
         </summary>
         <div class="nhsuk-details__text">
-      
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="Search">
-              Enter invoice and drug reference number to search for previously entered drugs.
-            </label>
-            <div class="nhsuk-hint" id="example-with-hint-text-hint">
-              For example Supplierinvoice.033
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-          <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-              <a href="drug-input-continue-1-old" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-               </div>
-          </div>
+
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="drug-search">
+          Enter drug name to search for previously entered drugs.
+        </label>
+        <div class="nhsuk-hint">
+          For example Bisoprolol
+        </div>
+        <input 
+          class="nhsuk-input nhsuk-input--width-10" 
+          id="drug-search" 
+          name="drug" 
+          type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="invoice-search">
+          Enter invoice reference number to search for previously entered drugs.
+        </label>
+        <div class="nhsuk-hint">
+          For example Supplierinvoice.143
+        </div>
+        <input 
+          class="nhsuk-input nhsuk-input--width-10" 
+          id="invoice-search" 
+          name="invoice" 
+          type="text">
+      </div>
+
+      <a href="drug-input-search-result" class="nhsuk-button" style="margin-top: 20px;">
+        Search
+      </a>
       
         </div>
       </details>
 
       <!--search-->
+
 
 
 <!---pagination--->
