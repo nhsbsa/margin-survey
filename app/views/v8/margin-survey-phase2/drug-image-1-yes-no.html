@@ -1,0 +1,91 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+<br>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      
+      <!-- Change the page title here -->
+
+      <h1 class="nhsuk-heading-xl">Are you sure you want to reassign invoice 1102?</h1>
+
+        <p class="nhsuk-body-l">
+          Reassigning this invoice will unlink associated drug entries.
+        </p>
+
+
+      <form action="ConfirmInvoice" method="post">
+  
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+           <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="inline-1" name="ConfirmInvoice" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
+                Yes, I want to reassign this invoice
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="inline-2" name="ConfirmInvoice" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
+                No, I don't want to reassign this invoice
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      </div>
+
+<br>
+
+      <!-- Submit button to continue -->
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      </form>
+
+      
+    </div>
+  </div>
+
+{% endblock %}

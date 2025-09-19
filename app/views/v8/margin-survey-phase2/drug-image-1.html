@@ -90,20 +90,33 @@ input[type=checkbox]:checked ~ label > img {
     <img src="/images/supplier.png" alt="source">
     <span class="highlight-text word1"></span>
   </div>
-
   
 
-           <br>
-           <br>
+<br>
+<br>
 
-                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="" class="nhsuk-button">Refresh image</a> 
-                          </div>
+<div class="nhsuk-form-group" style="padding-left: 0; padding-top: 10px; display: flex; align-items: center; gap: 15px;">
+  <a href="" class="nhsuk-button">Refresh image</a> 
+  <a href="drug-image-1-reassign-invoice" class="nhsuk-button nhsuk-button--secondary">Reassign Invoice</a>
+  <p><a href="#" class="nhsuk-link" style="margin-bottom: 0;">Archive Invoice</a></p>
+</div>
 
-                      
+<!-- Details about buttons -->
 
-
-                     
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Available actions
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <ul>
+          <li>Refresh image – Reloads the scanned invoice in case the document did not display correctly.</li>
+          <li>Reassign invoice – Moves this invoice to a different record. Any associated drug entries will be unlinked.</li>
+          <li>Archive invoice – Stores this invoice in the archive so it is no longer active but remains available for reference.</li>
+        </ul>
+      </div>
+    </details>
       
     </div>
   </div>
