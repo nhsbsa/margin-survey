@@ -1,0 +1,206 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v5.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+    <br>
+      
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">List of suppliers for Alpha Pharmacy</h1>
+    
+
+      <p>Continue margin survey activity for Alpha Pharmacy.</p>
+
+
+<dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Pharmacy name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Alpha Pharmacy
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      AAA Street, Newcastle, NA13 4FG
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     OCS
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      FGY780
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     MET
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      000000
+    </dd>
+  </div>
+
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+       Status
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Completed
+      </dd>
+
+  </div>
+  
+
+</dl>
+
+
+<table role="table" class="nhsuk-table-responsive">
+  <caption class="nhsuk-table__caption">Supplier list</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Supplier name
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Statement provided
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Drugs entered
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier name</span><a href="supplier-input-continue">Altera Digital Health</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="drug-input-continue">143</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="drug-input">Add drug <span class="nhsuk-u-visually-hidden">Altera Digital Health</span></a>
+      </td>
+    </tr>
+
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier name</span><a href="">Dedalusd</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="">3</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Add drug <span class="nhsuk-u-visually-hidden">Dedalusd</span></a>
+      </td>
+    </tr>
+
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier name</span><a href="">MEDITECH UK</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="">116</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Add drug <span class="nhsuk-u-visually-hidden">MEDITECH UK</span></a>
+      </td>
+    </tr>
+
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier name</span><a href="">Oracle Corporation UK Ltd</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Statement provided</span>Yes
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Drugs entered</span><a href="">41</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="">Add drug <span class="nhsuk-u-visually-hidden">Oracle Corporation UK Ltd</span></a>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+<br>
+      <!-- End of content -->
+      <a href="supplier-input" class="nhsuk-button">Add new supplier</a>
+
+      <br>
+      <br>
+ 
+       <h2 class="nhsuk-heading-l">Complete account</h2>
+       <p>When you have entered all the suppliers and drugs, mark this margin survey account as complete.
+         <br>
+         You can amend this account after it has been completed.</p>
+       <a href="menu-in-progress" class="nhsuk-button">Mark as incomplete</a>
+       <a href="menu-completed" class="nhsuk-button nhsuk-button--secondary">Back to margin survey dashboard</a>
+       
+    </div>
+  </div>
+{% endblock %}

@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v5.html' %}
+{% extends 'layout-v8.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -16,32 +16,29 @@ Drug Purchase Price Database (Margin Survey)
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
+ 
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-{% endblock %}
-
-<!-- For adding a back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
-{% block outerContent %}
 {% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
 
 
 <div class="nhsuk-grid-row">
 
-<div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-two-thirds">
 
 <br>
-      
-      <!-- Change the page title here -->
-      <h1>
-        Select month and year of New Drug Purchase Price Database task
-      </h1>
-
+  <!-- Change the page title here -->
+    <span class="nhsuk-caption-xl">Margin survey daily checking extract</span>
+      <h1 class="nhsuk-heading-xl">Select month and year</h1>
        
       <div class="nhsuk-card-group">
         <div class="nhsuk-form-group">
@@ -61,11 +58,10 @@ Drug Purchase Price Database (Margin Survey)
       
       <br>
 
-      <a href="home-page" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      <a href="daily-checking-extract" class="nhsuk-button" data-module="nhsuk-button" type="submit">
        Continue
       </a>
-      </div>
-      </div>
+  
       <!-- End of content -->
 
     </div>

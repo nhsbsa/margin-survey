@@ -1,0 +1,135 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+ 
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  {{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+
+<div class="nhsuk-grid-row">
+
+  
+<div class="nhsuk-grid-column-full">
+  
+<br>
+      
+      <!-- Change the page title here -->
+      
+<h1 class="nhsuk-heading-xl">April 2025 to June 2025</h1>
+
+<h2 class="nhsuk-heading-m">Generate list</h2>
+    <p class="nhsuk-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+     
+    
+
+         <a href="generate-sample" class="nhsuk-button">Generate sample</a>
+
+       
+
+         <hr>
+
+
+        <h2 class="nhsuk-heading-m">Pharmacy list (945)</h2>
+
+      
+
+               <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="autocomplete-supplier">
+    Search a pharmacy name
+  </label>
+
+  <div class="input-button-wrapper">
+    <input class="nhsuk-input nhsuk-u-width-one-third" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="Search here">
+    
+    <a href="" class="nhsuk-button" style="margin-top:-8px ;">Search</a>
+  </div>
+
+
+ <p class="nhsuk-body"><a href="add-pharmacy">Add pharmacy to the list</a></p> 
+
+  <ul class="nhsuk-list" id="supplier-list" hidden></ul>
+</div>
+
+<datalist id="supplier">
+  <option value="AAA Pharmacy"></option>
+  <option value="General Pharmacy"></option>
+  <option value="Holiday Pharmacy"></option>
+</datalist>
+
+
+
+
+        <table class="nhsuk-table">
+           <caption class="nhsuk-u-font-size-19 nhsuk-u-font-weight-normal nhsuk-u-padding-bottom-2">
+   <span class="nhsuk-u-visually-hidden">This table shows the whole pharmacy lists that was uploaded for April 2025 to June 2025.</span>
+  
+</caption>
+ <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Pharmacy name</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">ODS code</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Participating</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Previous <br>participating</th> 
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Eligible</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <th scope="row" class="nhsuk-table__header"><a href="aaa-pharmacy">AAA Pharamcy</a></th>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">123456</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="pharmacy-list-whole">Mark as eligible</a> | <a href="remove-pharamcy">Remove</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+     <th scope="row" class="nhsuk-table__header"><a href="">General Pharmacy</a></th>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">789075</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Mark as ineligible</a> | <a href="">Remove</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+     <th scope="row" class="nhsuk-table__header"><a href="">Holiday Pharmacy</a></th>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">111213</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric">No</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Mark as eligible</a> | <a href="">Remove</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+  
+    </div>
+  </div>
+{% endblock %}
