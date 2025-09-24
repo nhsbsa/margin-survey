@@ -1,0 +1,83 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v5.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+<div class="nhsuk-grid-row">
+  
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <br>
+      
+      <!-- Change the page title here -->
+      <h1>
+        Sign in
+      </h1>
+      
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Email address
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Password
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+      <a href="home-page" class="nhsuk-button">Sign in</a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Need help with signing in?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+         
+          <p>Contact the helpdesk on 0300 123 2344 or via email at <a href="mailto: marginsurvey@nhs.net">marginsurvey@nhs.net </a>for help</p>
+          
+      
+        </div>
+      </details>
+     
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

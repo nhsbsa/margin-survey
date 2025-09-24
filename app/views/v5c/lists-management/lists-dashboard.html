@@ -1,0 +1,80 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+ 
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+
+<div class="nhsuk-grid-row">
+
+  
+<div class="nhsuk-grid-column-full">
+  
+<br>
+   
+<h1 class="nhsuk-heading-xl">Select a list</h1>
+
+       
+    <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption"><span aria-hidden="Select a report type to export"></span></caption>
+  <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Reports</th>
+      <th scope="col" class="nhsuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+     <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Pharmacy list</td>
+      <td class="nhsuk-table__cell"><a href="pharmacy-list/pharmacy-list">View</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Drug list</td>
+      <td class="nhsuk-table__cell"><a href="drug-list/select-month-year">View</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Retrospective drug list</td>
+      <td class="nhsuk-table__cell"><a href="retrospective-drug-list/select-month-year">View</a></td>
+    </tr>
+     <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Supplier list</td>
+      <td class="nhsuk-table__cell"><a href="supplier-list/supplier-list">View</a></td>
+    </tr> 
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Manufacturer list</td>
+      <td class="nhsuk-table__cell"><a href="manufacturer-list/manufacturer-list">View</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+      
+    
+    </div>
+  </div>
+{% endblock %}

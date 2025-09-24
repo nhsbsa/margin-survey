@@ -1,0 +1,103 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v5.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+    <br>
+      
+      <!-- Change the page title here -->
+     <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Pharmacy details</h1>
+    
+
+      <p>Start a new margin survey activity for Alpha Pharmacy.</p>
+
+
+<dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Pharmacy name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Alpha Pharmacy
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      AAA Street, Newcastle, NA13 4FG
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     OCS
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      FGY780
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     MET
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      000000
+    </dd>
+
+  </div>
+  
+
+</dl>
+
+<a href="supplier-input" class="nhsuk-button">Continue</a>
+<a href="menu" class="nhsuk-button nhsuk-button--secondary">Back to margin survey dashboard</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
