@@ -16,6 +16,22 @@ Drug Purchase Price Database (Margin Survey)
 {% endblock %}
 
 {% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Manage lists</a></li>
+
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-list">Pharmacy list</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+
 {% endblock %}
 
 <!-- For adding page content -->
@@ -23,18 +39,12 @@ Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-{{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-  }) }}
-
 <div class="nhsuk-grid-row">
 
   
 <div class="nhsuk-grid-column-full">
   
-<br>
-      
+
       <!-- Change the page title here -->
        
 <h1 class="nhsuk-heading-xl">Pharmacy list for May 2025</h1>
