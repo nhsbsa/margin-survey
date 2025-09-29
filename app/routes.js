@@ -266,3 +266,14 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('drug-image-1');
     }
   });
+
+  router.post(/supplierDelete/, function (req, res) {
+
+    const supplierDelete = req.session.data['supplierDelete']
+
+    if (supplierDelete === "yes") {
+      res.redirect('supplier-confirmation-delete');
+    } else {
+      res.redirect('supplier-input-continue');
+    }
+  });
