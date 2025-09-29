@@ -58,10 +58,13 @@ Drug Purchase Price Database (Margin Survey)
         </h1>
         </legend>
 <br>    
-     <p>If you delete this supplier, you will lose any information that has not been saved.</p>
-
-      
-      
+     <p>This supplier currently has <strong>[X] drugs</strong> associated with it. If you delete this supplier:
+      <ul>
+      <li>All linked drug records will be removed.</li>
+      <li>You will lose any information that has not been saved.</li>
+     </ul>
+      </p>
+<br>
       <div class="nhsuk-form-group">
 
         <form action="supplierDelete" method="post">
@@ -87,6 +90,7 @@ Drug Purchase Price Database (Margin Survey)
       
       </div>
 
+<br>
 <br>
       <!-- Submit button to continue -->
       <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
