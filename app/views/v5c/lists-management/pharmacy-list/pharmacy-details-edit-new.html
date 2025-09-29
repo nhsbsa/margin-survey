@@ -18,6 +18,21 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+   <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Select a list</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-list">Pharmacy list</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/25-generate-sample">Pharmacies for June 2025</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-details">View details for Anchor Health Pharmacy</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -29,15 +44,11 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-  {{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-  }) }}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-<br>
+
       
       <!-- Change the page title here -->
      

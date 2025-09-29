@@ -18,22 +18,6 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <ol class="nhsuk-breadcrumb__list">
-    
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu">Margin survey checking dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="continue">List of suppliers</a></li>
-    
-  </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="#">
-      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Home
-    </a>
-  </p>
-</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -46,102 +30,38 @@ Drug Purchase Price Database (Margin Survey)
 {% block content %}
 
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-inset-text">
-      <span class="nhsuk-u-visually-hidden">Information: </span>
-      <p><b>Supplier have been deleted</b></p>
-    </div>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+<br>
 
-    <form id="myForm">
-      <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
-      <h1 class="nhsuk-heading-xl">View and edit Altera Digital Health</h1>
-      
-      
-    <!-- auto complete 
-     
-    <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="autocomplete-input">
-                    Select supplier
-                  </label>
-                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="service-search" type="text" autocomplete="off" list="trusts" placeholder="Select or enter a supplier">
-                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+              <div class="nhsuk-grid-column-two-thirds">
+
+                <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0" style="background-color: #007f3b; text-align: left;">
+
+                  <div class="nhsuk-card__content">
+
+                    <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                      You have successfully delete the supplier [supplier name].
+                    </h1>
+
+                  </div>
+
                 </div>
-                <datalist id="trusts">
-                  <option value="Altera Digital Health"></option>
-                  <option value="Dedalusd"></option>
-                  <option value="Meditech UK"></option>
-                  <option value="Oracle Corporation UK Ltd"></option>
-                  <option value="Nervecentre Software Ltd"></option>
-                </datalist>
-                
-              -->
-              
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="supplier">
-                  Enter supplier name
-                </label>
-                <select class="nhsuk-select nhsuk-u-width-one-half" id="supplier" name="supplier">
-                  <option value="Select">Select a supplier</option>
-                  <option value="Altera Digital Health"selected>Altera Digital Health</option>
-                <option value="Dedalusd">Dedalusd</option>
-                <option value="Meditech UK">Meditech UK</option>
-                <option value="Oracle Corporation UK Ltd">Oracle Corporation UK Ltd</option>
-                <option value="Nervecentre Software Ltd">Nervecentre Software Ltd</option>
-                </select>
+
+<br>
+                 <p class="nhsuk-body"><a href="continue" class="nhsuk-link">List of suppliers for Altera Digital Health</a></p>
+
+                <p class="nhsuk-body"><a href="menu-completed" class="nhsuk-link">Back to margin survey dashboard</a></p>
+
+
               </div>
 
 
-                <div class="nhsuk-card-group" >
-                  
-                     
-                  <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="Statement" name="Statement" type="checkbox" value="Statement" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="Statement" >
-                        Statement provided (Optional)
-                      </label>
-                    </div>
-                    </div>
-                   </div>
-                  
-                  <div class="nhsuk-form-group">
-                     <label class="nhsuk-label" for="total">
-                     Statement total amount (optional)
-                     <div class="nhsuk-hint" id="total-hint">
-                      For example, £600 or £192.01
-                    </div>
-                    </label>
-                    <div class="nhsuk-input__wrapper">
-                  
-                      <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
-                  
-                      <input class="nhsuk-input nhsuk-input--width-5" id="total" name="total" type="text" value="623.54">
-                    </div>
-                  
-                  </div>
 
-                         
-                            <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
-                            <a href="drug-input-continue" class="nhsuk-button">Save and add drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
-                            <a href="supplier-input-delete" class="nhsuk-button nhsuk-button--warning" >Delete supplier</a>
-                          </div>
-  <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+            </div>
 
-                </form>
+          </div>
 
-
-                   <script>
-                    function clearFields() {
-                        document.getElementById('myForm').reset();
-                    }
-                </script>
-                        </div>
-
-</div>
-
-
+        
 {% endblock %}
