@@ -20,9 +20,9 @@ Drug Purchase Price Database (Margin Survey)
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="continue">Go back to supplier list</a></li>
-    
+
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="confirmation-save-maunal">Go back to supplier list</a></li>
+
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -210,7 +210,13 @@ Drug Purchase Price Database (Margin Survey)
   <label class="nhsuk-label" for="Generic Manufacturer">
     Generic Manufacturer
   </label>
+
+    <div class="nhsuk-hint" id="example-with-hint-text-hint">
+   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+  </div>
+
   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="Generic Manufacturer" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+
   <ul class="nhsuk-list" id="Generic Manufacturer" hidden></ul>
 </div>
 <datalist id="Generic Manufacturer">
@@ -222,8 +228,8 @@ Drug Purchase Price Database (Margin Survey)
 
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input" class="nhsuk-button">Save and add another drug</a> 
-                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Save and back to suppliers</a>
+                            <a href="drug-input-continue-2" class="nhsuk-button">Confirm and continue to next drug</a> 
+                            <a href="continue" class="nhsuk-button nhsuk-button--secondary" >Manually add a drug</a>
                             <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
 
