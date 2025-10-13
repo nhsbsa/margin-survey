@@ -18,25 +18,6 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <ol class="nhsuk-breadcrumb__list">
-    
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/new">Pharmacy details</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/supplier-input">Add a supplier</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/drug-input">Add a drug</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey/continue">List of suppliers</a></li>
-
-  </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="#">
-      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Home
-    </a>
-  </p>
-</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -48,42 +29,46 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-
-      
+<br>
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      
        <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
       <h1 class="nhsuk-fieldset__heading">
-        Confirm the account for Alpha Pharmacy is complete
+        Confirm you want to leave this page and go to the suppliers' page
       </h1>
     </legend>
-    
-<br>
-      <p>This account contains ‘NO OF SUPPLIERS’  and a total of ‘NO OF DRUGS’ .</p>
+<br>    
+     <p>If you go to the supplier's page, you will lose any information you have not saved.</p>
 
-      <p>Confirm this account is now complete.</p>
+      
       
       <div class="nhsuk-form-group">
 
-        <form action="completeaccount" method="post">
+        <form action="Supplierconfirmblank" method="post">
 
            <div class="nhsuk-radios">
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="inline-1" name="completeaccount" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="inline-1" name="Supplierconfirmblank" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
-                Yes, this account is complete
+                Yes, I want to leave this page
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="inline-2" name="completeaccount" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="inline-2" name="Supplierconfirmblank" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
-                No, this account is not complete
+                No, I don't want to leave this page
               </label>
             </div>
       
@@ -92,8 +77,8 @@ Drug Purchase Price Database (Margin Survey)
       
       </div>
 
-      <br>
-
+<br>
+      <!-- Submit button to continue -->
       <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
         Continue
       </button>

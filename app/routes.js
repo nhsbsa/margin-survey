@@ -162,11 +162,11 @@ router.post(/suppliergone/, function (req, res) {
   });
   
 
-    router.post(/Confirmblanksupplier/, function (req, res) {
+    router.post(/Supplierconfirmblank/, function (req, res) {
 
-    const Confirmblanksupplier = req.session.data['Confirmblanksupplier']
+    const Supplierconfirmblank = req.session.data['Supplierconfirmblank']
 
-    if (Confirmblanksupplier === "yes") {
+    if (Supplierconfirmblank === "yes") {
       res.redirect('continue-complete');
     } else {
       res.redirect('supplier-input');
@@ -196,6 +196,20 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('drug-input');
     }
   });
+
+
+       router.post(/manualLeave/, function (req, res) {
+
+    const manualLeave = req.session.data['manualLeave']
+
+    if (manualLeave === "yes") {
+      res.redirect('continue-complete-manual-add');
+    } else {
+      res.redirect('drug-input');
+    }
+  });
+
+
 
     router.post(/confirmleave/, function (req, res) {
 
