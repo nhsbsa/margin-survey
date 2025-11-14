@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v5c-drug.html' %}
+{% extends 'layout-v5c.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -59,37 +59,42 @@ Drug Purchase Price Database (Margin Survey)
 
 <form id="myForm">
 
-<div class="nhsuk-form-group" >
+<div style="display:flex; gap:15px;">
   
-     <label class="nhsuk-label" for="invoice-id">
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="invoice-id">
       Invoice and drug reference number
     </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="invoice-id" name="invoice-id" type="text" style="width: 300px;">
+    <input class="nhsuk-input nhsuk-input--width-10" 
+           id="invoice-id" 
+           name="invoice-id" 
+           type="text" 
+           style="width: 300px;">
   </div>
 
-    <div class="nhsuk-form-group">
-      <div>
-      <label class="nhsuk-label" for="Conces/Cat C">
-        Conces/Cat C
-      </label>
-      <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
-        <option value="1" selected>Cat C</option>
-        <option value="2">Conces</option>
-      </select>
-    
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="ConcesCatC">
+      Conces/Cat C
+    </label>
+    <select class="nhsuk-select" id="ConcesCatC" name="ConcesCatC">
+      <option value="1" selected>Cat C</option>
+      <option value="2">Conces</option>
+    </select>
+  </div>
+
+</div>
 
 
-    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
+
+    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
       Is this drug a PI?
     </label>
-  </div>
+ 
 </div>
 
-</div>
-
-    <div class="nhsuk-form-group">
+    <div class="nhsuk-form-group" style="margin-top: 30px;">
                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
@@ -107,14 +112,7 @@ Drug Purchase Price Database (Margin Survey)
                   <option value="Salbutamol 2 mg tablet "></option>
                 </datalist>
     
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="Pack size">
-                    Pack size
-                  </label>
-                  <div>
-                    <input class="nhsuk-input nhsuk-input--width-5" id="Pack size" name="Pack size" type="text">
-                     </div>
-                </div>
+             
 
    
 <!--select brand and generic name-->
@@ -157,9 +155,17 @@ Drug Purchase Price Database (Margin Survey)
 
 <!--select brand and generic name-->
 <br>
-   
 
- 
+<div style="display:flex; gap:15px;">
+      <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="Pack size">
+                    Pack size
+                  </label>
+                  <div>
+                    <input class="nhsuk-input nhsuk-input--width-5" id="Pack size" name="Pack size" type="text">
+                     </div>
+                </div>
+
  <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="Number of packs">
         Number of packs
@@ -168,7 +174,7 @@ Drug Purchase Price Database (Margin Survey)
         <input class="nhsuk-input nhsuk-input--width-5" id="Number of packs" name="Number of packs" type="text">
        </div>
     </div>
-    
+    </div>
 <!--Price per pack-->
   <div style="display: inline-block; margin-right: 10px;">
   <div class="nhsuk-form-group">
@@ -311,9 +317,9 @@ Drug Purchase Price Database (Margin Survey)
   <label class="nhsuk-label" for="autocomplete-input 2">
     Generic Manufacturer
   </label>
-
+  
   <div class="nhsuk-hint" id="example-with-hint-text-hint">
-   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+   Enter manufacturers name, if name does not appear <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">add manufacturer</a>
   </div>
 
   <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="">
@@ -328,8 +334,8 @@ Drug Purchase Price Database (Margin Survey)
 
            
                           <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input" class="nhsuk-button">Save and add another drug</a>
-                            <a href="drug-input" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a> 
+                            <a href="drug-input-2" class="nhsuk-button">Save and add another drug</a>
+                            <a href="continue" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a> 
                             <!--a href="drug-input-continue-2" class="nhsuk-button nhsuk-button--secondary">Cancel and back to verifying</a-->
                           </div>
 
@@ -345,14 +351,14 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-    <p>You are on page 8 of 8</p>
+    <p>You are on page 7 of 8</p>
 
    
       <div class="nhsuk-checkboxes" style="margin-left: -38px;">
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-            <a href="drug-input-continue-2">Go to page</a>
+            <a href="drug-input-continue">Go to page</a>
           </label>
         </div>
       </div>
@@ -406,7 +412,8 @@ Drug Purchase Price Database (Margin Survey)
          <a href="drug-input-search-result" class="nhsuk-button nhsuk-button--secondary" style="margin-top: 20px;">
            Back to last search result
         </a>
-       
+
+         
         </div>
       </details>
 
@@ -418,12 +425,23 @@ Drug Purchase Price Database (Margin Survey)
 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
   <ul class="nhsuk-list nhsuk-pagination__list">
     <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
         <span class="nhsuk-pagination__title">Previous</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Page 7</span>
+        <span class="nhsuk-pagination__page">Page 6</span>
         <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
           <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
+        </svg>
+
+      </a>
+    </li>
+    <li class="nhsuk-pagination-item--next">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="drug-input-2">
+        <span class="nhsuk-pagination__title">Next</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 8</span>
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="m14.7 6.3 5 5c.2.2.3.4.3.7 0 .3-.1.5-.3.7l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H5a1 1 0 0 1 0-2h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4Z" />
         </svg>
 
       </a>
