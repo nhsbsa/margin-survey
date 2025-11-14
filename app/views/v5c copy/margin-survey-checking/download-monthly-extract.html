@@ -1,0 +1,55 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v5c.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+    <br>
+
+      <!-- Change the page title here -->
+      <div class="nhsuk-panel">
+        <h1 class="nhsuk-panel__title">
+          A monthly extract for June 2025 is being generated
+        </h1>
+        <p class="nhsuk-panel__body">
+          Refresh this page after 5 minutes to get the reports
+        </p>    
+      </div>
+
+      
+      <p><a href="get-monthly-extracts-reports">Search again</a></p>
+<br>
+      <a href="menu" class="nhsuk-button nhsuk-button--secondary">Back to the dashboard</a>
+
+
+</div>
+  </div>
+{% endblock %}

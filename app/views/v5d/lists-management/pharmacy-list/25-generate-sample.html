@@ -1,0 +1,384 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Select a list</a></li>
+
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-list">Upload and manage pharmacy lists</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+
+  
+<div class="nhsuk-grid-column-full">
+  
+      
+      <!-- Change the page title here -->
+       
+<h1 class="nhsuk-heading-xl">Pharmacy list for June 2025</h1>
+    
+
+
+<p class="nhsuk-body">This table shows all the pharmacies in this list. You can edit or remove any pharmacies or add a new pharmacy.</p>
+
+<p class="nhsuk-body">You can also download this pharmacy list as an Excel file.</p>
+
+ <a href="pharmacy-details-add" class="nhsuk-button" >Add pharmacy</a>
+
+ <a href="download-list" class="nhsuk-button nhsuk-button--secondary" >Download list</a>
+
+ <br>
+ <br>
+
+<h3 class="nhsuk-heading-m">The 25 pharmacies for June 2025</h2>
+        <table class="nhsuk-table">
+           <caption class="nhsuk-u-font-size-19 nhsuk-u-font-weight-normal nhsuk-u-padding-bottom-2"><span aria-hidden="This table shows the generated lists.">
+  
+</caption>
+
+
+  <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Trading name</th>  
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Postcode</th> 
+     <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">OCS code</th>
+        <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">DHID</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <th scope="row" class="nhsuk-table__header"><a href="pharmacy-details">Anchor Health Pharmacy</a></th>
+     <td class="nhsuk-table__cell nhsuk-table__cell--numeric">NA13 4FG</td> 
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FW734</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4434</td>
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="pharmacy-details-edit">Edit</a> | <a href="confirm-delete">Remove</a></td>
+</td>
+    </tr>
+  </tbody>
+
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <th scope="row" class="nhsuk-table__header"><a href="">Aim Health Pharmacy</a></th>
+     <td class="nhsuk-table__cell nhsuk-table__cell--numeric">NE11 8DG</td> 
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FA675</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4004</td>
+    
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+</td>
+    </tr>
+  </tbody>
+   
+  <tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Wellcare Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">AB12 3CD</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FZ265</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1001</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Greenlight Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">BA45 6EF</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FV365</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1002</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">CarePlus Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">CB78 9GH</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FJ763</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1003</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Health First Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">DE23 1KL</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FY283</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1004</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Unity Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">EJ34 2MN</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FN854</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1005</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <th scope="row" class="nhsuk-table__header"><a href="">Aim Health Pharmacy</a></th>
+     <td class="nhsuk-table__cell nhsuk-table__cell--numeric">NE11 8DG</td> 
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FA675</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4004</td>
+    
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+</td>
+    </tr>
+  </tbody>
+   
+  <tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Wellcare Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">AB12 3CD</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FZ265</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1001</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Greenlight Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">BA45 6EF</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FV365</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1002</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">CarePlus Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">CB78 9GH</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FJ763</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1003</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Health First Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">DE23 1KL</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FY283</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1004</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Unity Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">EJ34 2MN</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FN854</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1005</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <th scope="row" class="nhsuk-table__header"><a href="">Aim Health Pharmacy</a></th>
+     <td class="nhsuk-table__cell nhsuk-table__cell--numeric">NE11 8DG</td> 
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FA675</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4004</td>
+    
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+</td>
+    </tr>
+  </tbody>
+   
+  <tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Wellcare Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">AB12 3CD</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FZ265</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1001</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Greenlight Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">BA45 6EF</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FV365</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1002</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">CarePlus Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">CB78 9GH</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FJ763</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1003</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Health First Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">DE23 1KL</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FY283</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1004</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Unity Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">EJ34 2MN</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FN854</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1005</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+<tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <th scope="row" class="nhsuk-table__header"><a href="">Aim Health Pharmacy</a></th>
+     <td class="nhsuk-table__cell nhsuk-table__cell--numeric">NE11 8DG</td> 
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FA675</td>
+      <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4004</td>
+    
+       <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+</td>
+    </tr>
+  </tbody>
+   
+  <tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Wellcare Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">AB12 3CD</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FZ265</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1001</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Greenlight Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">BA45 6EF</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FV365</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1002</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">CarePlus Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">CB78 9GH</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FJ763</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1003</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Health First Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">DE23 1KL</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FY283</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1004</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+
+<tbody class="nhsuk-table__body">
+  <tr class="nhsuk-table__row">
+    <th scope="row" class="nhsuk-table__header"><a href="">Unity Pharmacy</a></th>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">EJ34 2MN</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">FN854</td>
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1005</td>
+   
+    <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><a href="">Edit</a> | <a href="">Remove</a></td>
+   
+  </tr>
+</tbody>
+  
+</table>
+
+      
+<br>      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v5d.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+
+<div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <h1>
+        Select month and year of New Drug Purchase Price Database task
+      </h1>
+
+       
+      <div class="nhsuk-card-group">
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Month and year
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width:600px">
+              <option value="1"selected>Select a month and year</option>
+              <option value="2" >January 2025</option>
+              <option value="3">October 2024</option>
+              <option value="4">July 2024</option>
+              <option value="5">April 2024</option>
+              <option value="6">January 2024</option>
+            </select>
+          </div>
+      
+      <br>
+
+      <a href="menu" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+       Continue
+      </a>
+      </div>
+      </div>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

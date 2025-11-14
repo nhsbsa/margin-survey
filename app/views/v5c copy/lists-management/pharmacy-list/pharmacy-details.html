@@ -1,0 +1,315 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+   <ol class="nhsuk-breadcrumb__list">
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Select a list</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/pharmacy-list">Pharmacy list</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../pharmacy-list/25-generate-sample">Pharmacies for June 2025</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+      
+      <!-- Change the page title here -->
+     
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">View details for Anchor Health Pharmacy</h1>
+
+      
+
+       <dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      DHID
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      4434
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     NHS England area
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     NHS SURREY HEARTLANDS INTEGRATED CARE BOARD
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      NHS England area code
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     QXU
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     Contractor code
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      FW734
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     Type
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Independent
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      OU code
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      42456
+    </dd>
+  </div>
+
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Trading name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     Anchor Health Pharmacy
+    </dd>
+  </div>
+
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Owner's name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      ARCHANA BIOLOGICS UK LIMITED
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+    54 NURSERY ROAD, SUNBURY-ON-THAMES, NEWCASTLE
+    </dd>
+  </div>
+     <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Postcode
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     NA13 4FG
+    </dd>
+  </div>
+     <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Met/Other
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     Met
+    </dd>
+  </div>
+     <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Strate
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     1
+    </dd>
+  </div>
+     <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Row count
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     19
+    </dd>
+  </div>
+     <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Month Year
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     June 2025
+    </dd>
+  </div>
+</dl>
+
+  <a href="pharmacy-details-edit" class="nhsuk-button nhsuk-button--secondary" >Edit details</a>
+        
+        <br>
+        <br>
+<!--h2 class="nhsuk-heading-m">Collection details</h2>
+
+<dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Collection date
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   TNT shipment number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     
+    </dd>
+  </div>
+</dl>
+
+<br>
+<h2 class="nhsuk-heading-m">Return details</h2>
+
+<dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Return date
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   TNT shipment number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     
+    </dd>
+  </div>
+</dl>
+
+
+<br>
+<h2 class="nhsuk-heading-m">Other details</h2>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="status">
+    Status
+  </label> <select class="nhsuk-select" id="status" name="status">
+
+    <option value="Letter sent"selected></option>
+    <option value="Letter sent">Letter sent</option>
+    <option value="Confirm participation" >Confirm participation</option>
+    <option value="To arrange collection" >To arrange collection</option>
+     <option value="Collection arranged" >Collection arranged</option>
+    <option value="Invoices on site" >Invoices on site</option>
+      <option value="Invoices received via email" >Invoices received via email</option>
+      <option value="Invoices returned" >Invoices returned</option>
+     <option value="Not participating" >Not participating</option>
+  </select>
+
+
+  <a href="pharmacy-details-confirm-status" class="nhsuk-button" style="margin-top:-8px ;">Update status</a>
+</div>
+
+<dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   Date invoices arrived
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     
+    </dd>
+  </div>
+ 
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+   Last updated by
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+    
+    </dd>
+  </div>
+</dl>
+
+<br>
+
+
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Comments
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+
+   <p class="nhsuk-body">
+                               <i>09 June 2025 13:52:43 added by Diana Green</i>
+                            <br>
+                              <b>Pharmacy confirmed via email on 12 June 2025 that invoices were securely packaged with return samples.</b> </p>
+                              <hr>
+                               <i>08 June 2025 10:12:03 added by Diana Green</i>
+                            <br>
+                              <b>Received confirmation from pharmacy that all requested items were included in return package.</b> </p>
+  </div>
+</details>
+
+<br>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example">
+    Add comments (optional)
+  </label>
+  <div class="nhsuk-hint" id="example-hint">
+   Provide more details in the box if needed.
+  </div> <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+</div>
+     
+
+    <a href="" class="nhsuk-button">Save</a-->
+</div>   
+
+       
+
+
+
+
+
+
+
+     <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
