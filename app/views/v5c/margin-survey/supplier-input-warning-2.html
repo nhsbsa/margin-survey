@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v8.html' %}
+{% extends 'layout-v5c.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -18,12 +18,15 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
+    
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="select-month-year">Select month and year</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu">Margin survey checking dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="continue">List of suppliers</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu">Margin survey dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="new">Pharmacy details</a></li>
+    
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="#">
@@ -32,6 +35,7 @@ Drug Purchase Price Database (Margin Survey)
     </a>
   </p>
 </nav>
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -46,7 +50,23 @@ Drug Purchase Price Database (Margin Survey)
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-
+<div class="nhsuk-error-summary" data-module="nhsuk-error-summary">
+  <div role="alert">
+    <h2 class="nhsuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="nhsuk-error-summary__body">
+      <p>
+       You have entered an amount for statement total
+      </p>
+      <ul class="nhsuk-list nhsuk-error-summary__list">
+        <li>
+          <a href="#checkbox">You must now check the box 'Statement provided'</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
     <form id="myForm">
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
@@ -73,35 +93,53 @@ Drug Purchase Price Database (Margin Survey)
               
                 <div class="nhsuk-form-group">
                    
-              <label class="nhsuk-label" for="autocomplete-supplier">
-                Enter supplier name
-               </label>
-               <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-supplier" name="supplier" type="text" autocomplete="off" list="supplier" placeholder="">
-               <ul class="nhsuk-list" id="supplier-list" hidden></ul>
-               </div>
-               <datalist id="supplier">
-                 <option value="Altera Digital Health"></option>
-                 <option value="Dedalusd"></option>
-                 <option value="Meditech UK"></option>
-                 <option value="Oracle Corporation UK Ltd"></option>
-                 <option value="Nervecentre Software Ltd"></option>
-               </datalist>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="supplier">
+                  Enter supplier name
+                </label>
+                <select class="nhsuk-select nhsuk-u-width-one-half" id="supplier" name="supplier">
+                  <option value="Select">Select a supplier</option>
+                  <option value="Altera Digital Health"selected>Altera Digital Health</option>
+                <option value="Dedalusd">Dedalusd</option>
+                <option value="Meditech UK">Meditech UK</option>
+                <option value="Oracle Corporation UK Ltd">Oracle Corporation UK Ltd</option>
+                <option value="Nervecentre Software Ltd">Nervecentre Software Ltd</option>
+                </select>
+              </div>
 
 
-                <div class="nhsuk-card-group" >
-                  
-                     
-                  <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1" >
-                        Statement provided (optional)
-                      </label>
-                    </div>
-                    </div>
-                   </div>
-                  
-                  <div class="nhsuk-form-group">
+<br>
+               
+  <div class="nhsuk-form-group nhsuk-form-group--error">
+  <!-- Error message -->
+  <span id="checkbox-error" class="nhsuk-error-message">
+    <span class="nhsuk-u-visually-hidden">Error:</span>
+    You must confirm this statement
+  </span>
+
+  <div class="nhsuk-checkboxes">
+    <div class="nhsuk-checkboxes__item">
+      <input 
+        class="nhsuk-checkboxes__input nhsuk-checkboxes__input--error" 
+        id="checkbox" 
+        name="checkbox" 
+        type="checkbox" 
+        value="checkbox" 
+        aria-describedby="checkbox-error"
+      >
+      <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox">
+        Statement provided (optional)
+      </label>
+    </div>
+  </div>
+</div>
+
+
+
+                 <br>
+                 
+                 
+                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="total">
                    Enter statement total amount if ‘Statement provided’ is selected
                      <div class="nhsuk-hint" id="total-hint">
@@ -117,12 +155,14 @@ Drug Purchase Price Database (Margin Survey)
                   
                   </div>
 
-                 
+          
+
+                
 
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
-                            <a href="drug-input-manual" class="nhsuk-button">Save and add drug</a> 
-                            <a href="confirmation-save-supplier" class="nhsuk-button nhsuk-button--secondary" >Back to suppliers</a>
-                            </div>
+                            <a href="drug-input" class="nhsuk-button">Save and add drug</a> 
+                            <a href="confirmation-save-supplier" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a>
+                          </div>
  <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
                 </form>
