@@ -55,38 +55,41 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
-
-
 <form id="myForm">
 
-<div class="nhsuk-form-group" >
+<div style="display:flex; gap: 35px;">
   
-     <label class="nhsuk-label" for="invoice-id">
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="invoice-id">
       Invoice and drug reference number
     </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="invoice-id" name="invoice-id" type="text" style="width: 300px;">
+    <input class="nhsuk-input nhsuk-input--width-10" 
+           id="invoice-id" 
+           name="invoice-id" 
+           type="text" 
+           style="width: 300px;">
   </div>
 
-    <div class="nhsuk-form-group">
-      <div>
-      <label class="nhsuk-label" for="Conces/Cat C">
-        Conces/Cat C
-      </label>
-      <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
-        <option value="1" selected>Cat C</option>
-        <option value="2">Conces</option>
-      </select>
-    
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="ConcesCatC">
+      Conces/Cat C
+    </label>
+    <select class="nhsuk-select" id="ConcesCatC" name="ConcesCatC">
+      <option value="1" selected>Cat C</option>
+      <option value="2">Conces</option>
+    </select>
+  </div>
+
+</div>
 
 
-    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
+
+    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
       Is this drug a PI?
     </label>
-  </div>
-</div>
-
+ 
 </div>
 
     <div class="nhsuk-form-group">
