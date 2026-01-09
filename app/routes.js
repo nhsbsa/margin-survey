@@ -291,3 +291,14 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('supplier-input-continue');
     }
   });
+
+  router.post(/supplierMerge/, function (req, res) {
+
+    const supplierMerge = req.session.data['supplierMerge']
+
+    if (supplierMerge === "yes") {
+      res.redirect('confirmation-supplier-merge');
+    } else {
+      res.redirect('continue');
+    }
+  });
