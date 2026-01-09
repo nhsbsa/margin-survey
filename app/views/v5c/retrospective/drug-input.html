@@ -54,33 +54,44 @@ Drug Purchase Price Database (Margin Survey)
       <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
 
 
-      <form id="myForm">
+    
 
-<div class="nhsuk-form-group" >
+<form id="myForm">
 
-     <label class="nhsuk-label" for="Invoice ID">
+<div style="display:flex; gap: 35px;">
+  
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="invoice-id">
       Invoice and drug reference number
     </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;">
+    <input class="nhsuk-input nhsuk-input--width-10" 
+           id="invoice-id" 
+           name="invoice-id" 
+           type="text" 
+           style="width: 300px;">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="ConcesCatC">
+      Conces/Cat C
+    </label>
+    <select class="nhsuk-select" id="ConcesCatC" name="ConcesCatC">
+      <option value="1" selected>Cat C</option>
+      <option value="2">Conces</option>
+    </select>
+  </div>
 
 </div>
 
-    <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="Conces/Cat C">
-    Conces/Cat C
-  </label>
-  <select class="nhsuk-select" id="Conces/Cat C" name="Conces/Cat C" >
-    <option value="1" selected>Cat C</option>
-    <option value="2">Conces</option>
-  </select>
-</div>
- 
-    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
+
+
+    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
       Is this drug a PI?
     </label>
-  </div>
+ 
+</div>
 
 
 <br>
@@ -419,17 +430,7 @@ Drug Purchase Price Database (Margin Survey)
 
       </a>
     </li>
-    <li class="nhsuk-pagination-item--next">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="drug-input-2">
-        <span class="nhsuk-pagination__title">Next</span>
-        <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Page 8</span>
-        <svg class="nhsuk-icon nhsuk-icon--arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-          <path d="m14.7 6.3 5 5c.2.2.3.4.3.7 0 .3-.1.5-.3.7l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H5a1 1 0 0 1 0-2h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4Z" />
-        </svg>
-
-      </a>
-    </li>
+   
   </ul>
 </nav>
 

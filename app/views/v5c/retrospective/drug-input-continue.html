@@ -55,31 +55,17 @@ Drug Purchase Price Database (Margin Survey)
 
       <form id="myForm">
 
-<!--<div class="nhsuk-form-group" style="display: flex; align-items: center; gap: 1rem;">
-  <div>
-    <label class="nhsuk-label" for="Invoice ID">
-      Invoice ID
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="123.143">
-  </div>
+        
+<div style="display:flex; gap: 35px;">
 
-  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 32px;">
-    <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
-    <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
-      Is this drug a PI?
-    </label>
-  </div>
-</div> -->
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="Invoice ID">
+            Invoice and drug reference number
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
+      </div>
 
 <div class="nhsuk-form-group" >
-
-    <label class="nhsuk-label" for="Invoice ID">
-      Invoice and drug reference number
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
-</div>
-
-    <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
     Conces/Cat C
   </label>
@@ -87,9 +73,10 @@ Drug Purchase Price Database (Margin Survey)
     <option value="1" selected>Cat C</option>
     <option value="2">Conces</option>
   </select>
-</div>
+ </div>
+  </div>
 
-    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
+    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
       Is this drug a PI?
@@ -97,13 +84,11 @@ Drug Purchase Price Database (Margin Survey)
   </div>
 
 
-<br>
-
-    <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="autocomplete-input">
+    <div class="nhsuk-form-group" style="margin-top: 30px;">
+                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-one-half" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="Enter a drug name" value="Oxybutynin 5mg modified-release tablets">
+                  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="Enter a drug name" value="Oxybutynin 5mg modified-release tablets">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
                 <datalist id="Drug">

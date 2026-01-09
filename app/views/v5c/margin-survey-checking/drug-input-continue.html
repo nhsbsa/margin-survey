@@ -65,35 +65,20 @@ Drug Purchase Price Database (Margin Survey)
       <h1 class="nhsuk-heading-xl">Check drug details from Altera Digital Health</h1>
 
 
-<br>
-      
+        
       <form id="myForm">
 
 
-<!--p>Check these drug details. If any details are incorrect, amend the drug details and select Update information.
-<br>
-If all the details are correct select View next drug.</p-->
+<div style="display:flex; gap: 35px;">
 
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="Invoice ID">
+            Invoice and drug reference number
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
+      </div>
 
 <div class="nhsuk-form-group" >
-  <div>
-    <label class="nhsuk-label" for="Invoice ID">
-      Invoice and drug reference number
-    </label>
-    
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
- 
-    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
-    <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
-    <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
-      Is this drug a PI?
-    </label>
-  </div>
-</div>
-
-</div>
-
-<div class="nhsuk-form-group">
   <label class="nhsuk-label" for="Conces/Cat C">
     Conces/Cat C
   </label>
@@ -101,27 +86,19 @@ If all the details are correct select View next drug.</p-->
     <option value="1" selected>Cat C</option>
     <option value="2">Conces</option>
   </select>
-</div>
-
-<!--<div class="nhsuk-form-group" style="display: flex; align-items: center; gap: 1rem;">
-  <div>
-    <label class="nhsuk-label" for="Invoice ID">
-      Invoice ID
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="123.143">
+ </div>
   </div>
 
-  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 32px;">
+    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
       Is this drug a PI?
     </label>
   </div>
-</div> -->
 
 
-    <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="autocomplete-input">
+    <div class="nhsuk-form-group" style="margin-top: 30px;">
+                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
                   <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="Enter a drug name" value="Oxybutynin 5mg modified-release tablets">
