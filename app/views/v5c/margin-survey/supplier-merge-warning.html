@@ -25,7 +25,6 @@ Drug Purchase Price Database (Margin Survey)
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="select-month-year">Select month and year</a></li>
     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="menu">Margin survey dashboard</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="new">Pharmacy details</a></li>
     
   </ol>
   <p class="nhsuk-breadcrumb__back">
@@ -55,6 +54,7 @@ Drug Purchase Price Database (Margin Survey)
       <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
       <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">Change the name of Altera Digital Health</h1>
 
+    <form action="supplierMerge" method="post">
         <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
         <fieldset class="nhsuk-fieldset" aria-describedby="">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -64,24 +64,23 @@ Drug Purchase Price Database (Margin Survey)
             </legend>
             <div class="nhsuk-radios" data-module="nhsuk-radios">
             <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example" name="example" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example">
-                Yes, I want to change the name of 'Altera Digital Health, to 'A Vogul'
+                <input class="nhsuk-radios__input" id="supplierMerge-yes" name="supplierMerge" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="supplierMerge-yes">
+                Yes, I want to change the name of 'Altera Digital Health' to 'A Vogel'.
                 </label>
             </div>
             <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                No, I do no want to change the name of Altera Digital Health
+                <input class="nhsuk-radios__input" id="supplierMerge-no" name="supplierMerge" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="supplierMerge-no">
+                No, I do not want to change the name of 'Altera Digital Health'.
                 </label>
             </div>
             </div>
         </fieldset>
         </div>
                       
-        <a href="confirmation-supplier-merge" class="nhsuk-button">Confirm</a> 
-        <a href="continue" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a>
-
+        <button class="nhsuk-button nhsuk-u-margin-right-3" data-module="nhsuk-button">Confirm</button>
+    </form>
 
     </div>
      
