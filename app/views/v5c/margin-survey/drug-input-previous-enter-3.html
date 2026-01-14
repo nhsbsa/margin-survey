@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-v5c.html' %}
+{% extends 'layout-v5c-drug.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -48,10 +48,11 @@ Drug Purchase Price Database (Margin Survey)
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+    
    
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">January 2025 - Retrospective</span>
-      <h1 class="nhsuk-heading-xl">Add a drug to Altera Digital Health</h1>
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl">Add a drug to Dedalusd</h1>
 
 
 <form id="myForm">
@@ -92,7 +93,8 @@ Drug Purchase Price Database (Margin Survey)
            name="reference-id" 
            type="text" 
            style="width: 300px;"
-           placeholder="Last entry 143">
+           placeholder="Last entry 3"
+           value="4">
     </div>
     </div>
 
@@ -116,7 +118,7 @@ Drug Purchase Price Database (Margin Survey)
   const referenceText = document.getElementById('reference-text');
 
   referenceInput.addEventListener('input', () => {
-    const isMatch = referenceInput.value.trim() === '143';
+    const isMatch = referenceInput.value.trim() === '3';
 
     previousIcon.style.display = isMatch ? 'inline-block' : 'none';
     referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
@@ -127,22 +129,19 @@ Drug Purchase Price Database (Margin Survey)
 
 <!--Javascript ends-->
 
-
-    <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
-    <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
+ <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
+    <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
     <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
       Is this drug a PI?
     </label>
- 
-</div>
+  </div>
 
-<br>
 
-    <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="autocomplete-input">
+    <div class="nhsuk-form-group" style="margin-top: 30px;">
+                   <label class="nhsuk-label" for="autocomplete-input">
                     Drug name
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="">
+                  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input" name="Drug" type="text" autocomplete="off" list="Drug" placeholder="Enter a drug name" value="Oxybutynin 5mg modified-release tablets">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
                 <datalist id="Drug">
@@ -161,14 +160,12 @@ Drug Purchase Price Database (Margin Survey)
                     Pack size
                   </label>
                   <div>
-                    <input class="nhsuk-input nhsuk-input--width-5" id="Pack size" name="Pack size" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-5" id="Pack size" name="Pack size" type="text" value="10">
                      </div>
                 </div>
 
-   
-<!--select brand and generic name-->
-<div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
+                <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;" >
     <input class="nhsuk-checkboxes__input"
            id="brand-name-1"
            name="brand-name-checkbox"
@@ -176,17 +173,17 @@ Drug Purchase Price Database (Margin Survey)
            value="brand-name"
            aria-controls="brand-name-generic-name-1"
            aria-expanded="false"
-           onclick="toggleConditional(this)">
+           onclick="toggleConditional(this)" value="" checked>
     <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
       Select if the drug has another brand name or generic name (optional)
     </label>
   </div>
-  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="brand-name-generic-name-1">
+  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional" id="brand-name-generic-name-1">
     <div class="nhsuk-form-group" style="margin-top: 25px;">
       <label class="nhsuk-label" for="brand-name">
         Brand name / Generic name
       </label>
-      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text">
+      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="Tillomed Laboratories Ltd">
     </div>
   </div>
 </div>
@@ -204,17 +201,14 @@ Drug Purchase Price Database (Margin Survey)
   }
 </script>
 
-<!--select brand and generic name-->
-<br>
-   
    
 
- <div class="nhsuk-form-group">
+ <div class="nhsuk-form-group" style="margin-top: 25px;">
       <label class="nhsuk-label" for="Number of packs">
         Number of packs
       </label>
       <div>
-        <input class="nhsuk-input nhsuk-input--width-5" id="Number of packs" name="Number of packs" type="text">
+        <input class="nhsuk-input nhsuk-input--width-5" id="Number of packs" name="Number of packs" type="text" value="11">
        </div>
     </div>
     
@@ -231,6 +225,7 @@ Drug Purchase Price Database (Margin Survey)
         id="price-per-pack" 
         name="price-per-pack" 
         type="text" 
+        value="0.25"
       >
     </div>
   </div>
@@ -244,7 +239,7 @@ Drug Purchase Price Database (Margin Survey)
     </label>
     <div class="nhsuk-input__wrapper">
       <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
-      <input class="nhsuk-input nhsuk-input--width-5" id="invoice-price" name="invoice-price" type="text">
+      <input class="nhsuk-input nhsuk-input--width-5" id="invoice-price" name="invoice-price" type="text" value="2.75">
     </div>
   </div>
 </div>
@@ -283,7 +278,7 @@ Drug Purchase Price Database (Margin Survey)
     </label>
     <div class="nhsuk-input__wrapper">
       <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
-      <input class="nhsuk-input nhsuk-input--width-5" id="difference" name="difference" type="text" disabled>
+      <input class="nhsuk-input nhsuk-input--width-5" id="difference" name="difference" type="text" value="0" disabled>
     </div>
   </div>
 </div>
@@ -297,15 +292,13 @@ Drug Purchase Price Database (Margin Survey)
     </label>
     <div class="nhsuk-input__wrapper">
       <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
-      <input class="nhsuk-input nhsuk-input--width-5" id="check-total" name="check-total" type="text" disabled>
+      <input class="nhsuk-input nhsuk-input--width-5" id="check-total" name="check-total" type="text" value="2.75" disabled>
     </div>
   </div>
 </div>
 
 
 <script>
-  
-  const perpackInput = document.getElementById('price-per-pack');
   const priceInput = document.getElementById('invoice-price');
   const warningIcon = document.getElementById('warning-icon');
   const differenceInput = document.getElementById('difference');
@@ -313,72 +306,53 @@ Drug Purchase Price Database (Margin Survey)
   const checkInput = document.getElementById('check-total');
   const warningMessage = document.getElementById('warning-message');
 
-  
-   // Price per pack
-   perpackInput.addEventListener('input', () => {
-    if (perpackInput.value.trim() === "1") {
-      // Show visual warning
-      differenceInput.value = "0";
-      checkInput.value = "1";
-
-    } else {
-      // Reset visual
-      warningIcon.style.display = "none";
-      differenceInput.value = "0";
-      differenceText.style.fontWeight = "normal";
-      checkInput.value = "1";
-      warningMessage.textContent = "";
-      warningMessage.classList.add('nhsuk-u-visually-hidden');
-    }
-  });
-
-   // Invoice price
   priceInput.addEventListener('input', () => {
-    if (priceInput.value.trim() === "2") {
-      // Show visual warning on difference
+    if (priceInput.value.trim() === "1") {
+      // Show visual warning
       warningIcon.style.display = "inline-block";
-      differenceInput.value = "1";
+      differenceInput.value = "1.75";
       differenceInput.style.fontWeight = "bold";
       differenceText.style.fontWeight = "bold";
-      checkInput.value = "1";
+      checkInput.value = "2.75";
 
+     
     } else {
-      // Reset visual and screen reader warnings on difference
+      // Reset visual and screen reader warnings
       warningIcon.style.display = "none";
       differenceInput.value = "0";
       differenceText.style.fontWeight = "normal";
-      checkInput.value = "1";
+      checkInput.value = "2.75";
       warningMessage.textContent = "";
       warningMessage.classList.add('nhsuk-u-visually-hidden');
     }
   });
-
 </script>
 
 <!--Javascript ends-->
 
 <div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="autocomplete-input 2">
+  <label class="nhsuk-label" for="autocomplete-Manufacturer">
     Generic Manufacturer
-  </label>
-  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+   </label>
+   <div class="nhsuk-hint" id="example-with-hint-text-hint">
   If name does not appear <a href="add-manufacturer" class="nhsuk-link">add manufacturer</a> 
   </div>
+   <input class="nhsuk-input nhsuk-u-width-fulld="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+   <ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
+   </div>
+   <datalist id="Manufacturer">
+     <option value="AbbVie"></option>
+     <option value="Bristol-Myers Squibb"></option>
+     <option value="GSK"></option>
+     <option value="Johnson & Johnson Company"></option>
+   </datalist>
 
-  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="">
-  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
-</div>
-<datalist id="Generic Manufacturer">
-  <option value="AbbVie"></option>
-  <option value="Bristol-Myers Squibb"></option>
-  <option value="GSK"></option>
-  <option value="Johnson & Johnson Company"></option>
-</datalist>
 
            
                           <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
-                            <a href="drug-input-2" class="nhsuk-button">Save and add another drug</a> 
-                            <a href="confirmation-save" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a>
+                            <a href="" class="nhsuk-button">Save and add another drug</a>
+                            <a href="continue" class="nhsuk-button nhsuk-button--secondary">Back to suppliers</a> 
+                            <!--a href="drug-input-continue-2" class="nhsuk-button nhsuk-button--secondary">Cancel and back to verifying</a-->
                           </div>
 
                           <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
@@ -393,14 +367,14 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-    <p>You are on page 8 of 8</p>
+    <p>You are on page 144 of 144</p>
 
    
       <div class="nhsuk-checkboxes" style="margin-left: -38px;">
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-            <a href="drug-input-2">Go to page</a>
+            <a href="drug-input-continue">Go to page</a>
           </label>
         </div>
       </div>
@@ -408,8 +382,8 @@ Drug Purchase Price Database (Margin Survey)
   </div>
 
 <br>
-<br>
-      <!--search-->
+
+    <!--search-->
       
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary">
@@ -450,31 +424,38 @@ Drug Purchase Price Database (Margin Survey)
         <a href="drug-input-search-result" class="nhsuk-button" style="margin-top: 20px;">
           Search
         </a>
-      
+
+         <a href="drug-input-search-result" class="nhsuk-button nhsuk-button--secondary" style="margin-top: 20px;">
+           Back to last search result
+        </a>
+
+         
         </div>
       </details>
 
     <!--search-->
 
-<!---pagination--->
+
+      <!---pagination--->
 
 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
   <ul class="nhsuk-list nhsuk-pagination__list">
     <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
         <span class="nhsuk-pagination__title">Previous</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Page 7</span>
+        <span class="nhsuk-pagination__page">Page 3</span>
         <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
           <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
         </svg>
 
       </a>
     </li>
+   
   </ul>
 </nav>
 
-<!---pagination ends--->
+      <!---pagination ends--->
 
 
 {% endblock %}
