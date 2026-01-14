@@ -111,22 +111,43 @@ Drug Purchase Price Database (Margin Survey)
                      </div>
                 </div>
 
-    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;">
-          <input class="nhsuk-checkboxes__input" id="brand-name-1" name="brand-name" type="checkbox" value="brand-name" aria-controls="brand-name-generic-name-1" aria-expanded="false" value="" checked>
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
-            Select if the drug has another brand name or generic name (optional)
-          </label>
-        </div>
-        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="brand-name-generic-name-1">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="brand-name">
-              Brand name / Generic name
-            </label> <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="Tillomed Laboratories Ltd">
-          </div>
-
-        </div>
+   
+                <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 30px;" >
+    <input class="nhsuk-checkboxes__input"
+           id="brand-name-1"
+           name="brand-name-checkbox"
+           type="checkbox"
+           value="brand-name"
+           aria-controls="brand-name-generic-name-1"
+           aria-expanded="false"
+           onclick="toggleConditional(this)" value="" checked>
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="brand-name-1">
+      Select if the drug has another brand name or generic name (optional)
+    </label>
+  </div>
+  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional" id="brand-name-generic-name-1">
+    <div class="nhsuk-form-group" style="margin-top: 25px;">
+      <label class="nhsuk-label" for="brand-name">
+        Brand name / Generic name
+      </label>
+      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="Tillomed Laboratories Ltd">
+    </div>
+  </div>
 </div>
+
+<script>
+  function toggleConditional(checkbox) {
+    const conditional = document.getElementById('brand-name-generic-name-1');
+    if (checkbox.checked) {
+      conditional.classList.remove('nhsuk-checkboxes__conditional--hidden');
+      checkbox.setAttribute('aria-expanded', 'true');
+    } else {
+      conditional.classList.add('nhsuk-checkboxes__conditional--hidden');
+      checkbox.setAttribute('aria-expanded', 'false');
+    }
+  }
+</script>
 
  <div class="nhsuk-form-group" style="margin-top: 25px;">
       <label class="nhsuk-label" for="Number of packs">
@@ -189,7 +210,7 @@ Drug Purchase Price Database (Margin Survey)
   <label class="nhsuk-label" for="Generic Manufacturer">
     Generic Manufacturer
   </label>
-  <input class="nhsuk-input nhsuk-u-width-one-half" id="Generic Manufacturer" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
+  <input class="nhsuk-input nhsuk-u-width-full" id="Generic Manufacturer" name="Generic Manufacturer" type="text" autocomplete="off" list="Generic Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
   <ul class="nhsuk-list" id="Generic Manufacturer" hidden></ul>
 </div>
 <datalist id="Generic Manufacturer">
