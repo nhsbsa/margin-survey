@@ -1,0 +1,83 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v5c.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../home-page">Home</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../lists-dashboard">Manage lists</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../supplier-list/supplier-list">Supplier list</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../supplier-list/edit-supplier-merge">Edit a supplier</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">January 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">Change the name of A & J Williams (Yorkshire)</h1>
+
+    <form action="supplierMerge" method="post">
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
+        <p class="nhsuk-body">
+                Are you sure you want to change the name of  'A & J Williams (Yorkshire)' to 'A Vogel'? All drugs associated with 'A & J Williams (Yorkshire)' will be merged with the drugs associated with 'A Vogel'.
+        </p>
+            <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="supplierMerge-yes" name="supplierMerge" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="supplierMerge-yes">
+                Yes, I want to change the name of 'A & J Williams (Yorkshire)' to 'A Vogel'.
+                </label>
+            </div>
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="supplierMerge-no" name="supplierMerge" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="supplierMerge-no">
+                No, I do not want to change the name of 'A & J Williams (Yorkshire)'.
+                </label>
+            </div>
+            </div>
+        </fieldset>
+        </div>
+                      
+        <button class="nhsuk-button nhsuk-u-margin-right-3" data-module="nhsuk-button">Confirm</button>
+    </form>
+
+    </div>
+     
+  </div>
+
+{% endblock %}

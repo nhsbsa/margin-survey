@@ -299,6 +299,6 @@ router.post(/suppliergone/, function (req, res) {
     if (supplierMerge === "yes") {
       res.redirect('confirmation-supplier-merge');
     } else {
-      res.redirect('continue');
+      res.redirect('edit-supplier-merge');
     }
   });
