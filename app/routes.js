@@ -302,3 +302,15 @@ router.post(/suppliergone/, function (req, res) {
       res.redirect('edit-supplier-merge');
     }
   });
+
+    router.post(/MarginRetroMerge/, function (req, res) {
+
+    const MarginRetroMerge = req.session.data['MarginRetroMerge']
+
+    if (MarginRetroMerge === "yes") {
+      res.redirect('confirmation-supplier-merge');
+    } else {
+      res.redirect('supplier-input-continue-dedalusd');
+    }
+  });
+  
