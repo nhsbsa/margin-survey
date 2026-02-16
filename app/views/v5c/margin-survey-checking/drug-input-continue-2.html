@@ -61,7 +61,7 @@ Drug Purchase Price Database (Margin Survey)
         <label class="nhsuk-label" for="Invoice ID">
             Invoice and drug reference number
           </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="Supplierinvoice.143">
+          <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="143.1">
       </div>
 
 <div class="nhsuk-form-group" >
@@ -279,6 +279,9 @@ Drug Purchase Price Database (Margin Survey)
   <label class="nhsuk-label" for="autocomplete-Manufacturer">
     Generic Manufacturer
    </label>
+   <div class="nhsuk-hint" id="example-with-hint-text-hint">
+  If name does not appear <a href="add-manufacturer" class="nhsuk-link">add manufacturer</a> 
+  </div>
    <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-Manufacturer" name="Manufacturer" type="text" autocomplete="off" list="Manufacturer" placeholder="Enter a generic manufacturer" value="Johnson & Johnson Company">
    <ul class="nhsuk-list" id="Manufacturer-list" hidden></ul>
    </div>
@@ -296,7 +299,7 @@ Drug Purchase Price Database (Margin Survey)
            
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 10px;">
                             <a href="drug-input-continue" class="nhsuk-button">Details correct - check next drug</a> 
-                            <a href="drug-input-continue-2" class="nhsuk-button">Update information</a> 
+                            <a href="drug-input-updated" class="nhsuk-button">Update information</a> 
                             <a href="drug-input" class="nhsuk-button nhsuk-button--secondary">Add a drug</a>
                             <a href="delete-2" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
@@ -344,7 +347,7 @@ Drug Purchase Price Database (Margin Survey)
             Enter invoice reference number to search for previously entered drugs.
           </label>
           <div class="nhsuk-hint">
-            For example Supplierinvoice.143
+            For example 128
           </div>
           <input 
             class="nhsuk-input nhsuk-input--width-10" 

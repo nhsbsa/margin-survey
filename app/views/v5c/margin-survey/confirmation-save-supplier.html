@@ -18,6 +18,11 @@ Drug Purchase Price Database (Margin Survey)
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+  }) }}
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -29,15 +34,10 @@ Drug Purchase Price Database (Margin Survey)
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-{{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-  }) }}
 
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-<br>
       <!-- Change the page title here -->
       
        <div class="nhsuk-form-group">

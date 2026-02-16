@@ -91,8 +91,8 @@ Drug Purchase Price Database (Margin Survey)
            id="reference-id" 
            name="reference-id" 
            type="text" 
-           style="width: 300px;"
-           placeholder="Last entry 143.1">
+           style="width: 300px;">
+           <!--placeholder="Last entry 143.5"-->
     </div>
     </div>
 
@@ -110,11 +110,11 @@ Drug Purchase Price Database (Margin Survey)
 
 
 </div>
-
+<!--Waiting confirm
 <div id="reference-inset" class="nhsuk-inset-text" style="display: none; margin-top:30px;">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <p>
-    The reference number you entered does not follow on from the previous entry of 143.
+    The reference number you entered does not follow on from the previous entry of 143.5.
   </p>
 </div>
 
@@ -126,7 +126,8 @@ Drug Purchase Price Database (Margin Survey)
   const referenceInset = document.getElementById('reference-inset');
 
   referenceInput.addEventListener('input', () => {
-    const isMatch = referenceInput.value.trim() === '143';
+    const value = parseFloat(referenceInput.value);
+    const isMatch = !isNaN(value) && value >= 0 && value <= 143.5;
 
     previousIcon.style.display = isMatch ? 'inline-block' : 'none';
     referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
@@ -453,7 +454,7 @@ Drug Purchase Price Database (Margin Survey)
             Enter invoice reference number to search for previously entered drugs.
           </label>
           <div class="nhsuk-hint">
-            For example Supplierinvoice.143
+            For example 128
           </div>
           <input 
             class="nhsuk-input nhsuk-input--width-10" 
