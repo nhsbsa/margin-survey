@@ -203,7 +203,7 @@ router.post(/suppliergone/, function (req, res) {
     const manualLeave = req.session.data['manualLeave']
 
     if (manualLeave === "yes") {
-      res.redirect('continue-complete-manual-add');
+      res.redirect('continue');
     } else {
       res.redirect('drug-input');
     }
