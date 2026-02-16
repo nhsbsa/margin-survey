@@ -117,8 +117,9 @@ Drug Purchase Price Database (Margin Survey)
   const previousIcon = document.getElementById('previous-icon');
   const referenceText = document.getElementById('reference-text');
 
-  referenceInput.addEventListener('input', () => {
-    const isMatch = referenceInput.value.trim() === '3';
+ referenceInput.addEventListener('input', () => {
+    const value = parseFloat(referenceInput.value);
+    const isMatch = !isNaN(value) && value >= 0 && value <= 3;
 
     previousIcon.style.display = isMatch ? 'inline-block' : 'none';
     referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
@@ -412,7 +413,7 @@ Drug Purchase Price Database (Margin Survey)
             Enter invoice reference number to search for previously entered drugs.
           </label>
           <div class="nhsuk-hint">
-            For example Supplierinvoice.143
+            For example 128
           </div>
           <input 
             class="nhsuk-input nhsuk-input--width-10" 

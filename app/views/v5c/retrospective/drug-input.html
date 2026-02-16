@@ -58,19 +58,48 @@ Drug Purchase Price Database (Margin Survey)
 
 <form id="myForm">
 
-<div style="display:flex; gap: 35px;">
   
+<!--Difference-->
+<div style="display:flex; gap: 35px;">
   <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="invoice-id">
-      Invoice and drug reference number
+    <label 
+      class="nhsuk-label" 
+      id=" previous-label" 
+      for="previous" 
+      style="user-select: none;">
+    
+      <!-- Hidden icon, will be shown conditionally -->
+        <div id="tell-message" class="nhsuk-u-visually-hidden" aria-live="tell-reference"></div>
+
+      <span id="previous-icon" style=" 
+        display: none;
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 20px;
+        user-select: none;
+        vertical-align: middle;
+      " aria-hidden="true">!</span>
+      <span id="reference-text" style="font-weight: normal;">Invoice and drug reference number</span>
     </label>
-    <input class="nhsuk-input nhsuk-input--width-10" 
-           id="invoice-id" 
-           name="invoice-id" 
+    <div class="nhsuk-input__wrapper">
+       <input class="nhsuk-input nhsuk-input--width-10" 
+           id="reference-id" 
+           name="reference-id" 
            type="text" 
            style="width: 300px;">
-  </div>
+          <!-- placeholder="Last entry 143.5"-->
+    </div>
+    </div>
 
+    
+    
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="ConcesCatC">
       Conces/Cat C
@@ -81,9 +110,37 @@ Drug Purchase Price Database (Margin Survey)
     </select>
   </div>
 
+
+</div>
+<!--waiting confirm
+<div id="reference-inset" class="nhsuk-inset-text" style="display: none; margin-top:30px;">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>
+    The reference number you entered does not follow on from the previous entry of 143.5.
+  </p>
 </div>
 
 
+<script>
+  const referenceInput = document.getElementById('reference-id');
+  const previousIcon = document.getElementById('previous-icon');
+  const referenceText = document.getElementById('reference-text');
+  const referenceInset = document.getElementById('reference-inset');
+
+referenceInput.addEventListener('input', () => {
+    const value = parseFloat(referenceInput.value);
+    const isMatch = !isNaN(value) && value >= 0 && value <= 143.5;
+
+    previousIcon.style.display = isMatch ? 'inline-block' : 'none';
+    referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
+    referenceInset.style.display = isMatch ? 'block' : 'none';
+  });
+</script>
+
+
+
+
+<!--Javascript ends-->
 
     <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 10px;">
     <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI">
@@ -350,7 +407,7 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-      <p>You are on page 7 of 8</p>
+      <p>You are on page 159 of 159</p>
 
    
       <div class="nhsuk-checkboxes" style="margin-left: -38px;">
@@ -396,7 +453,7 @@ Drug Purchase Price Database (Margin Survey)
             Enter invoice reference number to search for previously entered drugs.
           </label>
           <div class="nhsuk-hint">
-            For example Supplierinvoice.143
+            For example 128
           </div>
           <input 
             class="nhsuk-input nhsuk-input--width-10" 
@@ -423,7 +480,7 @@ Drug Purchase Price Database (Margin Survey)
       <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
         <span class="nhsuk-pagination__title">Previous</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Page 6</span>
+        <span class="nhsuk-pagination__page">Page 158</span>
         <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
           <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
         </svg>

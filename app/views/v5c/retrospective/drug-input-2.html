@@ -91,8 +91,8 @@ Drug Purchase Price Database (Margin Survey)
            id="reference-id" 
            name="reference-id" 
            type="text" 
-           style="width: 300px;"
-           placeholder="Last entry 143.1">
+           style="width: 300px;">
+          <!-- placeholder="Last entry 143.5"-->
     </div>
     </div>
 
@@ -110,11 +110,11 @@ Drug Purchase Price Database (Margin Survey)
 
 
 </div>
-
+<!--Waiting confirm
 <div id="reference-inset" class="nhsuk-inset-text" style="display: none; margin-top:30px;">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <p>
-    The reference number you entered does not follow on from the previous entry of 143.
+    The reference number you entered does not follow on from the previous entry of 143.5.
   </p>
 </div>
 
@@ -125,8 +125,9 @@ Drug Purchase Price Database (Margin Survey)
   const referenceText = document.getElementById('reference-text');
   const referenceInset = document.getElementById('reference-inset');
 
-  referenceInput.addEventListener('input', () => {
-    const isMatch = referenceInput.value.trim() === '143';
+referenceInput.addEventListener('input', () => {
+    const value = parseFloat(referenceInput.value);
+    const isMatch = !isNaN(value) && value >= 0 && value <= 143.5;
 
     previousIcon.style.display = isMatch ? 'inline-block' : 'none';
     referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
@@ -404,7 +405,7 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-    <p>You are on page 8 of 8</p>
+    <p>You are on page 160 of 160</p>
 
    
       <div class="nhsuk-checkboxes" style="margin-left: -38px;">
@@ -449,7 +450,7 @@ Drug Purchase Price Database (Margin Survey)
             Enter invoice reference number to search for previously entered drugs.
           </label>
           <div class="nhsuk-hint">
-            For example Supplierinvoice.143
+            For example 128
           </div>
           <input 
             class="nhsuk-input nhsuk-input--width-10" 
@@ -475,7 +476,7 @@ Drug Purchase Price Database (Margin Survey)
       <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input">
         <span class="nhsuk-pagination__title">Previous</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Page 7</span>
+        <span class="nhsuk-pagination__page">Page 159</span>
         <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
           <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
         </svg>
