@@ -1,0 +1,195 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+ <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="continue-complete">Go back to supplier list</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+      
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">Altera Digital Health</span>
+      <h1 class="nhsuk-heading-xl">Delete this invoice and all drugs in this invoice</h1>
+    
+   <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="drug-image-1" target="_blank">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Open document viewer and check invoice (opens in a new tab)</span>
+  </a>
+</div>
+
+      <div class="nhsuk-form-group">
+
+        <form action="deletealldrugs" method="post">
+
+          <!--div class="nhsuk-radios nhsuk-radios--inline">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="inline-1" name="areyousure" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="inline-2" name="areyousure" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
+                No
+              </label>
+            </div>
+
+          </div-->
+       
+           <table class="nhsuk-table-responsive" role="table">
+  <caption class="nhsuk-table__caption"><span aria-hidden="All invoices on this drug"></span></caption>
+  <thead class="nhsuk-table__head" role="rowgroup">
+    <tr role="row">
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-half" role="columnheader">Drug name</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">Invoice and drug reference number</th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Bisoprolol Tab 10mg (AAH/HX)</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.143</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="drug-input-continue">View (opens a new tab)</td>
+    </tr>
+    <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Enseure Plus Juice Bottle Strawberry</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.144</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+     <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Invita D3 800 IU Capsules</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.145</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+     <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Jardiance 10mg Film Coated Tabs</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.146</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+     <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Lisinopril Tab 2.5mg [AAH]</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.147</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Madopar Cap 125mg</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.148</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Prednisolone E/C Tab 2.5mg [AAH]</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.147</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Prochlorperazine Tab 5mg [AAH]</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.148</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Trajenta 5mg Tablets GB</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.149</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Trelegy Ellipta 92/55/22 MCG</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.150</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+       <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Trimbow Nexthaler 88/5/9MCG IP</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.151</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>Xailin Night</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How much? </span>Supplierinvoice.152</td>
+       <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">How often? </span><a href="">View (opens a new tab)</td>
+    </tr>
+  </tbody>
+</table>
+
+          <div class="nhsuk-form-group">
+
+ <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Are you sure you want to delete this invoice and all drugs in this invoice?
+      </h1>
+    </legend>
+ 
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-divider-1" name="deletealldrugs" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-divider-1">
+          Yes
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-divider-2" name="deletealldrugs" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-divider-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+      
+      </div>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+     </form>
+<a href="drug-input-continue" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

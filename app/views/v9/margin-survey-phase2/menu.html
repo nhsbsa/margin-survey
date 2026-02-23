@@ -1,0 +1,300 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../home-page">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../margin-survey-phase2/select-month-year">Select month and year</a></li>
+    
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="#">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Home
+    </a>
+  </p>
+</nav>
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+      
+    
+      
+      <!-- Change the page title here -->
+     <span class="nhsuk-caption-xl">June 2025</span>
+      <h1 class="nhsuk-heading-xl">Margin survey dashboard</h1>
+    
+      
+        <p>Get the <a href="../report/daily-extract/daily-checking-extract" class="nhsuk-link">margin survey daily checking report.</a></p>
+      
+
+        <p>This table lists the margin survey accounts available for the month and their status.</p>
+
+        <p>Margin survey accounts can be checked using the <a href="../checking-activity/menu" class="nhsuk-link">checking activity dashboard.</a></p>
+
+
+      <p>0 out of 25 completed</p>
+      <ul class="nhsuk-task-list">
+
+
+        <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+          <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="continue" aria-describedby="your-health-4-status">	Alpha Pharmacy</a></div>
+          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+              Not started
+            </strong></div>
+        </li>
+
+        <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+          <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Apex Pharmacy</a></div>
+          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+              Not started
+            </strong></div>
+        </li>
+      
+        <li class="nhsuk-task-list__item">
+          <div class="nhsuk-task-list__name-and-hint">
+            <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Better Health Pharmacy</a></div>
+          </div>
+          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+            Not started
+          </strong></div>
+           </li>
+
+           
+        <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+          <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Care Plus Pharmacy</a></div>
+          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+              Not started
+            </strong></div>
+        </li>
+      
+        <li class="nhsuk-task-list__item">
+          <div class="nhsuk-task-list__name-and-hint">
+            <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Community Pharmacy</a></div>
+          </div>
+          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+            Not started
+          </strong></div>
+           </li>
+
+           <li class="nhsuk-task-list__item">
+            <div class="nhsuk-task-list__name-and-hint">
+              <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Essential Pharmacy</a></div>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+              Not started
+            </strong></div>
+             </li>
+
+             <li class="nhsuk-task-list__item">
+              <div class="nhsuk-task-list__name-and-hint">
+                <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Evergreen Pharmacy</a></div>
+              </div>
+              <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                Not started
+              </strong></div>
+               </li>
+
+               <li class="nhsuk-task-list__item">
+                <div class="nhsuk-task-list__name-and-hint">
+                  <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Family Health Pharmacy</a></div>
+                </div>
+                <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                  Not started
+                </strong></div>
+                 </li>
+
+                 <li class="nhsuk-task-list__item">
+                  <div class="nhsuk-task-list__name-and-hint">
+                    <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">First Choice Pharmacy</a></div>
+                  </div>
+                  <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                    Not started
+                  </strong></div>
+                   </li>
+
+                   <li class="nhsuk-task-list__item">
+                    <div class="nhsuk-task-list__name-and-hint">
+                      <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">General Care Pharmacy</a></div>
+                    </div>
+                    <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                      Not started
+                    </strong></div>
+                     </li>
+
+                     <li class="nhsuk-task-list__item">
+                      <div class="nhsuk-task-list__name-and-hint">
+                        <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Guardian Pharmacy</a></div>
+                      </div>
+                      <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                        Not started
+                      </strong></div>
+                       </li>
+
+                       <li class="nhsuk-task-list__item">
+                        <div class="nhsuk-task-list__name-and-hint">
+                          <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Harmony Pharmacy</a></div>
+                        </div>
+                        <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                          Not started
+                        </strong></div>
+                         </li>
+
+                         <li class="nhsuk-task-list__item">
+                          <div class="nhsuk-task-list__name-and-hint">
+                            <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Heart Pharmacy</a></div>
+                          </div>
+                          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                            Not started
+                          </strong></div>
+                           </li>
+
+                           <li class="nhsuk-task-list__item">
+                            <div class="nhsuk-task-list__name-and-hint">
+                              <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Healthwise Pharmacy</a></div>
+                            </div>
+                            <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                              Not started
+                            </strong></div>
+                             </li>
+
+                             <li class="nhsuk-task-list__item">
+                              <div class="nhsuk-task-list__name-and-hint">
+                                <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Horizon Pharmacy</a></div>
+                              </div>
+                              <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                Not started
+                              </strong></div>
+                               </li>
+
+                               <li class="nhsuk-task-list__item">
+                                <div class="nhsuk-task-list__name-and-hint">
+                                  <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Lifeline Pharmacy</a></div>
+                                </div>
+                                <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                  Not started
+                                </strong></div>
+                                 </li>
+
+                                 <li class="nhsuk-task-list__item">
+                                  <div class="nhsuk-task-list__name-and-hint">
+                                    <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">MediTrust Pharmacy</a></div>
+                                  </div>
+                                  <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                    Not started
+                                  </strong></div>
+                                   </li>
+
+                                   <li class="nhsuk-task-list__item">
+                                    <div class="nhsuk-task-list__name-and-hint">
+                                      <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Personal Health Pharmacy</a></div>
+                                    </div>
+                                    <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                      Not started
+                                    </strong></div>
+                                     </li>
+
+                                    <li class="nhsuk-task-list__item">
+                                      <div class="nhsuk-task-list__name-and-hint">
+                                        <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Sunrise Pharmacy</a></div>
+                                      </div>
+                                      <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                        Not started
+                                      </strong></div>
+                                       </li>
+
+                                       <li class="nhsuk-task-list__item">
+                                        <div class="nhsuk-task-list__name-and-hint">
+                                          <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Wellbeing Pharmacy</a></div>
+                                        </div>
+                                        <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                          Not started
+                                        </strong></div>
+                                         </li>
+  
+                                         <li class="nhsuk-task-list__item">
+                                          <div class="nhsuk-task-list__name-and-hint">
+                                            <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">WellnessWay Pharmacy</a></div>
+                                          </div>
+                                          <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                            Not started
+                                          </strong></div>
+                                           </li>
+    
+                                           <li class="nhsuk-task-list__item">
+                                            <div class="nhsuk-task-list__name-and-hint">
+                                              <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">XtraCare Pharmacy</a></div>
+                                            </div>
+                                            <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                              Not started
+                                            </strong></div>
+                                             </li>
+
+                                             <li class="nhsuk-task-list__item">
+                                              <div class="nhsuk-task-list__name-and-hint">
+                                                <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">XpressMeds Pharmacy</a></div>
+                                              </div>
+                                              <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                                Not started
+                                              </strong></div>
+                                               </li>
+        
+                                               <li class="nhsuk-task-list__item">
+                                                <div class="nhsuk-task-list__name-and-hint">
+                                                  <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">YourMed Pharmacy</a></div>
+                                                </div>
+                                                <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                                  Not started
+                                                </strong></div>
+                                                 </li>
+
+                                                 <li class="nhsuk-task-list__item">
+                                                  <div class="nhsuk-task-list__name-and-hint">
+                                                    <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-health-4-status">Zencare Pharmacy</a></div>
+                                                  </div>
+                                                  <div class="nhsuk-task-list__status" id="your-health-4-status"><strong class="nhsuk-tag nhsuk-tag--blue">
+                                                    Not started
+                                                  </strong></div>
+                                                   </li>
+  
+                                        
+
+
+    </div>
+  </div>
+{% endblock %}

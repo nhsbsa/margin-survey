@@ -1,0 +1,170 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-v8.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Drug Purchase Price Database (Margin Survey)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">June 2025 - Margin Survey</span>
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">Reassign Invoice 1102</h1>
+
+        <div class="nhsuk-hint nhsuk-u-padding-bottom-4" id="contact-hint">
+        Invoice 2 details
+        </div>
+   
+  
+
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      display: block;
+      width: 1000px;
+    }
+
+    .highlight-text {
+      position: absolute;
+      background-color: hsla(54, 100%, 50%, 0.347); /* Semi-transparent red */
+      padding: 10px 460px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    
+    /* Position each word where you need it */
+    .word1 {
+      top: 505px;
+      left: 50px;
+    }
+
+    input[type=checkbox] {
+  display: none;
+}
+
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  width: 1000px;
+  height: 1000px;
+}
+
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+  </style>
+
+  <div class="image-container">
+    <img src="/images/supplier.png" alt="source">
+    <span class="highlight-text word1"></span>
+  </div>
+  
+
+<br>
+<br>
+<br>
+
+        <div class="nhsuk-form-group">
+            <p class="nhsuk-body-l">Currently assigned to: <strong>Alpha Pharmacy,</strong> from <strong>Altera Digital Health</strong>, for <strong>June 2025</strong> survey period.</p>
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+<br>
+                 <h3 class="nhsuk-label nhsuk-label--m" for="example-month">Survey period</h3>
+                <!-- Date input fields for month and year -->                
+                <div style="display: flex; gap: 2rem; align-items: flex-end; flex-wrap: wrap;">
+                    <div>
+                        <label class="nhsuk-label" for="example-month">
+                            Month
+                        </label>
+                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                            <option value="Select">Select a month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06" selected>June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="nhsuk-label" for="example-year">
+                            Year
+                        </label>
+                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric">
+                            <option value="Select">Select a year</option>
+                            <option value="2025" selected>2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+
+                        </select>
+                    </div>
+                                                             
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+            Pharmacy
+        </label> <input class="nhsuk-input nhsuk-u-width-one-half" id="example" name="example" type="text" value="Alpha Pharmacy">
+        </div>
+
+        <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+            Supplier
+        </label> <input class="nhsuk-input nhsuk-u-width-one-half" id="example" name="example" type="text" value="Altera Digital Health">
+        </div>
+<br>
+        <div class="nhsuk-form-group" style="padding-left: 0; padding-top: 10px; display: flex; align-items: center; gap: 15px;">
+        <a href="drug-image-1-yes-no" class="nhsuk-button">Reassign Invoice</a> 
+        <a href="" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+        </div>
+      
+    </div>
+  </div>
+
+{% endblock %}
