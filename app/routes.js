@@ -314,3 +314,13 @@ router.post(/suppliergone/, function (req, res) {
     }
   });
   
+   router.post(/manufacturerMerge/, function (req, res) {
+
+    const manufacturerMerge = req.session.data['manufacturerMerge']
+
+    if (manufacturerMerge === "yes") {
+      res.redirect('confirmation-manufacturer-merge');
+    } else {
+      res.redirect('edit-manufacturer-merge');
+    }
+  });
