@@ -112,31 +112,62 @@ Drug Purchase Price Database (Margin Survey)
 
     <div class="nhsuk-input__wrapper">
     <input 
-    class="nhsuk-input nhsuk-input--width-10" 
-    id="Invoice ID" 
-    name="Invoice ID" 
-    type="text" 
-    style="width: 300px;" 
-    value="Supplierinvoice.143">
+class="nhsuk-input nhsuk-input--width-10" 
+id="InvoiceID" 
+name="InvoiceID" 
+type="text" 
+style="width: 300px;" 
+placeholder="">
 
  </div>
 </div>
 
-<!--<div class="nhsuk-form-group" style="display: flex; align-items: center; gap: 1rem;">
-  <div>
-    <label class="nhsuk-label" for="Invoice ID">
-      Invoice ID
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="Invoice ID" name="Invoice ID" type="text" style="width: 300px;" value="123.143">
-  </div>
 
-  <div class="nhsuk-checkboxes__item" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 32px;">
-    <input class="nhsuk-checkboxes__input" id="PI" name="PI" type="checkbox" value="PI" checked>
-    <label class="nhsuk-label nhsuk-checkboxes__label" for="PI">
-      Is this drug a PI?
-    </label>
-  </div>
-</div> -->
+
+<!--Javascript for ReferenceID-->
+
+<script>
+  (function () {
+
+    const invoiceInput = document.getElementById('InvoiceID');
+    const STORAGE_KEY = 'lastManualDrugReference';
+
+    if (!invoiceInput) return;
+
+    // 1️⃣ On page load – show last saved reference as placeholder
+    document.addEventListener('DOMContentLoaded', function () {
+      const lastReference = localStorage.getItem(STORAGE_KEY);
+
+      if (lastReference) {
+        invoiceInput.placeholder = lastReference;
+      }
+    });
+
+    // 2️⃣ When user manually enters a value – save it
+    invoiceInput.addEventListener('blur', function () {
+      const value = invoiceInput.value.trim();
+
+      if (value !== '') {
+        localStorage.setItem(STORAGE_KEY, value);
+      }
+    });
+
+    // 3️⃣ Optional: Save while typing
+    invoiceInput.addEventListener('input', function () {
+      const value = invoiceInput.value.trim();
+
+      if (value !== '') {
+        localStorage.setItem(STORAGE_KEY, value);
+      }
+    });
+
+  })();
+</script>
+
+<!--End of Javascript for ReferenceID-->
+
+
+
 
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="ConcesCatC">
