@@ -72,7 +72,14 @@ Drug Purchase Price Database (Margin Survey)
                 <label class="nhsuk-label" for="supplier">
                   Enter supplier name
                 </label>
-                <input class="nhsuk-input nhsuk-u-width-one-half" id="supplier" name="supplier" type="text" value="Altera Digital Health" >
+
+<input class="nhsuk-input nhsuk-u-width-one-half"
+       id="supplier"
+       name="supplier"
+       type="text"
+       value="Altera Digital Health"
+       data-original="Altera Digital Health">
+
               </div>
               
               
@@ -82,7 +89,14 @@ Drug Purchase Price Database (Margin Survey)
                      
                   <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="Statement" name="Statement" type="checkbox" value="Statement" checked>
+                      <input 
+                      class="nhsuk-checkboxes__input" 
+                      id="Statement" 
+                      name="Statement" 
+                      type="checkbox" 
+                      value="Statement" 
+                      checked>
+
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="Statement" >
                         Statement provided (Optional)
                           
@@ -102,7 +116,7 @@ Drug Purchase Price Database (Margin Survey)
                   
                       <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
                       
-                      <input class="nhsuk-input nhsuk-input--width-5"
+<input class="nhsuk-input nhsuk-input--width-5"
        id="total"
        name="total"
        type="text"
@@ -127,15 +141,13 @@ Drug Purchase Price Database (Margin Survey)
            
               -->
                   
-                <div id="margin-change-message"
+<div id="margin-change-message"
      class="nhsuk-inset-text nhsuk-u-margin-top-6 nhsuk-u-visually-hidden"
      aria-live="polite">
-
   <p class="nhsuk-body">
     Any value manually updated by a margin survey checker is displayed in bold text.
   </p>
-
-</div>  
+</div>
 
                          
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
@@ -150,36 +162,48 @@ Drug Purchase Price Database (Margin Survey)
 <script>
 (function () {
 
+  const supplierInput = document.getElementById('supplier');
   const totalInput = document.getElementById('total');
   const messageBox = document.getElementById('margin-change-message');
 
-  if (!totalInput) return;
+  if (!supplierInput || !totalInput) return;
 
-  const originalValue = totalInput.dataset.original;
+  const originalSupplier = supplierInput.dataset.original;
+  const originalTotal = totalInput.dataset.original;
 
-  function evaluateChange() {
-    const currentValue = totalInput.value.trim();
+  function checkChanges() {
 
-    if (currentValue !== originalValue && currentValue !== "") {
+    let hasChanges = false;
 
-      // Make field bold
-      totalInput.style.fontWeight = "700";
-
-      // Show bottom message
-      messageBox.classList.remove('nhsuk-u-visually-hidden');
-
+    // Check supplier name
+    if (supplierInput.value.trim() !== originalSupplier) {
+      supplierInput.style.fontWeight = "700";
+      hasChanges = true;
     } else {
+      supplierInput.style.fontWeight = "400";
+    }
 
-      // Reset styling
+    // Check statement total
+    if (totalInput.value.trim() !== originalTotal) {
+      totalInput.style.fontWeight = "700";
+      hasChanges = true;
+    } else {
       totalInput.style.fontWeight = "400";
+    }
 
-      // Hide message
+    // Show message if ANY field changed
+    if (hasChanges) {
+      messageBox.classList.remove('nhsuk-u-visually-hidden');
+    } else {
       messageBox.classList.add('nhsuk-u-visually-hidden');
     }
   }
 
-  totalInput.addEventListener('input', evaluateChange);
-  totalInput.addEventListener('blur', evaluateChange);
+  supplierInput.addEventListener('input', checkChanges);
+  supplierInput.addEventListener('blur', checkChanges);
+
+  totalInput.addEventListener('input', checkChanges);
+  totalInput.addEventListener('blur', checkChanges);
 
 })();
 </script>
