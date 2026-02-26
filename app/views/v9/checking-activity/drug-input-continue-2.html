@@ -373,10 +373,10 @@ Drug Purchase Price Database (Margin Survey)
     Generic manufacturer
   </label>
   <div class="nhsuk-hint" id="example-with-hint-text-hint">
-   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+   If name does not appear <a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">add manufacturer</a>
   </div>
 
-  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="" value="AAH">
+  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="" value="Johnson & Johnson Company">
   <ul class="nhsuk-list" id="suggestions-list" hidden>manufacture's name</ul>
 </div>
 <datalist id="Generic manufacturer">
@@ -398,8 +398,19 @@ Drug Purchase Price Database (Margin Survey)
                             <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
   
-   <p class="nhsuk-body"> <a href=""> Revert to original data</a></p>
-                          <br>
+
+                            <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+
+</form>
+
+
+   <script>
+    function clearFields() {
+        document.getElementById('myForm').reset();
+    }
+</script>
+
+<br>
 
  <p> You are on page 144 of 145</p>
                      
@@ -473,7 +484,7 @@ Drug Purchase Price Database (Margin Survey)
 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
   <ul class="nhsuk-list nhsuk-pagination__list">
     <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input-continue">
         <span class="nhsuk-pagination__title">Previous</span>
         <span class="nhsuk-u-visually-hidden">:</span>
         <span class="nhsuk-pagination__page">Page 143</span>
@@ -484,7 +495,7 @@ Drug Purchase Price Database (Margin Survey)
       </a>
     </li>
     <li class="nhsuk-pagination-item--next">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="drug-input-continue-2">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="drug-input-continue-3">
         <span class="nhsuk-pagination__title">Next</span>
         <span class="nhsuk-u-visually-hidden">:</span>
         <span class="nhsuk-pagination__page">Page 145</span>

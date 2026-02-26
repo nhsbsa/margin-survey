@@ -46,6 +46,7 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
@@ -78,7 +79,7 @@ Drug Purchase Price Database (Margin Survey)
        name="supplier"
        type="text"
        value="Altera Digital Health"
-       data-original="Altera Digital Health">
+       data-changed="false">
 
               </div>
               
@@ -121,31 +122,19 @@ Drug Purchase Price Database (Margin Survey)
        name="total"
        type="text"
        value="62383.54"
-       data-original="62383.54">
+       data-changed="true">
                    
 
                     </div>
                   
                   </div>
 
-                 <!-- <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
-                </form>
-
-
-                   <script>
-                    function clearFields() {
-                        document.getElementById('myForm').reset();
-                    }
-                </script>
-           
-              -->
                   
 <div id="margin-change-message"
-     class="nhsuk-inset-text nhsuk-u-margin-top-6 nhsuk-u-visually-hidden"
-     aria-live="polite">
+     class="nhsuk-inset-text nhsuk-u-margin-top-6 nhsuk-u-visually-hidden">
   <p class="nhsuk-body">
-    Any value manually updated by a margin survey checker is displayed in bold text.
+Any value manually updated by a margin survey checker is displayed in bold text.
   </p>
 </div>
 
@@ -160,53 +149,25 @@ Drug Purchase Price Database (Margin Survey)
 </div>
 
 <script>
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const supplierInput = document.getElementById('supplier');
-  const totalInput = document.getElementById('total');
-  const messageBox = document.getElementById('margin-change-message');
+  const fields = document.querySelectorAll("[data-changed]");
+  const messageBox = document.getElementById("margin-change-message");
 
-  if (!supplierInput || !totalInput) return;
+  let hasChanges = false;
 
-  const originalSupplier = supplierInput.dataset.original;
-  const originalTotal = totalInput.dataset.original;
-
-  function checkChanges() {
-
-    let hasChanges = false;
-
-    // Check supplier name
-    if (supplierInput.value.trim() !== originalSupplier) {
-      supplierInput.style.fontWeight = "700";
+  fields.forEach(function(field) {
+    if (field.dataset.changed === "true") {
+      field.classList.add("nhsuk-u-font-weight-bold");
       hasChanges = true;
-    } else {
-      supplierInput.style.fontWeight = "400";
     }
+  });
 
-    // Check statement total
-    if (totalInput.value.trim() !== originalTotal) {
-      totalInput.style.fontWeight = "700";
-      hasChanges = true;
-    } else {
-      totalInput.style.fontWeight = "400";
-    }
-
-    // Show message if ANY field changed
-    if (hasChanges) {
-      messageBox.classList.remove('nhsuk-u-visually-hidden');
-    } else {
-      messageBox.classList.add('nhsuk-u-visually-hidden');
-    }
+  if (hasChanges) {
+    messageBox.classList.remove("nhsuk-u-visually-hidden");
   }
 
-  supplierInput.addEventListener('input', checkChanges);
-  supplierInput.addEventListener('blur', checkChanges);
-
-  totalInput.addEventListener('input', checkChanges);
-  totalInput.addEventListener('blur', checkChanges);
-
-})();
+});
 </script>
-
 
 {% endblock %}
