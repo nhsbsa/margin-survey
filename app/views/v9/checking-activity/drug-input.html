@@ -57,17 +57,17 @@ Drug Purchase Price Database (Margin Survey)
 
 
 <div style="display:flex; gap: 35px;"> 
-<div class="nhsuk-form-group">
-     <label 
-     class="nhsuk-label" 
-     for="Invoice ID"
+  <div class="nhsuk-form-group">
+    <label 
+      class="nhsuk-label" 
+      id=" previous-label" 
       for="previous" 
       style="user-select: none;">
-
+    
       <!-- Hidden icon, will be shown conditionally -->
-      <div id="tell-message" class="nhsuk-u-visually-hidden" aria-live="tell-reference"></div>
+        <div id="tell-message" class="nhsuk-u-visually-hidden" aria-live="tell-reference"></div>
 
-        <span id="previous-icon" style=" 
+      <span id="previous-icon" style=" 
         display: none;
         margin-right: 5px;
         width: 30px;
@@ -82,22 +82,18 @@ Drug Purchase Price Database (Margin Survey)
         user-select: none;
         vertical-align: middle;
       " aria-hidden="true">!</span>
-
-
-    <span id="reference-text" style="font-weight: normal;">Invoice and drug reference number</span>
+      <span id="reference-text" style="font-weight: normal;">Invoice and drug reference number</span>
     </label>
-
     <div class="nhsuk-input__wrapper">
-    <input 
-    class="nhsuk-input nhsuk-input--width-10" 
-    id="Invoice ID" 
-    name="Invoice ID" 
-    type="text" 
-    style="width: 300px;" 
-    value="">
-
- </div>
-</div>
+       <input class="nhsuk-input nhsuk-input--width-10" 
+           id="reference-id" 
+           name="reference-id" 
+           type="text" 
+           style="width: 300px;"
+           placeholder="Previous 142.1"
+           value="">
+    </div>
+    </div>
 
 
 
@@ -119,6 +115,30 @@ Drug Purchase Price Database (Margin Survey)
     </label>
  
 </div>
+
+<div id="reference-inset" class="nhsuk-inset-text" style="display: none; margin-top:30px;">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>
+    The reference number you entered does not follow on from the previous entry of 142.1.
+  </p>
+</div>
+
+
+<script>
+  const referenceInput = document.getElementById('reference-id');
+  const previousIcon = document.getElementById('previous-icon');
+  const referenceText = document.getElementById('reference-text');
+  const referenceInset = document.getElementById('reference-inset');
+
+  referenceInput.addEventListener('input', () => {
+    const value = parseFloat(referenceInput.value);
+    const isMatch = !isNaN(value) && value >= 0 && value <= 142.1;
+
+    previousIcon.style.display = isMatch ? 'inline-block' : 'none';
+    referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
+    referenceInset.style.display = isMatch ? 'block' : 'none';
+  });
+</script>
 
 <br>
 
@@ -350,7 +370,7 @@ Drug Purchase Price Database (Margin Survey)
   </div>
 
   <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="" value="">
-  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+  <ul class="nhsuk-list" id="suggestions-list" hidden>manufacture's name</ul>
 </div>
 <datalist id="Generic manufacturer">
   <option value="AbbVie"></option>
