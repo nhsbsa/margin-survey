@@ -60,17 +60,17 @@ Drug Purchase Price Database (Margin Survey)
 
 
 <div style="display:flex; gap: 35px;"> 
-<div class="nhsuk-form-group">
-     <label 
-     class="nhsuk-label" 
-     for="Invoice ID"
+  <div class="nhsuk-form-group">
+    <label 
+      class="nhsuk-label" 
+      id=" previous-label" 
       for="previous" 
       style="user-select: none;">
-
+    
       <!-- Hidden icon, will be shown conditionally -->
-      <div id="tell-message" class="nhsuk-u-visually-hidden" aria-live="tell-reference"></div>
+        <div id="tell-message" class="nhsuk-u-visually-hidden" aria-live="tell-reference"></div>
 
-        <span id="previous-icon" style=" 
+      <span id="previous-icon" style=" 
         display: none;
         margin-right: 5px;
         width: 30px;
@@ -85,22 +85,18 @@ Drug Purchase Price Database (Margin Survey)
         user-select: none;
         vertical-align: middle;
       " aria-hidden="true">!</span>
-
-
-    <span id="reference-text" style="font-weight: normal;">Invoice and drug reference number</span>
+      <span id="reference-text" style="font-weight: normal;">Invoice and drug reference number</span>
     </label>
-
     <div class="nhsuk-input__wrapper">
-    <input 
-    class="nhsuk-input nhsuk-input--width-10" 
-    id="Invoice ID" 
-    name="Invoice ID" 
-    type="text" 
-    style="width: 300px;" 
-    value="">
-
- </div>
-</div>
+       <input class="nhsuk-input nhsuk-input--width-10" 
+           id="reference-id" 
+           name="reference-id" 
+           type="text" 
+           style="width: 300px;"
+           placeholder="Previous 142.1"
+           value="">
+    </div>
+    </div>
 
 
 
@@ -122,6 +118,30 @@ Drug Purchase Price Database (Margin Survey)
     </label>
  
 </div>
+
+<div id="reference-inset" class="nhsuk-inset-text" style="display: none; margin-top:30px;">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>
+    The reference number you entered does not follow on from the previous entry of 142.1.
+  </p>
+</div>
+
+
+<script>
+  const referenceInput = document.getElementById('reference-id');
+  const previousIcon = document.getElementById('previous-icon');
+  const referenceText = document.getElementById('reference-text');
+  const referenceInset = document.getElementById('reference-inset');
+
+  referenceInput.addEventListener('input', () => {
+    const value = parseFloat(referenceInput.value);
+    const isMatch = !isNaN(value) && value >= 0 && value <= 142.1;
+
+    previousIcon.style.display = isMatch ? 'inline-block' : 'none';
+    referenceText.style.fontWeight = isMatch ? 'bold' : 'normal';
+    referenceInset.style.display = isMatch ? 'block' : 'none';
+  });
+</script>
 
 <br>
 
@@ -160,14 +180,14 @@ Drug Purchase Price Database (Margin Survey)
       Select if the drug has another brand name or generic name (optional)
     </label>
   </div>
-  <!--div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional" id="brand-name-generic-name-1">
+  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional" id="brand-name-generic-name-1">
     <div class="nhsuk-form-group" style="margin-top: 25px;">
       <label class="nhsuk-label" for="brand-name">
         Brand name / Generic name
       </label>
-      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="Aspire">
+      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="brand-name" name="brand-name" type="text" value="">
     </div>
-  </div-->
+  </div>
 </div>
 
 <script>
@@ -349,7 +369,7 @@ Drug Purchase Price Database (Margin Survey)
     Generic manufacturer
   </label>
   <div class="nhsuk-hint" id="example-with-hint-text-hint">
-   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+   If name does not appear <a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">add manufacturer</a>
   </div>
 
   <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="" value="">
@@ -385,7 +405,7 @@ Drug Purchase Price Database (Margin Survey)
 </script>
 
   
-                           <p> You are on page 145 of 145</p>
+                           <p> You are on page 146 of 146</p>
                         
       <div class="nhsuk-checkboxes" style="margin-left: -38px;">
         <div class="nhsuk-checkboxes__item">
@@ -395,6 +415,80 @@ Drug Purchase Price Database (Margin Survey)
           </label>
         </div>
       </div>
+<br>
+           <!--search-->
+      
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="drug-search">
+            Enter drug name to search for previously entered drugs.
+          </label>
+          <div class="nhsuk-hint">
+            For example Bisoprolol
+          </div>
+          <input 
+            class="nhsuk-input nhsuk-input--width-10" 
+            id="drug-search" 
+            name="drug" 
+            type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="invoice-search">
+            Enter invoice reference number to search for previously entered drugs.
+          </label>
+          <div class="nhsuk-hint">
+            For example 128
+          </div>
+          <input 
+            class="nhsuk-input nhsuk-input--width-10" 
+            id="invoice-search" 
+            name="invoice" 
+            type="text">
+        </div>
+
+        <a href="drug-input-search-result" class="nhsuk-button" style="margin-top: 20px;">
+          Search
+        </a>
+
+        
+         <a href="drug-input-search-result" class="nhsuk-button nhsuk-button--secondary" style="margin-top: 20px;">
+           Back to last search result
+        </a>
+
+      
+        </div>
+      </details>
+
+    <!--search-->
+
+      <!---pagination--->
+
+<nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+  <ul class="nhsuk-list nhsuk-pagination__list">
+    <li class="nhsuk-pagination-item--previous">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="drug-input-continue-3">
+        <span class="nhsuk-pagination__title">Previous</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 145</span>
+        <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
+        </svg>
+
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+  <!---pagination ends--->
     </div>
   </div>
 
