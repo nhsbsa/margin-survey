@@ -46,6 +46,7 @@ Drug Purchase Price Database (Margin Survey)
 
 
 
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
@@ -72,7 +73,14 @@ Drug Purchase Price Database (Margin Survey)
                 <label class="nhsuk-label" for="supplier">
                   Enter supplier name
                 </label>
-                <input class="nhsuk-input nhsuk-u-width-one-half" id="supplier" name="supplier" type="text" value="Altera Digital Health" >
+
+<input class="nhsuk-input nhsuk-u-width-one-half"
+       id="supplier"
+       name="supplier"
+       type="text"
+       value="Altera Digital Health"
+       data-changed="false">
+
               </div>
               
               
@@ -82,7 +90,14 @@ Drug Purchase Price Database (Margin Survey)
                      
                   <div class="nhsuk-form-group" style="padding-left:0px; padding-top:31px;">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="Statement" name="Statement" type="checkbox" value="Statement" checked>
+                      <input 
+                      class="nhsuk-checkboxes__input" 
+                      id="Statement" 
+                      name="Statement" 
+                      type="checkbox" 
+                      value="Statement" 
+                      checked>
+
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="Statement" >
                         Statement provided (Optional)
                           
@@ -101,35 +116,27 @@ Drug Purchase Price Database (Margin Survey)
                     <div class="nhsuk-input__wrapper">
                   
                       <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
-                  
-                      <input 
-                       class="nhsuk-input nhsuk-input--width-5 input-bold"
-                       id="total" 
-                       name="total" 
-                       type="text" 
-                       value="62383.54">
+                      
+<input class="nhsuk-input nhsuk-input--width-5"
+       id="total"
+       name="total"
+       type="text"
+       value="62383.54"
+       data-changed="true">
                    
-                   <style>
-                   .input-bold {font-weight: bold;}
-                    </style>
+
                     </div>
                   
                   </div>
 
-                 <!-- <p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
 
-                </form>
-
-
-                   <script>
-                    function clearFields() {
-                        document.getElementById('myForm').reset();
-                    }
-                </script>
-           
-              -->
                   
-                  
+<div id="margin-change-message"
+     class="nhsuk-inset-text nhsuk-u-margin-top-6 nhsuk-u-visually-hidden">
+  <p class="nhsuk-body">
+Any value manually updated by a margin survey checker is displayed in bold text.
+  </p>
+</div>
 
                          
                             <div class="nhsuk-form-group" style="padding-left: 00px; padding-top: 20px;">
@@ -141,5 +148,26 @@ Drug Purchase Price Database (Margin Survey)
 
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const fields = document.querySelectorAll("[data-changed]");
+  const messageBox = document.getElementById("margin-change-message");
+
+  let hasChanges = false;
+
+  fields.forEach(function(field) {
+    if (field.dataset.changed === "true") {
+      field.classList.add("nhsuk-u-font-weight-bold");
+      hasChanges = true;
+    }
+  });
+
+  if (hasChanges) {
+    messageBox.classList.remove("nhsuk-u-visually-hidden");
+  }
+
+});
+</script>
 
 {% endblock %}

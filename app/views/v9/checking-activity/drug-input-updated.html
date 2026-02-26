@@ -371,10 +371,10 @@ Drug Purchase Price Database (Margin Survey)
     Generic manufacturer
   </label>
   <div class="nhsuk-hint" id="example-with-hint-text-hint">
-   Enter first few letters of manufacturer's name and select option. <br><a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">Add manufacturer</a> if the name does not appear
+   If name does not appear <a href="../lists-management/manufacturer-list/add-manufacturer" class="nhsuk-link">add manufacturer</a>
   </div>
 
-  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="" value="AAH">
+  <input class="nhsuk-input nhsuk-u-width-full" id="autocomplete-input 2" name="Generic manufacturer" type="text" autocomplete="off" list="Generic manufacturer" placeholder="" value="Johnson & Johnson Company">
   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
 </div>
 <datalist id="Generic manufacturer">
@@ -394,12 +394,21 @@ Drug Purchase Price Database (Margin Survey)
                             <a href="delete" class="nhsuk-button nhsuk-button--warning">Delete drug</a>
                           </div>
 
-<p class="nhsuk-body"> <a href=""> Revert to original data</a></p>
-                          <br>
 
- <p> You are on page 1 of 144</p>
-                     
-            <div class="nhsuk-checkboxes" style="margin-left: -38px;">
+<p><a href="" type="button" onclick="clearFields()">Clear all fields</a></p>
+
+</form>
+
+
+   <script>
+    function clearFields() {
+        document.getElementById('myForm').reset();
+    }
+</script>
+
+ <p>You are on page 7 of 8</p>
+
+  <div class="nhsuk-checkboxes" style="margin-left: -38px;">
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-input nhsuk-input--width-4" id="example-2" name="example">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
@@ -407,33 +416,93 @@ Drug Purchase Price Database (Margin Survey)
           </label>
         </div>
       </div>
-      <br>
-         <!--search-->
-     <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Search for a drug entry
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-    
+
+<br>
+     <!--search-->
+      
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Search for a drug entry
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+
         <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="Search">
-            Enter invoice and drug reference number to search for previously entered drugs.
+          <label class="nhsuk-label" for="drug-search">
+            Enter drug name to search for previously entered drugs.
           </label>
-          <div class="nhsuk-hint" id="example-with-hint-text-hint">
-            For example Supplierinvoice.033
+          <div class="nhsuk-hint">
+            For example Bisoprolol
           </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <input class="nhsuk-input nhsuk-input--width-10" id="Search" name="Search" type="text" style="margin-bottom: 30px;">
-            <a href="drug-input-search-result" style="display: flex; align-items: center; justify-content: center; margin-top: 2px;" class="nhsuk-button">Search</a> 
-             </div>
+          <input 
+            class="nhsuk-input nhsuk-input--width-10" 
+            id="drug-search" 
+            name="drug" 
+            type="text">
         </div>
-    
-      </div>
-    </details>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="invoice-search">
+            Enter invoice reference number to search for previously entered drugs.
+          </label>
+          <div class="nhsuk-hint">
+            For example 128
+          </div>
+          <input 
+            class="nhsuk-input nhsuk-input--width-10" 
+            id="invoice-search" 
+            name="invoice" 
+            type="text">
+        </div>
+
+        <a href="drug-input-search-result" class="nhsuk-button" style="margin-top: 20px;">
+          Search
+        </a>
+
+        
+         <a href="drug-input-search-result" class="nhsuk-button nhsuk-button--secondary" style="margin-top: 20px;">
+           Back to last search result
+        </a>
+
+      
+        </div>
+      </details>
 
     <!--search-->
+
+
+  <!---pagination--->
+
+<nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+  <ul class="nhsuk-list nhsuk-pagination__list">
+    <li class="nhsuk-pagination-item--previous">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
+        <span class="nhsuk-pagination__title">Previous</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 6</span>
+        <svg class="nhsuk-icon nhsuk-icon--arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M10.7 6.3c.4.4.4 1 0 1.4L7.4 11H19a1 1 0 0 1 0 2H7.4l3.3 3.3c.4.4.4 1 0 1.4a1 1 0 0 1-1.4 0l-5-5A1 1 0 0 1 4 12c0-.3.1-.5.3-.7l5-5a1 1 0 0 1 1.4 0Z" />
+        </svg>
+
+      </a>
+    </li>
+    <li class="nhsuk-pagination-item--next">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="drug-input-continue-2">
+        <span class="nhsuk-pagination__title">Next</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 8</span>
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="m14.7 6.3 5 5c.2.2.3.4.3.7 0 .3-.1.5-.3.7l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H5a1 1 0 0 1 0-2h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4Z" />
+        </svg>
+
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <!---pagination ends--->
+ 
 
     </div>
   </div>
